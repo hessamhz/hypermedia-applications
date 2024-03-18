@@ -5,8 +5,8 @@
 ## **Table of Contents**
 
 1. [Introduction](#introduction)
-2. [Development Guidelines](#development-guidelines)
-	2.1. [Pre Commit](#pre-commit)
+2. [Development Guidelines](#development-guidelines)\
+	2.1. [Pre Commit](#pre-commit)\
 	2.2. [Commit Message Conventions](#commit-message-conventions)
 3. [Usability Evaluation](#usability-evaluation)
 
