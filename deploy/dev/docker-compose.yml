@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16.1
+    container_name: hive-postgres-dev
+    volumes:
+      - postgres_data_hive:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: postgres_dev_password
+      POSTGRES_DB: hive
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data_hive:
