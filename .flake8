@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203, E704
+per-file-ignores =
+    # imported but unused
+    __init__.py: F401, F403, F811
+    dev.py: F405, F403, F401
+    production.py: F405, F403
+    migrations/*: E501
+    0001_initial.py: E501
+    celery.py: B018
