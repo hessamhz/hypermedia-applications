@@ -9,7 +9,9 @@ aiohttp==3.9.1
 aiosignal==1.3.1
     # via aiohttp
 asgiref==3.7.2
-    # via django
+    # via
+    #   django
+    #   django-cors-headers
 async-timeout==4.0.3
     # via aiohttp
 attrs==23.1.0
@@ -27,7 +29,10 @@ coverage==7.3.3
 django==4.2
     # via
     #   -r common.in
+    #   django-cors-headers
     #   djangorestframework
+django-cors-headers==4.3.1
+    # via -r common.in
 djangorestframework==3.14.0
     # via -r common.in
 flake8==6.1.0
@@ -67,6 +72,8 @@ pyflakes==3.1.0
 pyproject-hooks==1.0.0
     # via build
 python-dotenv==1.0.0
+    # via -r common.in
+python-magic==0.4.27
     # via -r common.in
 pytz==2023.3.post1
     # via djangorestframework
