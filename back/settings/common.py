@@ -177,8 +177,10 @@ THIRD_PARTY_APPS = ("rest_framework",)
 LOCAL_APPS = (
     "src.api",
     "src.apps.storage",
-    # "src.apps.services",
-    # "src.apps.projects",
+    "src.apps.members",
+    "src.apps.services",
+    "src.apps.projects",
+    "src.apps.website",
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

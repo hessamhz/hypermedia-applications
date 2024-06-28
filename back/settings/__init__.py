@@ -6,5 +6,5 @@ if not stage:
 
 if stage == "dev":
     from settings.dev import *
-elif stage == "staging":
-    from settings.staging import *
+elif stage == "production":
+    from settings.production import *
