@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MembersConfig(AppConfig):
+class WebsiteConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "src.apps.members"
+    name = "src.apps.website"
