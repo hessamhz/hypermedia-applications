@@ -37,7 +37,6 @@ class MemberSerializer(serializers.ModelSerializer):
 
 class MemberListSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
-    activities = serializers.SerializerMethodField()
 
     class Meta:
         model = Member
