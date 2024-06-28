@@ -4,10 +4,16 @@
 #
 #    pip-compile --output-file=production.txt common.in production.in
 #
+argon2-cffi==23.1.0
+    # via -r common.in
+argon2-cffi-bindings==21.2.0
+    # via argon2-cffi
 asgiref==3.7.2
     # via
     #   django
     #   django-cors-headers
+cffi==1.16.0
+    # via argon2-cffi-bindings
 click==8.1.7
     # via uvicorn
 django==4.2
@@ -29,6 +35,8 @@ packaging==23.2
     # via gunicorn
 psycopg2-binary==2.9.9
     # via -r common.in
+pycparser==2.22
+    # via cffi
 python-dotenv==1.0.0
     # via -r common.in
 python-magic==0.4.27
