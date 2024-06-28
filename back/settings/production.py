@@ -13,7 +13,7 @@ SECRET_KEY = get_env("SECRET_KEY")
 # END OF SECRET CONFIGURATION
 
 # TODO Setup Gunicorn
-INSTALLED_APPS = ("corsheaders",) + INSTALLED_APPS + ("storages",)
+INSTALLED_APPS = ("corsheaders",) + INSTALLED_APPS
 
 # CSRF CONFIGURATION
 CSRF_TRUSTED_ORIGINS = get_env("CSRF_TRUSTED_ORIGINS").split(",")

@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16.1
+    container_name: postgres-hive
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DEFAULT_DATABASE_USER}
+      POSTGRES_PASSWORD: ${DEFAULT_DATABASE_PASSWORD}
+      POSTGRES_DB: ${DEFAULT_DATABASE_NAME}
+    ports:
+      - "5432:5432"
+
+  django:
+    build:
+      context: ../../back
+      dockerfile: build/Dockerfile
+    volumes:
+      - static_volume:/usr/src/app/static
+      - media_volume:/usr/src/app/media
+    env_file:
+      - .env
+    container_name: django-hive
+    environment:
+      - STAGE=production
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
