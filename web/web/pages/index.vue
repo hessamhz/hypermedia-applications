@@ -3,5 +3,7 @@
       <Hero />
       <Center />
       <Statistics />
+      <WhoWeAre />
+      <Activities />
     </div>
   </template>
