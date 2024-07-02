@@ -8,16 +8,16 @@
             <div>
               <ul class="flex items-center gap-[4vw]">
                 <li>
-                  <a class="hover:text-gray-300 font-semibold" href="#">Home</a>
+                  <a class="hover:text-gray-300 font-semibold" href="/">Home</a>
                 </li>
                 <li>
-                  <a class="hover:text-gray-300 font-semibold" href="#">About</a>
+                  <a class="hover:text-gray-300 font-semibold" href="/about">About</a>
                 </li>
                 <li>
-                  <a class="hover:text-gray-300 font-semibold" href="#">Activities</a>
+                  <a class="hover:text-gray-300 font-semibold" href="/activities">Activities</a>
                 </li>
                 <li>
-                  <a class="hover:text-gray-300 font-semibold" href="#">Contacts</a>
+                  <a class="hover:text-gray-300 font-semibold" href="/contacts">Contacts</a>
                 </li>
               </ul>
             </div>
