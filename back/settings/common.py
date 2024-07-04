@@ -172,7 +172,10 @@ DJANGO_APPS = (
     "django.contrib.admin",
 )
 
-THIRD_PARTY_APPS = ("rest_framework",)
+THIRD_PARTY_APPS = (
+    "rest_framework",
+    "corsheaders",
+)
 
 # Apps specific for this projeßßct go here.
 LOCAL_APPS = (
@@ -216,3 +219,36 @@ MEDIA_URL = get_env("MEDIA_URL")
 STATIC_ROOT = get_env("STATIC_ROOT")
 STATIC_URL = get_env("STATIC_URL")
 # END OF STATIC, MEDIA FILE CONFIGURATION
+
+# CORSHEADERS CONFIGURATION
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "x-csrftoken",
+    "x-requested-with",
+    "accept",
+    "origin",
+    "user-agent",
+    "dnt",
+    "cache-control",
+    "x-frame-options",
+    "if-modified-since",
+    "keep-alive",
+    "x-api-key",
+    "x-forwarded-for",
+    "x-real-ip",
+    "x-amz-date",
+    "x-amz-security-token",
+    "x-amz-user-agent",
+]
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+# END CORSHEADERS CONFIGURATION
