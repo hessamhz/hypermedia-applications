@@ -1,5 +1,3 @@
-import re
-
 from corsheaders.defaults import default_headers
 from settings.common import *
 
@@ -26,13 +24,11 @@ SESSION_COOKIE_SECURE = True
 # END CORSHEADERS CONFIGURATION
 
 # CORSHEADERS CONFIGURATION
-CORS_ALLOW_HEADERS = list(default_headers) + ["access", "Authorization"]
-CORS_ORIGIN_REGEX_WHITELIST = [
-    re.compile(r) for r in get_env("CORS_ORIGIN_REGEX_WHITELIST").split(",")
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "access",
+    "Authorization",
 ]
 CORS_ALLOW_CREDENTIALS = True
-CORS_URLS_REGEX = re.compile(get_env("CORS_URLS_REGEX"))
 CORS_EXPOSE_HEADERS = ["X-CSRFToken", "access", "Authorization"]
 # END CORSHEADERS CONFIGURATION
-
-MIDDLEWARE += ("corsheaders.middleware.CorsMiddleware",)

@@ -142,6 +142,7 @@ TEMPLATES = [
 MIDDLEWARE = (
     # Default Django middleware.
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
