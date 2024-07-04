@@ -2,8 +2,8 @@
     <div class="fixed top-0 z-[1000] bg-[rgba(255,255,255,0.6)] backdrop-blur-sm w-screen shadow h-16">
         <nav class="flex items-center justify-between px-12 py-2 mx-auto">
             <div class="flex items-center gap-3">
-              <img class="w-32" src="C:\Users\longo\OneDrive - Politecnico di Milano\Desktop\the-hive\the-hive\src\assets\logo.svg">
-              
+              <img class="w-32" src="/assets/logo.svg" alt="The Hive's Logo">
+
             </div>
             <div>
               <ul class="flex items-center gap-[4vw]">
