@@ -175,6 +175,7 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     "rest_framework",
     "corsheaders",
+    "tinymce",
 )
 
 # Apps specific for this projeßßct go here.

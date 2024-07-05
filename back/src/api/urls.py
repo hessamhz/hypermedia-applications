@@ -17,6 +17,7 @@ v_1_url_patterns = [
     path("services/", ServiceListView.as_view(), name="service-list"),
     path("services/<slug:slug>/", ServiceDetailView.as_view(), name="service-detail"),
     path("contact-us/", ContactUsCreateView.as_view(), name="contact-us-create"),
+    path("tinymce/", include("tinymce.urls")),
 ]
 
 urlpatterns = [

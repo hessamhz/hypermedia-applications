@@ -1,6 +1,7 @@
 import uuid
 
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Project(models.Model):
@@ -17,7 +18,6 @@ class Project(models.Model):
         blank=True,
         related_name="%(app_label)s_%(class)s_picture",
     )
-    is_new = models.BooleanField(default=True)
 
     album = models.ManyToManyField(
         "storage.MediaModel",
@@ -44,6 +44,8 @@ class Project(models.Model):
     is_new = models.BooleanField(default=True)
 
     slug = models.SlugField(max_length=128)
+
+    content = HTMLField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

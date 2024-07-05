@@ -18,8 +18,11 @@ django==4.2
     # via
     #   -r common.in
     #   django-cors-headers
+    #   django-tinymce
     #   djangorestframework
 django-cors-headers==4.3.1
+    # via -r common.in
+django-tinymce==4.1.0
     # via -r common.in
 djangorestframework==3.14.0
     # via -r common.in
