@@ -16,7 +16,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             context = text_data_json.get("context")
             query = text_data_json.get("query")
 
-            response_message = {f"Context is: {context} and query is {query}"}
+            response_message = f"Context is: {context} and query is {query}"
 
             await self.send(text_data=json.dumps({"message": response_message}))
         except Exception as e:
