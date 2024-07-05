@@ -1,9 +1,9 @@
 <template>
     <div>
-      <Hero />
-      <Center />
-      <Statistics />
-      <WhoWeAre />
-      <Activities />
+      <IndexHero />
+      <IndexCenter />
+      <IndexStatistics />
+      <IndexWhoWeAre />
+      <IndexActivities />
     </div>
   </template>
