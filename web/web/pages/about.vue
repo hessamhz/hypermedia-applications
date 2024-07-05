@@ -1,7 +1,7 @@
 <template>
     <div>
       <PageTitle title="The Center" />
-      <Story />
-      <Mission />
+      <AboutStory />
+      <AboutMission />
     </div>
   </template>
