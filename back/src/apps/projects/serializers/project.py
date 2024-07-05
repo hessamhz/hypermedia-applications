@@ -41,7 +41,7 @@ class ProjectListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ["title", "picture", "slug", "overview"]
+        fields = ["title", "picture", "slug", "overview", "is_new", "status"]
 
     def get_picture(self, instance):
         if instance.picture:
