@@ -20,6 +20,7 @@ v_1_url_patterns = [
     path("tinymce/", include("tinymce.urls")),
 ]
 
+
 urlpatterns = [
     path("v1/", include(v_1_url_patterns)),
 ]

@@ -196,6 +196,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # WSGI CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = "src.core.wsgi.application"
+ASGI_APPLICATION = "src.core.asgi.application"
 # END OF WSGI CONFIGURATION
 
 
@@ -253,3 +254,14 @@ CORS_ALLOW_METHODS = [
     "OPTIONS",
 ]
 # END CORSHEADERS CONFIGURATION
+
+# CHANNELS CONFIGURATION
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(get_env("REDIS_HOST"), 6379)],
+        },
+    },
+}
+# END OF CHANNELS CONFIGURATION

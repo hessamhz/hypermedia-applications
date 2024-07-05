@@ -13,6 +13,12 @@ services:
     ports:
       - "5432:5432"
 
+  redis:
+    image: redis:7.2.5
+    container_name: hive-redis
+    ports:
+      - "6379:6379"
+
   django:
     build:
       context: ../../back
@@ -29,6 +35,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - redis
 
 volumes:
   postgres_data:

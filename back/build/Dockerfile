@@ -41,4 +41,4 @@ RUN chown -R app:app $APP_HOME
 USER app
 
 ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "src.core.wsgi:application"]
+CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "src.core.asgi:application"]
