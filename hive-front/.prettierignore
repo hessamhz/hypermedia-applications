@@ -1,0 +1,25 @@
+# Nuxt build output
+.nuxt
+dist
+.output
+.data
+.nitro
+.cache
+
+# Node modules
+node_modules
+
+# Logs
+logs
+*.log
+
+# Version control
+.git
+
+# Environment files
+.env
+.env.*
+
+# IDE specific files
+.idea
+.vscode
