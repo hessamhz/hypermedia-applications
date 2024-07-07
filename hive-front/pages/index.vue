@@ -1,4 +1,50 @@
-<script setup></script>
+<script setup>
+const hexagons = [
+  ['', 'EMPTY', '', '', 'https://picsum.photos/500/500'],
+  [
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+  ],
+  [
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+  ],
+  [
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+  ],
+  [
+    'https://picsum.photos/500/500',
+    'https://picsum.photos/500/500',
+    '',
+    'https://picsum.photos/500/500',
+    '',
+    '',
+    'https://picsum.photos/500/500',
+  ],
+];
+
+function hexagonRowsClass(i) {
+  let classes = '';
+  if (i > 0) classes += ' -mt-[51px] md:-mt-[77px] xl:-mt-[101px] ';
+  if (i % 2 === 0) classes += ' pl-[79px] md:pl-[115px] xl:pl-[153px] ';
+  return classes;
+}
+</script>
 
 <template>
   <div>
@@ -7,7 +53,7 @@
       class="relative flex flex-col gap-12 px-5 py-10 md:py-16 xl:flex-row xl:justify-end xl:px-0"
     >
       <div
-        class="z-0 text-center xl:absolute xl:left-20 xl:top-1/3 xl:text-left"
+        class="z-10 text-center xl:absolute xl:left-20 xl:top-1/3 xl:text-left"
       >
         <h1 class="mb-4 text-5xl font-bold md:text-7xl">Title title title</h1>
         <h3 class="mb-10 text-3xl font-semibold md:mb-14 md:text-4xl xl:mb-16">
@@ -15,9 +61,9 @@
         </h3>
         <NuxtLink
           class="rounded-lg bg-purple-700 px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4"
-          to="/contacts"
+          to="/chat"
         >
-          Contact us
+          Chat with us
         </NuxtLink>
       </div>
       <img
@@ -87,18 +133,36 @@
       </ul>
     </div>
     <!-- WHO WE ARE -->
-    <div class="px-5 py-10 text-center md:px-10 md:py-16 xl:px-20 xl:py-20">
+    <div class="py-10 text-center md:py-16 xl:py-20">
       <h2 class="mb-6 text-4xl font-bold text-purple-700 md:mb-11 md:text-5xl">
         Who we are
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quae
-        voluptates consequatur libero fugit animi at. Quae ipsa aspernatur
-        molestias natus distinctio quia illo soluta reiciendis adipisci iste,
-        debitis doloribus voluptatibus nisi nulla officia quas iure? Quas
-        praesentium quasi error repudiandae, similique laboriosam expedita
-        voluptate velit, itaque repellat dolorum eius.
-      </p>
+      <div class="overflow-x-clip">
+        <div class="mx-auto flex w-fit flex-col">
+          <div
+            v-for="(row, rowIndex) in hexagons"
+            :key="rowIndex"
+            class="flex gap-[73px] md:gap-[105px] xl:gap-[139px]"
+            :class="hexagonRowsClass(rowIndex)"
+          >
+            <template
+              v-for="(hexagon, hexagonIndex) in row"
+              :key="hexagonIndex + 1000"
+            >
+              <img
+                v-if="hexagon !== 'EMPTY'"
+                :src="hexagon"
+                class="hexagon h-24 rotate-[30deg] md:h-36 xl:h-48"
+                :class="!hexagon && 'invisible'"
+              />
+              <div
+                v-else
+                class="hexagon bg-gray-100 h-24 rotate-[30deg] md:h-36 xl:h-48"
+              ></div>
+            </template>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- OUR ACTIVITIES -->
     <div class="bg-gray-100 px-5 py-10 md:px-10 md:py-16 xl:px-20 xl:py-20">

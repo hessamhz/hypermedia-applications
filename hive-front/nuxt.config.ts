@@ -7,5 +7,9 @@ export default defineNuxtConfig({
       baseURL: 'https://the-hive.space/api/v1',
     },
   },
-  css: ['~/assets/css/custom-styles.css', '~/assets/css/font-face/inter.css'],
+  css: [
+    '~/assets/css/custom-styles.css',
+    '~/assets/css/tailwind.css',
+    '~/assets/css/font-face/inter.css',
+  ],
 });

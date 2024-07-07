@@ -14,14 +14,14 @@ const { data } = await useApi(`members/${route.params.slug}`);
         class="mb-2 flex items-end gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
       >
         <span class="border-b">Our People</span>
-        <IconChevron />
+        <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
       </NuxtLink>
       <h1 class="text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
         {{ data?.name }}
       </h1>
     </header>
     <div
-      class="mx-auto flex max-w-[1240px] gap-4 px-5 pb-10 pt-32 md:px-20 md:py-16 xl:px-24 xl:py-28"
+      class="mx-auto flex max-w-[1240px] items-start gap-4 px-5 pb-10 pt-32 md:px-20 md:py-16 xl:px-24 xl:py-28"
     >
       <div
         class="relative basis-full rounded-lg bg-purple-100 px-5 pb-8 pt-20 sm:py-8 md:p-10 xl:p-14 2xl:p-20"
@@ -87,14 +87,17 @@ const { data } = await useApi(`members/${route.params.slug}`);
             <p class="inline">&nbsp;{{ project.overview }}</p>
           </li>
         </ul>
-        <AppHexagonalImage
-          :src="data?.avatar.file"
-          :alt="data?.name"
-          :size="200"
-          class="absolute -top-28 right-1/2 flex translate-x-1/2 items-center justify-center bg-orange-300 sm:-right-12 sm:-top-24 sm:translate-x-0"
-        />
+        <div
+          class="hexagon absolute -top-28 right-1/2 mb-4 flex w-[144px] translate-x-1/2 items-center justify-center bg-orange-300 sm:-right-12 sm:-top-36 sm:w-[200px] sm:translate-x-0 md:-right-24 md:-top-28 xl:-top-52 xl:w-[280px]"
+        >
+          <img
+            :src="data?.avatar.file"
+            :alt="data?.name"
+            class="hexagon w-[138px] object-cover sm:w-[192px] xl:w-[264px]"
+          />
+        </div>
       </div>
-      <ul class="hidden basis-44 pt-28 text-gray-500 sm:block">
+      <ul class="sticky top-0 hidden basis-44 pt-28 text-gray-500 sm:block">
         <li>
           <a href="#education">Education</a>
         </li>

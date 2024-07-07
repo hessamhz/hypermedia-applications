@@ -1,115 +1,5 @@
 <script setup>
-// const { data } = await useApi('projects');
-
-const xxx = [
-  {
-    title: 'Project Rehab1',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab',
-    overview:
-      'A Rehab project focusing on helping the women doing drugs A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab2',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab2',
-    overview: 'A Rehab project focusing on helping the women doing drugs',
-  },
-  {
-    title: 'Project Rehab3',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab3',
-    overview:
-      'A Rehab project focusing on helping the women doing drugs A Rehab project focusing on helping A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab4',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab4',
-    overview:
-      'A Rehab project focusing on helping the women doing drugs A Rehab project focusing on helping A Rehab project focusing on helping A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab5',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab5',
-    overview: 'A Rehab project focusing on helping the women doing drugs',
-  },
-  {
-    title: 'Project Rehab6',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab6',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab7',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab7',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab8',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab8',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab9',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab9',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab10',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab10',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab11',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab11',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab12',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab12',
-    overview: 'A Rehab project focusing on helping',
-  },
-  {
-    title: 'Project Rehab13',
-    picture: {
-      file: 'https://fastly.picsum.photos/id/976/800/800.jpg?hmac=8Cs5XoELZ4EMM8PZS1iVbEZUnRjtP-SHZWI6g0Rbh7U',
-    },
-    slug: 'rehab13',
-    overview: 'A Rehab project focusing on helping',
-  },
-];
+const { data } = await useApi('projects');
 </script>
 
 <template>
@@ -128,7 +18,7 @@ const xxx = [
     >
       <ul class="grid gap-3 sm:grid-cols-2 lg:gap-4 2xl:gap-5">
         <li
-          v-for="project in xxx"
+          v-for="project in data"
           :key="project.slug"
           class="sm:[&:nth-child(7n+1)>a>div]:ml-auto sm:[&:nth-child(7n+1)>a>div]:w-1/2 sm:[&:nth-child(7n+1)>a>div]:text-right sm:[&:nth-child(7n+1)]:col-span-2 sm:[&:nth-child(7n+2)>a>div]:mx-auto sm:[&:nth-child(7n+2)>a>div]:w-4/5 sm:[&:nth-child(7n+2)>a>div]:text-center sm:[&:nth-child(7n+3)>a>div]:mx-auto sm:[&:nth-child(7n+3)>a>div]:w-4/5 sm:[&:nth-child(7n+3)>a>div]:text-center sm:[&:nth-child(7n+4)>a>div]:w-1/2 sm:[&:nth-child(7n+4)]:col-span-2 sm:[&:nth-child(7n+5)>a>div]:w-1/2 sm:[&:nth-child(7n+5)]:col-span-2 sm:[&:nth-child(7n+6)>a>div]:mx-auto sm:[&:nth-child(7n+6)>a>div]:w-4/5 sm:[&:nth-child(7n+6)>a>div]:text-center sm:[&:nth-child(7n+7)>a>div]:mx-auto sm:[&:nth-child(7n+7)>a>div]:w-4/5 sm:[&:nth-child(7n+7)>a>div]:text-center"
         >

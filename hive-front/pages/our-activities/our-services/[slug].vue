@@ -2,44 +2,6 @@
 const route = useRoute();
 
 const { data } = await useApi(`services/${route.params.slug}`);
-
-const comments = [
-  {
-    id: '567d3fbd-e07c-4266-9e00-915be04b8f0d',
-    picture: null,
-    name: 'Filippo',
-    description:
-      ' 1 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 11 1 1 1 1 1 1',
-    created_at: '2024-06-28T23:39:16.453806Z',
-    updated_at: '2024-06-28T23:39:16.453823Z',
-  },
-  {
-    id: '567d3fbd-e07c-4266-9e00-915be04b8f0e',
-    picture: null,
-    name: 'Filippo 2',
-    description: '2 2 2 2 2 22 2 2 2 2 22 2 2 2 2 22 2 2 2 2 22 2 2 2 2 2',
-    created_at: '2024-06-28T23:39:16.453806Z',
-    updated_at: '2024-06-28T23:39:16.453823Z',
-  },
-  {
-    id: '567d3fbd-e07c-4266-9e00-915be04b8f0f',
-    picture: null,
-    name: 'Filippo 3',
-    description:
-      '3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 33 3 3 3 3 3 3 3 33 3 3 3 3 3 3 33 3 3 3 3 3 3 3 3 3 3 3 3 3 ',
-    created_at: '2024-06-28T23:39:16.453806Z',
-    updated_at: '2024-06-28T23:39:16.453823Z',
-  },
-  {
-    id: '567d3fbd-e07c-4266-9e00-915be04b8f0g',
-    picture: null,
-    name: 'Filippo 4',
-    description:
-      '4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 ',
-    created_at: '2024-06-28T23:39:16.453806Z',
-    updated_at: '2024-06-28T23:39:16.453823Z',
-  },
-];
 </script>
 
 <template>
@@ -49,10 +11,11 @@ const comments = [
     >
       <NuxtLink
         to="/our-activities/our-services"
-        class="mb-2 flex items-end gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+        class="mb-2 flex items-center gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
       >
         <span class="border-b">Our Services</span>
-        <IconChevron />
+        <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
+
       </NuxtLink>
       <h1 class="text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
         {{ data?.title }}
@@ -64,7 +27,10 @@ const comments = [
       <div class="flex md:gap-3 lg:gap-4 2xl:gap-5">
         <div
           class="hidden aspect-square h-44 shrink-0 rounded-xl bg-orange-100 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
-        ></div>
+        >
+        <img :src="data.picture.file" :alt="data.title" class="w-full h-full object-cover lg:rounded-[20px] rounded-xl">
+
+      </div>
         <div
           class="grow rounded-xl bg-purple-100 p-5 md:h-44 md:p-6 lg:h-52 lg:rounded-[20px] lg:p-7 xl:h-56 xl:p-8 2xl:p-9"
         >
@@ -103,7 +69,7 @@ const comments = [
         class="mb-20 mt-12 h-full w-full lg:mb-40 lg:mt-16 xl:mt-20 2xl:mt-24"
       >
         <SwiperSlide
-          v-for="comment in comments"
+          v-for="comment in data.comments"
           :key="comment.id"
           class="min-h-52 rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px]"
         >

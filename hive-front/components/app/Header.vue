@@ -4,41 +4,36 @@ const isMobileMenuOpen = ref(false);
 
 <template>
   <header
-    class="app-header flex items-center justify-between px-5 py-6 sm:px-8 sm:py-5 md:px-12 lg:px-20"
+    class="app-header flex items-center justify-between px-5 py-6 sm:px-8 sm:py-5! md:px-12 lg:px-20"
   >
-    <div class="flex">
-      <img
-        class="w-28 lg:w-32 xl:w-44"
-        src="/logo.svg"
-      />
-    </div>
-    <nav class="hidden sm:flex">
-      <ul
-        class="flex gap-7 font-semibold md:gap-14 lg:gap-24 lg:text-lg xl:text-xl 2xl:text-2xl"
+    <nav class="flex w-full items-center justify-between">
+      <NuxtLink
+        to="/"
+        exact
       >
-        <li>
-          <NuxtLink
-            to="/"
-            exact
-          >
-            Home
-          </NuxtLink>
-        </li>
+        <img
+          class="w-28 lg:w-32 xl:w-44"
+          src="/logo.svg"
+        />
+      </NuxtLink>
+      <ul
+        class="hidden gap-2 font-semibold md:flex md:gap-6 lg:gap-12 2xl:gap-20 xl:gap-14 lg:text-lg xl:text-xl 2xl:text-2xl"
+      >
         <li class="relative cursor-pointer [&>nav]:hover:block">
           <NuxtLink
             to="/who-we-are"
-            class="pointer-events-none"
+            class="pointer-events-none p-2"
           >
             Who We Are
           </NuxtLink>
-          <nav class="absolute left-0 top-6 z-10 hidden pt-3 lg:top-7 lg:pt-5">
+          <nav class="absolute left-0 top-6 z-20 hidden pt-3 lg:top-7 lg:pt-5">
             <ul
-              class="w-max space-y-3 rounded-md border bg-white px-6 py-3 text-sm shadow-sm lg:px-7 lg:py-4 lg:text-base xl:px-8 xl:py-5 xl:text-lg 2xl:text-xl"
+              class="w-max space-y-1 rounded-md border bg-white px-4 py-3 text-sm shadow-sm lg:px-5 lg:py-4 lg:text-base xl:px-6 xl:py-5 xl:text-lg 2xl:text-xl"
             >
               <li>
                 <NuxtLink
                   to="/who-we-are/our-team"
-                  class="inline-block w-full"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
                 >
                   Our Team
                 </NuxtLink>
@@ -46,7 +41,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/who-we-are/about"
-                  class="inline-block w-full"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
                 >
                   About
                 </NuxtLink>
@@ -57,18 +52,18 @@ const isMobileMenuOpen = ref(false);
         <li class="relative cursor-pointer [&>nav]:hover:block">
           <NuxtLink
             to="/our-activities"
-            class="pointer-events-none"
+            class="pointer-events-none p-2"
           >
             Our Activities
           </NuxtLink>
-          <nav class="absolute left-0 top-6 z-10 hidden pt-3 lg:top-7 lg:pt-5">
+          <nav class="absolute left-0 top-6 z-20 hidden pt-3 lg:top-7 lg:pt-5">
             <ul
-              class="w-max space-y-3 rounded-md border bg-white px-6 py-3 text-sm shadow-sm lg:px-7 lg:py-4 lg:text-base xl:px-8 xl:py-5 xl:text-lg 2xl:text-xl"
+              class="w-max space-y-1 rounded-md border bg-white px-4 py-3 text-sm shadow-sm lg:px-5 lg:py-4 lg:text-base xl:px-6 xl:py-5 xl:text-lg 2xl:text-xl"
             >
               <li>
                 <NuxtLink
                   to="/our-activities/our-services"
-                  class="inline-block w-full"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
                 >
                   Our Services
                 </NuxtLink>
@@ -76,7 +71,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/our-activities/our-projects"
-                  class="inline-block w-full"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
                 >
                   Our Projects
                 </NuxtLink>
@@ -84,14 +79,26 @@ const isMobileMenuOpen = ref(false);
             </ul>
           </nav>
         </li>
-
         <li>
-          <NuxtLink to="/contacts">Contacts</NuxtLink>
+          <NuxtLink
+            to="/contacts"
+            class="rounded-xl p-2 hover:bg-gray-200"
+          >
+            Contacts
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="/chat"
+            class="rounded-xl p-2 hover:bg-gray-200"
+          >
+            Chat with us
+          </NuxtLink>
         </li>
       </ul>
     </nav>
     <button
-      class="sm:hidden"
+      class="md:hidden"
       @click="isMobileMenuOpen = true"
     >
       <IconMenu />

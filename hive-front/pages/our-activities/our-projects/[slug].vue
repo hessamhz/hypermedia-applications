@@ -14,7 +14,8 @@ const { data } = await useApi(`projects/${route.params.slug}`);
         class="mb-2 flex items-end gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
       >
         <span class="border-b">Our Projects</span>
-        <IconChevron />
+        <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
+
       </NuxtLink>
       <h1 class="text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
         {{ data?.title }}

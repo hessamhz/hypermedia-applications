@@ -4,6 +4,23 @@ const form = ref({
   email: '',
   message: '',
 });
+
+const config = useRuntimeConfig();
+
+async function submit() {
+  const response = await $fetch(`${config.public.baseURL}/contact-us/`, {
+    method: 'POST',
+    body: form.value,
+  });
+  // if successful, empty the form fields
+  if (response.id) {
+    form.value = {
+      name: '',
+      email: '',
+      message: '',
+    };
+  }
+}
 </script>
 
 <template>
@@ -48,6 +65,12 @@ const form = ref({
           label="What do you want to tell us?"
           name="message"
         />
+        <button
+          type="submit"
+          class="rounded-full bg-purple-700 px-10 py-2 text-sm text-white md:!mt-12 md:px-12 md:py-3 md:text-base"
+        >
+          Submit
+        </button>
       </form>
     </div>
     <div

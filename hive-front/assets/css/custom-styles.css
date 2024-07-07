@@ -2,11 +2,3 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 40px;
 }
-
-/* ============================================================= */
-
-@property --radius {
-  syntax: '<length>';
-  inherits: true;
-  initial-value: 0;
-}

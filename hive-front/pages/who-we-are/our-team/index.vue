@@ -26,12 +26,15 @@ const { data } = await useApi('members');
             :to="`/who-we-are/our-team/${person.slug}`"
             class="flex flex-col items-center"
           >
-            <app-hexagonal-image
-              :src="person?.avatar.file"
-              :alt="data?.name"
-              :size="200"
-              class="hexagon mb-4 flex items-center justify-center bg-orange-300"
-            />
+            <div
+              class="hexagon mb-4 flex w-[144px]  items-center justify-center bg-orange-300 sm:w-[180px] xl:w-[200px]"
+            >
+              <img
+                :src="person?.avatar.file"
+                :alt="person?.name"
+                class="hexagon w-[138px] object-cover sm:w-[172px] xl:w-[192px]"
+              />
+            </div>
             <h2 class="mb-px font-bold xl:text-lg">{{ person.name }}</h2>
             <h3 class="font-medium text-purple-700 xl:text-lg">
               {{ person.role }}
