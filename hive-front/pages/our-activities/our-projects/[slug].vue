@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 
-const { data } = await useApi(`projects/${route.params.slug}`);
+const { data } = await useApi(`projects/${route.params.slug}/`);
 </script>
 
 <template>

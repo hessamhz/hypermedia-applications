@@ -4,7 +4,7 @@ const isMobileMenuOpen = ref(false);
 
 <template>
   <header
-    class="app-header flex items-center justify-between px-5 py-6 sm:px-8 sm:py-5! md:px-12 lg:px-20"
+    class="app-header sm:py-5! flex items-center justify-between px-5 py-6 sm:px-8 md:px-12 lg:px-20"
   >
     <nav class="flex w-full items-center justify-between">
       <NuxtLink
@@ -17,7 +17,7 @@ const isMobileMenuOpen = ref(false);
         />
       </NuxtLink>
       <ul
-        class="hidden gap-2 font-semibold md:flex md:gap-6 lg:gap-12 2xl:gap-20 xl:gap-14 lg:text-lg xl:text-xl 2xl:text-2xl"
+        class="hidden gap-2 font-semibold md:flex md:gap-6 lg:gap-12 lg:text-lg xl:gap-14 xl:text-xl 2xl:gap-20 2xl:text-2xl"
       >
         <li class="relative cursor-pointer [&>nav]:hover:block">
           <NuxtLink
@@ -111,10 +111,10 @@ const isMobileMenuOpen = ref(false);
 </template>
 
 <style scoped>
-.app-header .router-link-active {
+.app-header ul .router-link-active {
   position: relative;
 }
-.app-header .router-link-active::before {
+.app-header ul .router-link-active::before {
   position: absolute;
   content: '';
   background-color: theme('colors.purple.600');

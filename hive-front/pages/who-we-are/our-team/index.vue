@@ -1,5 +1,5 @@
 <script setup>
-const { data } = await useApi('members');
+const { data } = await useApi('members/');
 </script>
 
 <template>

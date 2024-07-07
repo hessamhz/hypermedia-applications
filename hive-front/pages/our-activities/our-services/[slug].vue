@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 
-const { data } = await useApi(`services/${route.params.slug}`);
+const { data } = await useApi(`services/${route.params.slug}/`);
 </script>
 
 <template>
@@ -15,7 +15,6 @@ const { data } = await useApi(`services/${route.params.slug}`);
       >
         <span class="border-b">Our Services</span>
         <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
-
       </NuxtLink>
       <h1 class="text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
         {{ data?.title }}
@@ -28,9 +27,12 @@ const { data } = await useApi(`services/${route.params.slug}`);
         <div
           class="hidden aspect-square h-44 shrink-0 rounded-xl bg-orange-100 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
         >
-        <img :src="data.picture.file" :alt="data.title" class="w-full h-full object-cover lg:rounded-[20px] rounded-xl">
-
-      </div>
+          <img
+            :src="data.picture.file"
+            :alt="data.title"
+            class="h-full w-full rounded-xl object-cover lg:rounded-[20px]"
+          />
+        </div>
         <div
           class="grow rounded-xl bg-purple-100 p-5 md:h-44 md:p-6 lg:h-52 lg:rounded-[20px] lg:p-7 xl:h-56 xl:p-8 2xl:p-9"
         >
@@ -57,25 +59,43 @@ const { data } = await useApi(`services/${route.params.slug}`);
       >
         Your Opinion Matters
       </h2>
-      <Swiper
-        :slides-per-view="1"
-        :grab-cursor="true"
-        :centered-slides="true"
-        :breakpoints="{
-          768: {
-            slidesPerView: 3,
-          },
-        }"
-        class="mb-20 mt-12 h-full w-full lg:mb-40 lg:mt-16 xl:mt-20 2xl:mt-24"
-      >
-        <SwiperSlide
-          v-for="comment in data.comments"
-          :key="comment.id"
-          class="min-h-52 rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px]"
+      <ClientOnly>
+        <Swiper
+        :modules="[SwiperAutoplay]"
+          :autoplay="{
+            delay: 2000,
+            disableOnInteraction: false
+          }"
+          :speed="2000"
+          :slides-per-view="1"
+          :grab-cursor="true"
+          :centered-slides="true"
+          :breakpoints="{
+            768: {
+              slidesPerView: 3,
+            },
+          }"
+          class="mb-20 mt-12 h-full w-full lg:mb-40 lg:mt-16 xl:mt-20 2xl:mt-24"
         >
-          <p>{{ comment.description }}</p>
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide
+            v-for="comment in data.comments"
+            :key="comment.id"
+            class="!flex min-h-52 items-center justify-center rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px] xl:text-lg 2xl:text-xl"
+          >
+            <p>{{ comment.description }}</p>
+            <div
+              class="absolute left-5 top-5 flex items-center gap-2 text-sm text-gray-500"
+            >
+              <img
+                v-if="comment.picture"
+                :src="comment.picture.file"
+                class="aspect-square w-10 rounded-full"
+              />
+              <span>{{ comment.name }}</span>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </ClientOnly>
     </div>
   </div>
 </template>
