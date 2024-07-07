@@ -219,13 +219,13 @@ function hexagonRowsClass(i) {
         </li>
         <li>
           Address:
-          <strong>Test Test Test Test</strong>
+          <strong>Piazza Leonardo da Vinci, 32, 20133 Milano MI</strong>
         </li>
       </ul>
       <iframe
         loading="lazy"
         allowfullscreen
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.905270116299!2d36.690511675770146!3d-3.373328641470638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18371c9d1da15619%3A0xf7fa7c10930a16a6!2zRmlmacK0cyBSZXN0YXVyYW50ICYgQ2Fmw6k!5e0!3m2!1sen!2sde!4v1720379847550!5m2!1sen!2sde"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23086.889612024712!2d9.203250590024869!3d45.485194131014424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6f67dd11753%3A0x8e30fae1774a3377!2sPolitecnico%20di%20Milano!5e0!3m2!1sen!2sit!4v1720388326166!5m2!1sen!2sit"
         class="h-[320px] w-full max-w-xl border-0 md:w-7/12"
       ></iframe>
     </footer>
