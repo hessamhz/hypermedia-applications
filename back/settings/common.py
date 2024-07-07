@@ -225,34 +225,6 @@ STATIC_URL = get_env("STATIC_URL")
 # CORSHEADERS CONFIGURATION
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-    "x-csrftoken",
-    "x-requested-with",
-    "accept",
-    "origin",
-    "user-agent",
-    "dnt",
-    "cache-control",
-    "x-frame-options",
-    "if-modified-since",
-    "keep-alive",
-    "x-api-key",
-    "x-forwarded-for",
-    "x-real-ip",
-    "x-amz-date",
-    "x-amz-security-token",
-    "x-amz-user-agent",
-]
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS",
-]
 # END CORSHEADERS CONFIGURATION
 
 # CHANNELS CONFIGURATION
