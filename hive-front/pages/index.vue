@@ -157,7 +157,7 @@ function hexagonRowsClass(i) {
               />
               <div
                 v-else
-                class="hexagon bg-gray-100 h-24 rotate-[30deg] md:h-36 xl:h-48"
+                class="hexagon h-24 rotate-[30deg] bg-gray-100 md:h-36 xl:h-48"
               ></div>
             </template>
           </div>
@@ -205,5 +205,29 @@ function hexagonRowsClass(i) {
         </div>
       </div>
     </div>
+    <footer
+      class="flex flex-col gap-10 border-t-2 border-purple-700 bg-purple-300 px-5 py-7 md:flex-row md:justify-between lg:px-10 lg:py-14 xl:px-14 2xl:px-20 2xl:py-20"
+    >
+      <ul class="space-y-2 xl:text-lg 2xl:text-xl">
+        <li>
+          Email:
+          <strong>test@test.com</strong>
+        </li>
+        <li>
+          Phone number:
+          <strong>+1 254 154 1221</strong>
+        </li>
+        <li>
+          Address:
+          <strong>Test Test Test Test</strong>
+        </li>
+      </ul>
+      <iframe
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.905270116299!2d36.690511675770146!3d-3.373328641470638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18371c9d1da15619%3A0xf7fa7c10930a16a6!2zRmlmacK0cyBSZXN0YXVyYW50ICYgQ2Fmw6k!5e0!3m2!1sen!2sde!4v1720379847550!5m2!1sen!2sde"
+        class="h-[320px] w-full max-w-xl border-0 md:w-7/12"
+      ></iframe>
+    </footer>
   </div>
 </template>

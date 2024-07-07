@@ -1,7 +1,7 @@
 export function useApi(path, options = {}) {
   const config = useRuntimeConfig();
-  return useFetch(`/api/${path}`, {
+  return useFetch(`${path}`, {
     ...options,
-    baseURL: config.public.apiBase,
+    baseURL: config.public.baseURL,
   });
 }

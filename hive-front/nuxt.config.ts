@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'nuxt-swiper'],
+  swiper: {
+    modules: ['autoplay']
+  },
   runtimeConfig: {
     public: {
       baseURL: 'https://the-hive.space/api/v1',
