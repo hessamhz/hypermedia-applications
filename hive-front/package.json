@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "type": "module",
+  "dependencies": {
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "nuxt": "^3.12.2",
+    "nuxt-swiper": "^1.2.2",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5"
+  },
+  "lint-staged": {
+    "*.{js,css,html.vue}": "prettier --write",
+    "*.{js,vue}": "eslint --fix"
+  }
+}

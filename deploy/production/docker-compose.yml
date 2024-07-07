@@ -37,6 +37,19 @@ services:
       - db
       - redis
 
+  nuxt-app:
+    build:
+      context: ../../hive-front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
 volumes:
   postgres_data:
   static_volume:
