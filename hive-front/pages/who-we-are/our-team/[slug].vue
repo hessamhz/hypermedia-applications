@@ -65,8 +65,8 @@ const { data } = await useApi(`members/${route.params.slug}/`);
             :key="service.slug"
           >
             <NuxtLink
-              :to="`/our-activities/our-services/${service.slug}`"
-              class="border-b border-current text-purple-700"
+                :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
+                class="border-b border-current text-purple-700"
             >
               {{ service.title }}
             </NuxtLink>
@@ -78,8 +78,8 @@ const { data } = await useApi(`members/${route.params.slug}/`);
             :key="project.slug"
           >
             <NuxtLink
-              :to="`/our-activities/our-projects/${project.slug}`"
-              class="border-b border-current text-purple-700"
+                :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
+                class="border-b border-current text-purple-700"
             >
               {{ project.title }}
             </NuxtLink>
@@ -118,8 +118,5 @@ const { data } = await useApi(`members/${route.params.slug}/`);
 <style scoped>
 .hexagon {
   --size: 200px;
-}
-.hexagon.wrapper {
-  --size: 205px;
 }
 </style>

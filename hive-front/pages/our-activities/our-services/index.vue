@@ -28,8 +28,8 @@ const { data } = await useApi('services/');
         <img :src="service.picture.file" :alt="service.title" class="w-full h-full object-cover lg:rounded-[20px] rounded-xl">
         </div>
           <NuxtLink
-            :to="`/our-activities/our-services/${service.slug}`"
-            class="grow rounded-xl p-5 md:h-44 md:p-6 lg:h-52 lg:rounded-[20px] lg:p-7 xl:h-56 xl:p-8 2xl:p-9"
+              :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
+              class="grow rounded-xl p-5 md:h-44 md:p-6 lg:h-52 lg:rounded-[20px] lg:p-7 xl:h-56 xl:p-8 2xl:p-9"
           >
             <h2 class="pb-2 text-xl font-semibold lg:text-2xl xl:text-3xl">
               {{ service.title }}

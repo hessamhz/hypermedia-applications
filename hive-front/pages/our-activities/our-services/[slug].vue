@@ -39,9 +39,13 @@ const { data } = await useApi(`services/${route.params.slug}/`);
           <h2 class="pb-3 text-xl font-semibold lg:text-2xl xl:text-3xl">
             {{ data.title }}
           </h2>
-          <h4 class="pb-2 italic text-purple-700 lg:text-lg xl:text-xl">
-            {{ data.manager.name }}
-          </h4>
+          <NuxtLink
+            :to="{ name: 'who-we-are-our-team-slug', params: { slug: data.manager.slug } }"
+            >
+            <h4 class="pb-2 underline text-purple-700 lg:text-lg xl:text-xl">
+              {{ data.manager.name }}
+            </h4>
+          </NuxtLink>
           <span class="italic lg:text-lg xl:text-xl">
             {{ data.working_time }}
           </span>
@@ -72,8 +76,8 @@ const { data } = await useApi(`services/${route.params.slug}/`);
           :centered-slides="true"
           :breakpoints="{
             768: {
-              slidesPerView: 3,
-            },
+              slidesPerView: 3
+            }
           }"
           class="mb-20 mt-12 h-full w-full lg:mb-40 lg:mt-16 xl:mt-20 2xl:mt-24"
         >
@@ -90,7 +94,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
                 v-if="comment.picture"
                 :src="comment.picture.file"
                 class="aspect-square w-10 rounded-full"
-              />
+               alt=""/>
               <span>{{ comment.name }}</span>
             </div>
           </SwiperSlide>

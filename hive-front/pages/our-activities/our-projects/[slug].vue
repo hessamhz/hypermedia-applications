@@ -26,7 +26,9 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
     >
       <div class="text-sm italic md:text-base">
         <span class="text-gray-700">Responsible:</span>
-        <span class="font-semibold">{{ data.responsible }}</span>
+        <NuxtLink :to="{ name: 'who-we-are-our-team-slug', params: { slug: data.manager.slug } }">
+          <span class="font-semibold underline">{{ data.responsible }}</span>
+        </NuxtLink>
       </div>
       <div class="text-sm italic md:text-base">
         <span class="text-gray-700">Started:</span>

@@ -23,8 +23,8 @@ const { data } = await useApi('members/');
           class="mx-auto md:mx-0"
         >
           <NuxtLink
-            :to="`/who-we-are/our-team/${person.slug}`"
-            class="flex flex-col items-center"
+              :to="{ name: 'who-we-are-our-team-slug', params: { slug: person.slug } }"
+              class="flex flex-col items-center"
           >
             <div
               class="hexagon mb-4 flex w-[144px]  items-center justify-center bg-orange-300 sm:w-[180px] xl:w-[200px]"
