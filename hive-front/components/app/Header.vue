@@ -24,7 +24,7 @@ const isMobileMenuOpen = ref(false);
             to="/who-we-are"
             class="pointer-events-none p-2"
           >
-            Who We Are
+            Who Are We
           </NuxtLink>
           <nav class="absolute left-0 top-6 z-20 hidden pt-3 lg:top-7 lg:pt-5">
             <ul

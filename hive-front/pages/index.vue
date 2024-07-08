@@ -135,7 +135,7 @@ function hexagonRowsClass(i) {
     <!-- WHO WE ARE -->
     <div class="py-10 text-center md:py-16 xl:py-20">
       <h2 class="mb-6 text-4xl font-bold text-purple-700 md:mb-11 md:text-5xl">
-        Who we are
+        Who Are We
       </h2>
       <div class="overflow-x-clip">
         <div class="mx-auto flex w-fit flex-col">

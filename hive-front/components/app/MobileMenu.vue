@@ -27,7 +27,7 @@ defineEmits(['close']);
         Home
       </NuxtLink>
 
-      <div class="mb-2 mt-8 text-xs text-gray-400">Who We Are</div>
+      <div class="mb-2 mt-8 text-xs text-gray-400">Who Are We</div>
       <NuxtLink
         to="/who-we-are/our-team"
         class="mb-2 ml-2 block"
