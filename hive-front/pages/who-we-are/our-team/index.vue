@@ -42,6 +42,12 @@ const { data } = await useApi('members/');
           </NuxtLink>
         </li>
       </ul>
+      <p class="text-center text-sm text-gray-600 pt-16">
+        All suggested names and pictures are either fictional or taken from real websites.
+      </p>
+      <p class="text-center text-sm text-gray-600">
+        This website is a fictional project created for educational purposes.
+      </p>
     </div>
   </div>
 </template>
