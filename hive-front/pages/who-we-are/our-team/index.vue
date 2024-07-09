@@ -15,7 +15,7 @@ const { data } = await useApi('members/');
     </header>
     <div class="px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28">
       <ul
-        class="flex flex-wrap place-content-center gap-10 md:gap-x-16 md:gap-y-12 lg:gap-x-20 xl:gap-x-24"
+        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-x-16 md:gap-y-12 lg:gap-x-20 xl:gap-x-24"
       >
         <li
           v-for="person in data"
@@ -27,7 +27,7 @@ const { data } = await useApi('members/');
               class="flex flex-col items-center"
           >
             <div
-              class="hexagon mb-4 flex w-[144px]  items-center justify-center bg-orange-300 sm:w-[180px] xl:w-[200px]"
+              class="hexagon mb-4 flex w-[144px] items-center justify-center bg-orange-300 sm:w-[180px] xl:w-[200px]"
             >
               <img
                 :src="person?.avatar.file"
@@ -35,8 +35,8 @@ const { data } = await useApi('members/');
                 class="hexagon w-[138px] object-cover sm:w-[172px] xl:w-[192px]"
               />
             </div>
-            <h2 class="mb-px font-bold xl:text-lg">{{ person.name }}</h2>
-            <h3 class="font-medium text-purple-700 xl:text-lg">
+            <h2 class="mb-px text-center max-w-[18ch] font-bold xl:text-lg">{{ person.name }}</h2>
+            <h3 class="font-medium text-purple-700 text-center max-w-[24ch] xl:text-lg">
               {{ person.role }}
             </h3>
           </NuxtLink>
