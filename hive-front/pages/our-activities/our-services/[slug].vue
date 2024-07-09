@@ -57,7 +57,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
         {{ data.description }}
       </div>
     </div>
-    <div class="px-5">
+<!--    <div class="px-5">
       <h2
         class="mt-10 text-center text-3xl font-bold text-purple-700 md:text-4xl xl:text-5xl 2xl:text-6xl"
       >
@@ -100,7 +100,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
           </SwiperSlide>
         </Swiper>
       </ClientOnly>
-    </div>
+    </div>-->
   </div>
 </template>
 
