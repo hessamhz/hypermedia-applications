@@ -25,7 +25,7 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
       <img
         :src="data.picture.file"
         alt=""
-        class="mb-10 mt-7 aspect-[16/9] w-full rounded-xl object-cover shadow-lg xl:rounded-2xl"
+        class="mb-10 mt-7 w-full rounded-xl object-cover shadow-lg xl:rounded-2xl"
       />
       <div
         class="project-detail-content"
