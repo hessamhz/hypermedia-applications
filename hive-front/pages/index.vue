@@ -171,23 +171,7 @@ function hexagonRowsClass(i) {
       </h2>
       <div class="mx-auto flex max-w-3xl flex-col gap-10 sm:flex-row sm:gap-5">
         <div
-          class="flex flex-col items-start rounded-lg bg-yellow-400 p-5 sm:basis-full md:p-7"
-        >
-          <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Projects</h3>
-          <p class="mb-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-            veritatis molestiae! Est, eligendi eaque? Consectetur molestias quod
-            similique doloribus iusto?
-          </p>
-          <NuxtLink
-            to="/our-activities/our-projects"
-            class="mt-auto rounded-full bg-white px-5 py-2"
-          >
-            Read More
-          </NuxtLink>
-        </div>
-        <div
-          class="flex flex-col items-start rounded-lg bg-purple-700 p-5 sm:basis-full md:p-7 text-white"
+          class="flex flex-col items-start rounded-lg bg-purple-700 text-white p-5 sm:basis-full md:p-7"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Services</h3>
           <p class="mb-10">
@@ -197,8 +181,24 @@ function hexagonRowsClass(i) {
             molestias quod similique doloribus iusto?
           </p>
           <NuxtLink
-            to="/our-activities/our-services"
-            class="mt-auto rounded-full bg-white px-5 py-2 text-black"
+              to="/our-activities/our-services"
+              class="mt-auto rounded-full bg-white px-5 py-2 text-black"
+          >
+            Read More
+          </NuxtLink>
+        </div>
+        <div
+          class="flex flex-col items-start rounded-lg bg-yellow-400 p-5 sm:basis-full md:p-7 text-black"
+        >
+          <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Projects</h3>
+          <p class="mb-10">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
+            veritatis molestiae! Est, eligendi eaque? Consectetur molestias quod
+            similique doloribus iusto?
+          </p>
+          <NuxtLink
+              to="/our-activities/our-projects"
+              class="mt-auto rounded-full bg-white px-5 py-2"
           >
             Read More
           </NuxtLink>
