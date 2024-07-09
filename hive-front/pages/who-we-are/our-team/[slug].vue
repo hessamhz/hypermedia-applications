@@ -119,4 +119,7 @@ const { data } = await useApi(`members/${route.params.slug}/`);
 .hexagon {
   --size: 200px;
 }
+.hexagon.wrapper {
+  --size: 205px;
+}
 </style>

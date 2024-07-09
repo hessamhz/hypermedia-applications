@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'nuxt-swiper'],
   swiper: {
-    modules: ['autoplay']
+    modules: ['autoplay'],
   },
   runtimeConfig: {
     public: {

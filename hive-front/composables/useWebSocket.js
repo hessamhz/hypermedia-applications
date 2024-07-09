@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 
 export function useWebSocket() {
   const socket = ref(null);
@@ -33,8 +33,12 @@ export function useWebSocket() {
       try {
         const data = JSON.parse(event.data);
         if (data.message) {
-          messages.value.unshift({ text: data.message, sender: 'bot' });
-          saveMessages()
+          messages.value.unshift({
+            text: data.message,
+            sender: 'bot',
+            timestamp: new Date().toISOString(),
+          });
+          saveMessages();
         } else if (data.error) {
           error.value = data.error;
         }
@@ -72,7 +76,11 @@ export function useWebSocket() {
       const message = JSON.stringify({ context, query });
       socket.value.send(message);
       localStorage.setItem('chatContext', context + '\n' + query);
-      messages.value.unshift({ text: query, sender: 'user' });
+      messages.value.unshift({
+        text: query,
+        sender: 'user',
+        timestamp: new Date().toISOString(),
+      });
       saveMessages(); // Save messages after adding a new one
     } else {
       console.error('WebSocket is not connected');
@@ -99,11 +107,18 @@ export function useWebSocket() {
     { deep: true }
   );
 
+  const clearHistory = () => {
+    messages.value = []; // Clear messages array
+    localStorage.removeItem('chatHistory'); // Remove chat history from localStorage
+    localStorage.removeItem('chatContext'); // Remove chat context from localStorage
+  };
+
   return {
     messages,
     error,
     sendMessage,
     loadMessages,
     saveMessages,
+    clearHistory,
   };
 }
