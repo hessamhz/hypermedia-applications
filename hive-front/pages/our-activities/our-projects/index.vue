@@ -1,18 +1,12 @@
 <script setup>
+import SectionHeader from "~/components/app/SectionHeader.vue";
+
 const { data } = await useApi('projects/');
 </script>
 
 <template>
   <div>
-    <header
-      class="bg-gradient-to-r from-purple-700 to-orange-300 px-5 py-8 md:px-14 md:py-10 xl:px-20 xl:py-14"
-    >
-      <h1
-        class="text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
-      >
-        Our Projects
-      </h1>
-    </header>
+    <SectionHeader title="Our Projects" backgroundColor="bg-gradient-to-r from-yellow-400 to-purple-700" color="black"></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
     >

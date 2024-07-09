@@ -1,4 +1,6 @@
 <script setup>
+import SectionHeader from "~/components/app/SectionHeader.vue";
+
 const form = ref({
   name: '',
   email: '',
@@ -25,15 +27,7 @@ async function submit() {
 
 <template>
   <div>
-    <header
-      class="bg-gradient-to-r from-purple-700 to-orange-300 px-5 py-8 md:px-14 md:py-10 xl:px-20 xl:py-14"
-    >
-      <h1
-        class="text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
-      >
-        Contact
-      </h1>
-    </header>
+    <SectionHeader title="Contacts"></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] items-start gap-10 px-5 py-10 md:px-10 md:py-16 lg:flex xl:gap-11 xl:px-24 xl:py-28 2xl:gap-12"
     >

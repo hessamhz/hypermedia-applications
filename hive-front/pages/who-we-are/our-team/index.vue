@@ -1,18 +1,12 @@
 <script setup>
+import SectionHeader from "~/components/app/SectionHeader.vue";
+
 const { data } = await useApi('members/');
 </script>
 
 <template>
   <div>
-    <header
-      class="bg-gradient-to-r from-purple-700 to-orange-300 px-5 py-8 md:px-14 md:py-10 xl:px-20 xl:py-14"
-    >
-      <h1
-        class="text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
-      >
-        Our Team
-      </h1>
-    </header>
+    <SectionHeader title="Our Team"></SectionHeader>
     <div class="px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28">
       <ul
         class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-x-16 md:gap-y-12 lg:gap-x-20 xl:gap-x-24"

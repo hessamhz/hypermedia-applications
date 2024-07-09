@@ -1,4 +1,6 @@
 <script setup>
+import SectionHeader from "~/components/app/SectionHeader.vue";
+
 const route = useRoute();
 
 const { data } = await useApi(`services/${route.params.slug}/`);
@@ -6,20 +8,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
 
 <template>
   <div>
-    <header
-      class="bg-purple-700 px-5 py-4 font-bold text-white md:px-14 md:py-10 xl:px-20 xl:py-14"
-    >
-      <NuxtLink
-        to="/our-activities/our-services"
-        class="mb-2 flex items-center gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-      >
-        <span class="border-b">Our Services</span>
-        <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
-      </NuxtLink>
-      <h1 class="text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-        {{ data?.title }}
-      </h1>
-    </header>
+    <SectionHeader :title="data?.title" background-color="bg-purple-700" color="white" linkTo="/our-activities/our-services"></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] space-y-3 px-5 py-10 md:px-10 md:py-16 lg:space-y-4 xl:px-24 xl:py-28 2xl:space-y-5"
     >
