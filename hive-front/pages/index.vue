@@ -171,7 +171,7 @@ function hexagonRowsClass(i) {
       </h2>
       <div class="mx-auto flex max-w-3xl flex-col gap-10 sm:flex-row sm:gap-5">
         <div
-          class="flex flex-col items-start rounded-lg bg-purple-300 p-5 sm:basis-full md:p-7"
+          class="flex flex-col items-start rounded-lg bg-yellow-400 p-5 sm:basis-full md:p-7"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Projects</h3>
           <p class="mb-10">
@@ -187,7 +187,7 @@ function hexagonRowsClass(i) {
           </NuxtLink>
         </div>
         <div
-          class="flex flex-col items-start rounded-lg bg-orange-300 p-5 sm:basis-full md:p-7"
+          class="flex flex-col items-start rounded-lg bg-purple-700 p-5 sm:basis-full md:p-7 text-white"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Services</h3>
           <p class="mb-10">
@@ -198,7 +198,7 @@ function hexagonRowsClass(i) {
           </p>
           <NuxtLink
             to="/our-activities/our-services"
-            class="mt-auto rounded-full bg-white px-5 py-2"
+            class="mt-auto rounded-full bg-white px-5 py-2 text-black"
           >
             Read More
           </NuxtLink>
