@@ -48,7 +48,7 @@ const { data } = await useApi(`members/${route.params.slug}/`);
           id="main-role"
           class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
         >
-          {{ data?.role }}
+          Main Role
         </h2>
         <p class="mb-8 lg:mb-12 lg:text-xl xl:mb-16 xl:text-2xl">
           {{ data?.role_description }}
@@ -65,8 +65,8 @@ const { data } = await useApi(`members/${route.params.slug}/`);
             :key="service.slug"
           >
             <NuxtLink
-                :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
-                class="border-b border-current text-purple-700"
+              :to="`/our-activities/our-services/${service.slug}`"
+              class="border-b border-current text-purple-700"
             >
               {{ service.title }}
             </NuxtLink>
@@ -105,7 +105,7 @@ const { data } = await useApi(`members/${route.params.slug}/`);
           <a href="#main-expertise">Main Expertise</a>
         </li>
         <li>
-          <a href="#main-role">{{ data?.role }}</a>
+          <a href="#main-role">Main Role</a>
         </li>
         <li>
           <a href="#activities">Activities</a>
