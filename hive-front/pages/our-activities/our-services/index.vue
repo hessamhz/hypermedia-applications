@@ -41,5 +41,8 @@ const { data } = await useApi('services/');
         </li>
       </ul>
     </div>
+    <p class="text-center text-sm text-gray-600 p-4">
+      Icons by <a href="https://www.icons8.com" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">icons8.com</a>
+    </p>
   </div>
 </template>

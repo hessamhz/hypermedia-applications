@@ -43,10 +43,10 @@ const { data } = await useApi('members/');
         </li>
       </ul>
       <p class="text-center text-sm text-gray-600 pt-16">
-        All suggested names and pictures are either fictional or taken from real websites.
+        All suggested names and pictures are either fictional or taken from <a href="https://www.pexels.com">https://www.pexels.com</a>.
       </p>
       <p class="text-center text-sm text-gray-600">
-        This website is a fictional project created for educational purposes.
+        This website is a project created for educational purposes.
       </p>
     </div>
   </div>

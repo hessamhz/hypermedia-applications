@@ -1,4 +1,5 @@
 <template>
+
   <footer
       class="flex flex-col gap-10 border-t-2 border-purple-700 bg-gradient-to-r from-purple-700 to-orange-300 px-5 py-7 md:flex-row md:justify-between lg:px-10 lg:py-14 xl:px-14 2xl:px-20 2xl:py-20"
   >
@@ -14,6 +15,14 @@
       <li>
         Address:
         <strong>Piazza Leonardo da Vinci, 32, 20133 Milano MI</strong>
+      </li>
+      <li>
+        <p class=" text-sm text-white pt-16">
+          All suggested names and pictures are either fictional or taken from <a href="https://www.pexels.com">https://www.pexels.com</a>.
+        </p>
+        <p class=" text-sm text-white">
+          This website is a project created for educational purposes.
+        </p>
       </li>
     </ul>
     <iframe
