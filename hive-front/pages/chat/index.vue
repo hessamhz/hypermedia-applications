@@ -1,6 +1,10 @@
 <script setup>
 import { useWebSocket } from '~/composables/useWebSocket';
 
+definePageMeta({
+  layout: 'chat-layout'
+})
+
 const { messages, sendMessage: send, clearHistory } = useWebSocket();
 
 const newMessage = ref('');
