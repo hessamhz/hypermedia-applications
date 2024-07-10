@@ -25,7 +25,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
       <img
         src="https://fastly.picsum.photos/id/126/1000/650.jpg?hmac=zSW-Kzbvm15rkikq4_jdeNFwk9gT1mCGAKX42MWof6U"
         alt=""
-        class="mx-auto max-w-96 rounded-xl lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
+        class="mx-auto h-auto w-full max-w-96 rounded-xl lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
       />
     </div>
     <div class="bg-gradient-to-l from-purple-700 to-orange-300">
@@ -35,7 +35,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
         <img
           src="https://fastly.picsum.photos/id/126/1000/650.jpg?hmac=zSW-Kzbvm15rkikq4_jdeNFwk9gT1mCGAKX42MWof6U"
           alt=""
-          class="mx-auto max-w-96 rounded-xl lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
+          class="mx-auto h-auto w-full max-w-96 rounded-xl lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
         />
         <div class="text-white">
           <h2 class="mb-4 text-2xl font-bold lg:mb-7 lg:text-3xl xl:text-4xl">
