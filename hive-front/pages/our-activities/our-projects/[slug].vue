@@ -10,7 +10,7 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
   <div>
     <SectionHeader :title="data?.title" backgroundColor="bg-yellow-400" color="black" linkTo="/our-activities/our-projects"></SectionHeader>
     <div
-      class="mx-auto max-w-[1240px] px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
+      class="mx-auto px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
     >
       <div class="text-sm italic md:text-base">
         <span class="text-gray-700">Responsible:</span>
@@ -25,7 +25,7 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
       <img
         :src="data.picture.file"
         alt=""
-        class="mb-10 mt-7 w-full rounded-xl object-cover shadow-lg xl:rounded-2xl"
+        class="mb-10 mt-7 max-w-full m-auto object-contain rounded-xl shadow-lg xl:rounded-2xl"
       />
       <div
         class="project-detail-content"
