@@ -1,47 +1,45 @@
-<script setup>
-const hexagons = [
-  ['', 'EMPTY', '', '', 'https://picsum.photos/500/500'],
-  [
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-  ],
-  [
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-  ],
-  [
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-  ],
-  [
-    'https://picsum.photos/500/500',
-    'https://picsum.photos/500/500',
-    '',
-    'https://picsum.photos/500/500',
-    '',
-    '',
-    'https://picsum.photos/500/500',
-  ],
-];
+<script setup lang="js">
 
-function hexagonRowsClass(i) {
+import { shuffleArray } from "~/utils/shuffleArray.js";
+
+const data = await useApi('/members/avatars').data.value;
+
+let hexagon = [];
+
+if (Array.isArray(data)) {
+  let avatars = data.map(item => item.avatar.file);
+  shuffleArray(avatars);
+
+  const MAX_HEXAGONS_PER_ROW = 8; // Adjust based on your layout
+  hexagon = [];
+  let currentRow = [];
+
+  avatars.forEach((avatar, index) => {
+    if (currentRow.length < MAX_HEXAGONS_PER_ROW) {
+      currentRow.push(avatar);
+    } else {
+      hexagon.push(currentRow);
+      currentRow = [avatar];
+    }
+  });
+
+// Add the last row if it has any hexagons
+  if (currentRow.length > 0) {
+    // Fill the rest of the row with 'EMPTY' if needed
+    while (currentRow.length < MAX_HEXAGONS_PER_ROW) {
+      const randomIndex = Math.floor(Math.random() * avatars.length);
+      currentRow.push(avatars[randomIndex]);
+    }
+    hexagon.push(currentRow);
+  }
+} else {
+  console.error('Data is not an array:', data);
+}
+
+function hexagonColumnClass(i) {
   let classes = '';
-  if (i > 0) classes += ' -mt-[51px] md:-mt-[77px] xl:-mt-[101px] ';
-  if (i % 2 === 0) classes += ' pl-[79px] md:pl-[115px] xl:pl-[153px] ';
+  if (i > 0) classes += ' -mt-[20px] md:-mt-[30px] xl:-mt-[40px] ';
+  if (i % 2 === 0) classes += ' pl-[45px] md:pl-[67px] xl:pl-[87px] ';
   return classes;
 }
 </script>
@@ -135,15 +133,15 @@ function hexagonRowsClass(i) {
     <!-- WHO WE ARE -->
     <div class="py-10 text-center md:py-16 xl:py-20">
       <h2 class="mb-6 text-4xl font-bold text-purple-700 md:mb-11 md:text-5xl">
-        Who we are
+        Who are we
       </h2>
       <div class="overflow-x-clip">
         <div class="mx-auto flex w-fit flex-col">
           <div
-            v-for="(row, rowIndex) in hexagons"
+            v-for="(row, rowIndex) in hexagon"
             :key="rowIndex"
-            class="flex gap-[73px] md:gap-[105px] xl:gap-[139px]"
-            :class="hexagonRowsClass(rowIndex)"
+            class="flex gap-[7px] md:gap-[8px] xl:gap-[7px]"
+            :class="hexagonColumnClass(rowIndex)"
           >
             <template
               v-for="(hexagon, hexagonIndex) in row"
@@ -152,12 +150,12 @@ function hexagonRowsClass(i) {
               <img
                 v-if="hexagon !== 'EMPTY'"
                 :src="hexagon"
-                class="hexagon h-24 rotate-[30deg] md:h-36 xl:h-48"
+                class="hexagon h-24 md:h-36 xl:h-48 object-cover"
                 :class="!hexagon && 'invisible'"
               />
               <div
                 v-else
-                class="hexagon h-24 rotate-[30deg] bg-gray-100 md:h-36 xl:h-48"
+                class="hexagon h-24 bg-gray-100 md:h-36 xl:h-48"
               ></div>
             </template>
           </div>
