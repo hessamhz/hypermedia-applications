@@ -47,3 +47,17 @@ class MemberListSerializer(serializers.ModelSerializer):
             avatar = serialize_media(instance.avatar, context=self.context)
             return avatar
         return None
+
+
+class MemberAvatarListSerializer(serializers.ModelSerializer):
+    avatar = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Member
+        fields = ["avatar"]
+
+    def get_avatar(self, instance):
+        if instance.avatar:
+            avatar = serialize_media(instance.avatar, context=self.context)
+            return avatar
+        return None

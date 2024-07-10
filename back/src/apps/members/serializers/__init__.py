@@ -1,1 +1,5 @@
-from src.apps.members.serializers.member import MemberListSerializer, MemberSerializer
+from src.apps.members.serializers.member import (
+    MemberAvatarListSerializer,
+    MemberListSerializer,
+    MemberSerializer,
+)
