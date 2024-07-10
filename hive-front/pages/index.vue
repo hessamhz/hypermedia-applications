@@ -136,7 +136,7 @@ function hexagonColumnClass(i) {
         Who are we
       </h2>
       <div class="overflow-x-clip">
-        <div class="mx-auto flex w-fit flex-col">
+        <div class="m-auto flex w-fit flex-col">
           <div
             v-for="(row, rowIndex) in hexagon"
             :key="rowIndex"
@@ -161,6 +161,14 @@ function hexagonColumnClass(i) {
           </div>
         </div>
       </div>
+      <div class="pt-14">
+        <NuxtLink
+            class="rounded-lg bg-purple-700 px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4"
+            to="/who-we-are/our-team"
+        >
+          Meet the Team
+        </NuxtLink>
+      </div>
     </div>
     <!-- OUR ACTIVITIES -->
     <div class="bg-gray-100 px-5 py-10 md:px-10 md:py-16 xl:px-20 xl:py-20">
@@ -180,7 +188,7 @@ function hexagonColumnClass(i) {
           </p>
           <NuxtLink
               to="/our-activities/our-services"
-              class="mt-auto rounded-full bg-white px-5 py-2 text-black"
+              class="mt-auto rounded-lg bg-white px-5 py-2 text-black"
           >
             Read More
           </NuxtLink>
@@ -196,7 +204,7 @@ function hexagonColumnClass(i) {
           </p>
           <NuxtLink
               to="/our-activities/our-projects"
-              class="mt-auto rounded-full bg-white px-5 py-2"
+              class="mt-auto rounded-lg bg-white px-5 py-2"
           >
             Read More
           </NuxtLink>
