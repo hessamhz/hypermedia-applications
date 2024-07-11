@@ -53,7 +53,7 @@ function hexagonColumnClass(i) {
       <div
         class="absolute z-10 text-center xl:text-left xl:pl-20 xl:pb-5"
       >
-        <h1 class="mb-4 text-5xl font-bold text-white md:text-7xl ">Violence can be <span class="hover:blur-sm hover:ease-in-out hover:duration-300">invisible</span> </h1>
+        <h1 class="mb-4 text-5xl font-bold text-white md:text-7xl ">Violence can be <span class="blur-sm hover:blur-0 hover:ease-in-out hover:duration-500 duration-300 ease-in">invisible</span> </h1>
         <h1 class="mb-10 text-5xl font-bold text-white md:text-7xl ">You are not </h1>
         <NuxtLink
           class="rounded-lg bg-white  border-white font-medium px-7 py-3 md:text-xl xl:rounded-2xl xl:px-10 xl:py-4 hover:bg-hive-grey hover:ease-in hover:duration-150"
