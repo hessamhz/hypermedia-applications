@@ -14,7 +14,7 @@ const { data } = await useApi('services/');
         <li
           v-for="service in data"
           :key="service.slug"
-          class="flex flex-col gap-1 sm:flex-row sm:even:flex-row-reverse md:gap-3 lg:gap-4 2xl:gap-5 [&>*]:odd:bg-orange-100 [&>*]:even:bg-purple-100"
+          class="flex flex-col gap-1 sm:flex-row sm:even:flex-row-reverse md:gap-3 lg:gap-4 2xl:gap-5 [&>*]:odd:bg-purple-300 [&>*]:even:bg-purple-200"
         >
           <div
             class="h-64 shrink-0 rounded-xl sm:aspect-square sm:h-44 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
@@ -24,7 +24,7 @@ const { data } = await useApi('services/');
               v-if="service.picture"
               :src="service.picture.file"
               :alt="service.title"
-              class="h-full w-full rounded-xl object-cover lg:rounded-[20px]"
+              class="h-full w-full p-16 rounded-xl object-cover lg:rounded-[20px]"
             />
           </div>
           <NuxtLink

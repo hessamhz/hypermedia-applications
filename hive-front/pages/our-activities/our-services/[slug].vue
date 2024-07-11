@@ -14,13 +14,13 @@ const { data } = await useApi(`services/${route.params.slug}/`);
     >
       <div class="flex md:gap-3 lg:gap-4 2xl:gap-5">
         <div
-          class="hidden aspect-square h-44 shrink-0 rounded-xl bg-orange-100 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
+          class="hidden aspect-square h-44 shrink-0 rounded-xl bg-purple-200 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
         >
           <img
             v-if="data.picture"
             :src="data.picture.file"
             :alt="data.title"
-            class="h-full w-full rounded-xl object-cover lg:rounded-[20px]"
+            class="h-full w-full p-16 rounded-xl object-cover lg:rounded-[20px]"
           />
         </div>
         <div
@@ -41,7 +41,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
         </div>
       </div>
       <div
-        class="rounded-xl bg-orange-100 p-5 md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
+        class="rounded-xl bg-purple-200 p-5 md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
       >
         {{ data.description }}
       </div>
