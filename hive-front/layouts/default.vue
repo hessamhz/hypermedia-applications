@@ -1,7 +1,9 @@
 <template>
   <div>
-    <AppHeader />
-    <main>
+    <header>
+      <AppHeader />
+    </header>
+    <main class=" mt-24 ">
       <slot />
     </main>
     <AppFooter/>

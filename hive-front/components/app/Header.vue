@@ -4,7 +4,7 @@ const isMobileMenuOpen = ref(false);
 
 <template>
   <header
-    class="app-header sm:py-5! flex items-center justify-between px-5 py-6 sm:px-8 md:px-12 lg:px-20"
+    class="app-header fixed top-0 z-[99] bg-white w-full sm:py-4! flex items-center justify-between px-5 py-6 sm:px-8 md:px-12 lg:px-20"
   >
     <nav class="flex w-full items-center justify-between">
       <NuxtLink
@@ -12,7 +12,7 @@ const isMobileMenuOpen = ref(false);
         exact
       >
         <img
-          class="w-28 lg:w-32 xl:w-44"
+          class="w-28 lg:w-32 xl:w-40"
           src="/logo.svg"
         />
       </NuxtLink>
@@ -90,9 +90,9 @@ const isMobileMenuOpen = ref(false);
         <li>
           <NuxtLink
             to="/chat"
-            class="rounded-xl p-2 hover:bg-gray-200"
+            class="rounded-full px-6 bg-yellow-400 py-2 hover:bg-yellow-500"
           >
-            Chat with us
+            Chat with Bee
           </NuxtLink>
         </li>
       </ul>
