@@ -24,7 +24,7 @@ const { data } = await useApi('services/');
               v-if="service.picture"
               :src="service.picture.file"
               :alt="service.title"
-              class=" service-image sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
+              class=" service-image sm:h-full sm:w-full sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
             />
           </div>
           <NuxtLink
