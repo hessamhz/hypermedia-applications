@@ -16,17 +16,18 @@ const { data } = await useApi('services/');
           :key="service.slug"
           class="flex flex-col gap-1 sm:flex-row sm:even:flex-row-reverse md:gap-3 lg:gap-4 2xl:gap-5 [&>*]:odd:bg-purple-300 [&>*]:even:bg-purple-200"
         >
-          <div
-            class="service-image-container h-64 shrink-0 rounded-xl sm:aspect-square sm:h-44 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
-            :class="!service.picture && 'hidden sm:block'"
-          >
+          <!-- Had to create to distinct NuxtLinks because flex wouldn't operate correctly otherwise, and we really need the image to be selectable -->
+          <NuxtLink
+              :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
+              class="service-image-container h-64 shrink-0 rounded-xl sm:aspect-square sm:h-44 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
+              :class="!service.picture && 'hidden sm:block'" >
             <img
-              v-if="service.picture"
-              :src="service.picture.file"
-              :alt="service.title"
-              class=" service-image sm:h-full sm:w-full sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
+                v-if="service.picture"
+                :src="service.picture.file"
+                :alt="service.title"
+                class=" service-image sm:h-full sm:w-full sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
             />
-          </div>
+          </NuxtLink>
           <NuxtLink
               :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
               class="grow rounded-xl p-5 md:h-44 md:p-6 lg:h-52 lg:rounded-[20px] lg:p-7 xl:h-56 xl:p-8 2xl:p-9"
