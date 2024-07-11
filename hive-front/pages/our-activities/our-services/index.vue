@@ -17,14 +17,14 @@ const { data } = await useApi('services/');
           class="flex flex-col gap-1 sm:flex-row sm:even:flex-row-reverse md:gap-3 lg:gap-4 2xl:gap-5 [&>*]:odd:bg-purple-300 [&>*]:even:bg-purple-200"
         >
           <div
-            class="h-64 shrink-0 rounded-xl sm:aspect-square sm:h-44 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
+            class="service-image-container h-64 shrink-0 rounded-xl sm:aspect-square sm:h-44 md:block lg:h-52 lg:rounded-[20px] xl:h-56"
             :class="!service.picture && 'hidden sm:block'"
           >
             <img
               v-if="service.picture"
               :src="service.picture.file"
               :alt="service.title"
-              class="h-full w-full p-16 rounded-xl object-cover lg:rounded-[20px]"
+              class=" service-image sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
             />
           </div>
           <NuxtLink
@@ -43,3 +43,21 @@ const { data } = await useApi('services/');
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 639px) {
+  .service-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 175px;
+  }
+
+  .service-image {
+    max-width: 50%; /* Adjusts the maximum width to be 80% of its container */
+    max-height: 50%; /* Adjusts the maximum height to be 80% of its container */
+    object-fit: contain; /* Ensures the image fits within the given dimensions without being cropped */
+    margin: auto; /* Centers the image horizontally */
+  }
+}
+</style>
