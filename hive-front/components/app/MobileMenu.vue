@@ -8,7 +8,7 @@ defineEmits(['close']);
 
 <template>
   <div
-    class="app-mobile-menu fixed bottom-0 right-0 top-0 z-20 flex h-full w-48 flex-col border-l border-gray-400 bg-white px-5 py-8 transition-transform"
+    class="app-mobile-menu fixed bottom-0 right-0 top-0 z-[999] flex h-full w-48 flex-col border-l border-gray-400 bg-white px-5 py-8 transition-transform"
     :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
   >
     <button

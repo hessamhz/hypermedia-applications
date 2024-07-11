@@ -54,10 +54,10 @@ function hexagonColumnClass(i) {
         class="absolute z-10 text-center xl:text-left xl:pl-20 xl:pb-5"
       >
         <h1 class="mb-4 text-5xl font-bold text-white md:text-7xl ">Violence can be <span class="hover:blur-sm hover:ease-in-out hover:duration-300">invisible</span> </h1>
-        <h1 class="mb-10 text-5xl font-bold text-white md:text-7xl ">Risk is not </h1>
+        <h1 class="mb-10 text-5xl font-bold text-white md:text-7xl ">You are not </h1>
         <NuxtLink
-          class="rounded-lg bg-white  border-white font-medium px-7 py-3 md:text-xl xl:rounded-2xl xl:px-10 xl:py-4 hover:bg-gray-200 hover:ease-in hover:duration-150"
-          to="/chat"
+          class="rounded-lg bg-white  border-white font-medium px-7 py-3 md:text-xl xl:rounded-2xl xl:px-10 xl:py-4 hover:bg-hive-grey hover:ease-in hover:duration-150"
+          to="/contacts"
         >
           Talk to us
         </NuxtLink>
@@ -71,7 +71,7 @@ function hexagonColumnClass(i) {
         </div>
     </div>
     <!-- COUNTERS -->
-    <div class="bg-stone-200 px-5 py-16">
+    <div class="bg-hive-beige px-5 py-16">
         <ul
           class="mx-auto flex max-w-4xl flex-col items-center gap-7 sm:flex-row sm:justify-center sm:gap-0 xl:max-w-5xl"
         >
@@ -79,7 +79,7 @@ function hexagonColumnClass(i) {
             class="py-4 text-center sm:border-r sm:border-gray-300 sm:pr-6 md:pr-11 lg:pr-14"
           >
             <div
-              class="mb-2 text-5xl font-bold text-purple-800 lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
             >
               20
             </div>
@@ -91,7 +91,7 @@ function hexagonColumnClass(i) {
             class="py-4 text-center sm:border-r sm:border-gray-300 sm:px-6 md:px-11 lg:px-14"
           >
             <div
-              class="mb-2 text-5xl font-bold text-purple-700 lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
             >
               2300+
             </div>
@@ -101,7 +101,7 @@ function hexagonColumnClass(i) {
           </li>
           <li class="py-4 text-center sm:pl-6 md:pl-11 lg:pl-14">
             <div
-              class="mb-2 text-5xl font-bold text-purple-800 lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
             >
               20K
             </div>
@@ -133,7 +133,7 @@ function hexagonColumnClass(i) {
     
     <!-- WHO WE ARE -->
     <div class="py-10 text-center md:py-16 xl:py-20">
-      <h2 class="mb-6 text-4xl font-bold text-purple-700 md:mb-11 md:text-5xl">
+      <h2 class="mb-6 text-4xl font-bold text-hive-purple md:mb-11 md:text-5xl">
         Who are we
       </h2>
       <div class="overflow-x-clip">
@@ -164,7 +164,7 @@ function hexagonColumnClass(i) {
       </div>
       <div class="pt-14">
         <NuxtLink
-            class="rounded-lg bg-purple-700 px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4 hover:bg-purple-900"
+            class="rounded-lg bg-hive-purple px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4 hover:bg-hive-dark-purple"
             to="/who-we-are/our-team"
         >
           Meet the Team
@@ -172,13 +172,13 @@ function hexagonColumnClass(i) {
       </div>
     </div>
     <!-- OUR ACTIVITIES -->
-    <div class="bg-gray-100 px-5 py-10 md:px-10 md:py-16 xl:px-20 xl:py-20">
+    <div class="bg-hive-beige px-5 py-10 md:px-10 md:py-16 xl:px-20 xl:py-20">
       <h2 class="mb-9 text-center text-4xl font-bold md:mb-11 md:text-5xl">
         Our Activities
       </h2>
       <div class="mx-auto flex max-w-3xl flex-col gap-10 sm:flex-row sm:gap-5">
         <div
-          class="flex flex-col items-start rounded-lg bg-purple-800 text-white p-5 sm:basis-full md:p-7"
+          class="flex flex-col items-start rounded-lg bg-hive-purple text-white p-5 sm:basis-full md:p-7"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Services</h3>
           <p class="mb-10">
@@ -195,7 +195,7 @@ function hexagonColumnClass(i) {
           </NuxtLink>
         </div>
         <div
-          class="flex flex-col items-start rounded-lg bg-yellow-400 p-5 sm:basis-full md:p-7 text-black"
+          class="flex flex-col items-start rounded-lg bg-hive-yellow p-5 sm:basis-full md:p-7 text-hive-black"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Projects</h3>
           <p class="mb-10">
@@ -205,7 +205,7 @@ function hexagonColumnClass(i) {
           </p>
           <NuxtLink
               to="/our-activities/our-projects"
-              class="mt-auto rounded-lg bg-white px-5 py-2 hover:bg-gray-200 hover:ease-in hover:duration-150"
+              class="mt-auto rounded-lg bg-white px-5 py-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
           >
             Read More
           </NuxtLink>

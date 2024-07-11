@@ -4,7 +4,7 @@ const isMobileMenuOpen = ref(false);
 
 <template>
   <header
-    class="app-header fixed top-0 z-[99] bg-white w-full sm:py-4! flex items-center justify-between px-5 py-6 sm:px-8 md:px-12 lg:px-20"
+    class="app-header sticky top-0 z-[99] bg-white w-full drop-shadow-md sm:py-4! flex items-center justify-between px-5 py-5 sm:px-8 md:px-12 lg:px-20"
   >
     <nav class="flex w-full items-center justify-between">
       <NuxtLink
@@ -17,7 +17,7 @@ const isMobileMenuOpen = ref(false);
         />
       </NuxtLink>
       <ul
-        class="hidden gap-2 font-semibold md:flex md:gap-6 lg:gap-12 lg:text-lg xl:gap-14 xl:text-xl 2xl:gap-20 2xl:text-2xl"
+        class="hidden gap-2 font-semibold md:flex md:gap-7 lg:gap-10 lg:text-md xl:gap-12 xl:text-lg 2xl:gap-16 2xl:text-xl"
       >
         <li class="relative cursor-pointer [&>nav]:hover:block">
           <NuxtLink
@@ -33,7 +33,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/who-we-are/our-team"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
                   Our Team
                 </NuxtLink>
@@ -41,7 +41,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/who-we-are/about"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
                   About
                 </NuxtLink>
@@ -63,7 +63,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/our-activities/our-services"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
                   Our Services
                 </NuxtLink>
@@ -71,7 +71,7 @@ const isMobileMenuOpen = ref(false);
               <li>
                 <NuxtLink
                   to="/our-activities/our-projects"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-gray-200"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
                   Our Projects
                 </NuxtLink>
@@ -82,7 +82,7 @@ const isMobileMenuOpen = ref(false);
         <li>
           <NuxtLink
             to="/contacts"
-            class="rounded-xl p-2 hover:bg-gray-200"
+            class="rounded-xl p-2 hover:bg-hive-grey"
           >
             Contacts
           </NuxtLink>
@@ -90,7 +90,7 @@ const isMobileMenuOpen = ref(false);
         <li>
           <NuxtLink
             to="/chat"
-            class="rounded-full px-6 bg-yellow-400 py-2 hover:bg-yellow-500"
+            class="rounded-lg px-6 bg-hive-yellow py-2 hover:bg-hive-dark-yellow"
           >
             Chat with Bee
           </NuxtLink>
