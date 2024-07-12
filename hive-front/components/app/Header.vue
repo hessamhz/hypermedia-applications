@@ -32,20 +32,21 @@ const isMobileMenuOpen = ref(false);
             >
               <li>
                 <NuxtLink
+                  to="/who-we-are/about"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
+                >
+                  About Us
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
                   to="/who-we-are/our-team"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
                   Our Team
                 </NuxtLink>
               </li>
-              <li>
-                <NuxtLink
-                  to="/who-we-are/about"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
-                >
-                  About
-                </NuxtLink>
-              </li>
+              
             </ul>
           </nav>
         </li>
@@ -65,7 +66,7 @@ const isMobileMenuOpen = ref(false);
                   to="/our-activities/our-services"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
-                  Our Services
+                  Services
                 </NuxtLink>
               </li>
               <li>
@@ -73,7 +74,7 @@ const isMobileMenuOpen = ref(false);
                   to="/our-activities/our-projects"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
-                  Our Projects
+                  Projects
                 </NuxtLink>
               </li>
             </ul>
@@ -117,7 +118,7 @@ const isMobileMenuOpen = ref(false);
 .app-header ul .router-link-active::before {
   position: absolute;
   content: '';
-  background-color: theme('colors.purple.600');
+  background-color: theme('colors.hive-purple');
   bottom: -12px;
   left: 0;
   right: 0;

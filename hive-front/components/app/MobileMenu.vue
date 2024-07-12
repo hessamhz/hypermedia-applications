@@ -70,7 +70,7 @@ defineEmits(['close']);
 
 <style scoped>
 .app-mobile-menu .router-link-active {
-  text-decoration: underline 2px theme('colors.purple.600');
+  text-decoration: underline 2px theme('colors.hive-purple');
   text-underline-offset: 6px;
 }
 </style>

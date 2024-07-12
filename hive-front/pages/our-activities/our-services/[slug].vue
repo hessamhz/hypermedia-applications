@@ -8,7 +8,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
 
 <template>
   <div>
-    <SectionHeader :title="data?.title" background-color="bg-purple-700" color="white" linkTo="/our-activities/our-services"></SectionHeader>
+    <SectionHeader :title="data?.title" background-color="bg-hive-purple" color="white" linkTo="/our-activities/our-services"></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] space-y-3 px-5 py-10 md:px-10 md:py-16 lg:space-y-4 xl:px-24 xl:py-28 2xl:space-y-5"
     >
