@@ -21,6 +21,8 @@ export function useWebSocket() {
   const maxReconnectAttempts = 5;
   let reconnectAttempts = 0;
 
+  const isBotTyping = ref(false);
+
   const connect = () => {
     let wsEndpoint = "";
     if (localStorage.getItem("thread_id")) {
@@ -53,6 +55,8 @@ export function useWebSocket() {
         console.error("Error parsing message:", e);
         error.value = "Error parsing server response";
       }
+
+      isBotTyping.value = false;
     };
 
     socket.value.onerror = (event) => {
@@ -144,6 +148,10 @@ export function useWebSocket() {
     }, 1000);
   }
 
+  const simulateBotTyping = () => {
+    isBotTyping.value = true;
+  };
+
   return {
     messages,
     error,
@@ -151,5 +159,7 @@ export function useWebSocket() {
     loadMessages,
     saveMessages,
     clearHistory,
+    isBotTyping,
+    simulateBotTyping,
   };
 }

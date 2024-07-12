@@ -5,7 +5,7 @@ definePageMeta({
   layout: "chat-layout",
 });
 
-const { messages, sendMessage: send, clearHistory } = useWebSocket();
+const { messages, sendMessage: send, clearHistory, isBotTyping, simulateBotTyping } = useWebSocket();
 
 const newMessage = ref('');
 
@@ -13,6 +13,7 @@ const sendMessage = () => {
   if (newMessage.value.trim() === '') return;
 
   send(newMessage.value);
+  simulateBotTyping();
 
   newMessage.value = '';
 };
@@ -56,10 +57,16 @@ useSeoMeta({
   <div
     class="absolute bottom-0 left-0 right-0 top-[89px] flex flex-col overflow-y-hidden"
   >
-    <!-- MESSAGES -->
-    <div
-      class="flex h-full flex-grow flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 xl:pb-8"
-    >
+    <!-- MESSAGES VIEW -->
+    <div class="flex h-full flex-grow flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 xl:pb-8" >
+      <!-- TYPING INDICATOR -->
+      <div v-if="isBotTyping" class="flex justify-start">
+        <div class="bg-orange-100 max-w-72 rounded-lg px-4 py-2 animate-pulse">
+          Typing...
+        </div>
+      </div>
+
+      <!-- MESSAGE LIST -->
       <div
         v-for="(message, index) in messages"
         :key="index"
