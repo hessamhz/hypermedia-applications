@@ -93,6 +93,12 @@ function deleteMessages() {
         placeholder="Type your message... (Press Enter to send.)"
         @keydown.enter="sendMessage"
       />
+      <button
+        class="flex aspect-square w-14 items-center justify-center rounded-full bg-gray-100 md:w-[68px]"
+        @click="sendMessage"
+      >
+        <IconSend class="w-6" />
+      </button>
     </div>
     <!-- POPUP -->
     <dialog

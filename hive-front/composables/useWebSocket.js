@@ -30,7 +30,7 @@ export function useWebSocket() {
     }
     socket.value = new WebSocket(wsEndpoint);
 
-    socket.value.onopen = (e) => {
+    socket.value.onopen = () => {
       console.log("WebSocket connected");
       reconnectAttempts = 0;
     };
@@ -97,6 +97,13 @@ export function useWebSocket() {
   onMounted(() => {
     loadMessages();
     connect();
+    if (socket.value) {
+      setTimeout(() => {
+        reconnectAttempts = maxReconnectAttempts; // Stop reconnecting
+        socket.value.close();
+      }, 1000);
+    }
+    setTimeout(() => connect(), 1100);
   });
 
   onUnmounted(() => {
