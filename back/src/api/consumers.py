@@ -56,7 +56,6 @@ class ChatConsumer(AsyncWebsocketConsumer):
             text_data=json.dumps(
                 {
                     "thread_id": str(thread.id),
-                    "message": "First response from the server!",
                 }
             )
         )
