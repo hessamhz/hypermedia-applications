@@ -87,16 +87,19 @@ const { data } = await useApi(`services/${route.params.slug}/`);
           :key="comment.id"
           class="!flex min-h-52 items-center justify-center rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px] xl:text-lg 2xl:text-xl"
         >
-          <p>{{ comment.description }}</p>
+          
           <div
-            class="absolute left-5 top-5 flex items-center gap-2 text-sm text-gray-500"
+            class="flex-col items-start flex gap-2 text-sm px-3 text-gray-500"
           >
-            <img
-              v-if="comment.picture"
-              :src="comment.picture.file"
-              class="aspect-square w-10 rounded-full"
-            />
-            <span>{{ comment.name }}</span>
+            <div class="flex flox-row items-center mb-2">
+              <img
+                v-if="comment.picture"
+                :src="comment.picture.file"
+                class="aspect-square w-10 rounded-full mr-4"
+              />
+              <span>{{ comment.name }}</span>
+            </div>
+            <p class="text-black">{{ comment.description }}</p>
           </div>
         </SwiperSlide>
       </Swiper>
