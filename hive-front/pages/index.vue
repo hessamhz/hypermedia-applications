@@ -19,7 +19,7 @@ if (Array.isArray(data)) {
   let avatars = data.map(item => item.avatar.file);
   shuffleArray(avatars);
 
-  const MAX_HEXAGONS_PER_ROW = 8; // Adjust based on your layout
+  const MAX_HEXAGONS_PER_ROW = 7;
   hexagon = [];
   let currentRow = [];
 
@@ -32,9 +32,9 @@ if (Array.isArray(data)) {
     }
   });
 
-// Add the last row if it has any hexagons
+  //if there are any remaining hexagons
   if (currentRow.length > 0) {
-    // Fill the rest of the row with 'EMPTY' if needed
+    // Fill the rest of the row with previous images if needed
     while (currentRow.length < MAX_HEXAGONS_PER_ROW) {
       const randomIndex = Math.floor(Math.random() * avatars.length);
       currentRow.push(avatars[randomIndex]);
