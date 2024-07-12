@@ -186,6 +186,7 @@ LOCAL_APPS = (
     "src.apps.services",
     "src.apps.projects",
     "src.apps.website",
+    "src.apps.chatbot",
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
