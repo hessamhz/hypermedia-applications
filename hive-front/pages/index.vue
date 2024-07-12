@@ -80,64 +80,76 @@ useSeoMeta({
         />
         </div>
     </div>
-    <!-- COUNTERS -->
-    <div class="bg-hive-beige px-5 py-16">
-        <ul
-          class="mx-auto flex max-w-4xl flex-col items-center gap-7 sm:flex-row sm:justify-center sm:gap-0 xl:max-w-5xl"
-        >
-          <li
-            class="py-4 text-center sm:border-r sm:border-gray-300 sm:pr-6 md:pr-11 lg:pr-14"
-          >
-            <div
-              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
-            >
-              20
-            </div>
-            <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
-              Active Volunteers
-            </div>
-          </li>
-          <li
-            class="py-4 text-center sm:border-r sm:border-gray-300 sm:px-6 md:px-11 lg:px-14"
-          >
-            <div
-              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
-            >
-              2300+
-            </div>
-            <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
-              Women assisted
-            </div>
-          </li>
-          <li class="py-4 text-center sm:pl-6 md:pl-11 lg:pl-14">
-            <div
-              class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
-            >
-              20K
-            </div>
-            <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
-              Donations
-            </div>
-          </li>
-        </ul>
-      </div>
+    
     <!-- OUR CENTER -->
+     <div class="flex flex-col items-center justify-center text-center py-20">
+      <h2 class="mb-6 text-4xl font-bold text-hive-purple md:mb-11 md:text-5xl">Our Center</h2>
+      <p class="mb-8 max-w-3xl xl:mb-12 xl:text-lg">The Hive was founded by four dedicated individuals who shared a common vision of creating a safe haven 
+        for women affected by violence, abuse or discrimination. We strive to provide a safe, supportive, and empowering environment for them to share their experience.
+        </p>
+      <NuxtLink
+        to="/who-we-are/about"
+        class="max-w-64 rounded-lg bg-hive-purple px-8 py-3 text-white md:text-lg lg:text-xl xl:max-w-80 hover:bg-gray-200 hover:ease-in hover:duration-150"
+      >
+        Discover The Hive
+      </NuxtLink>
+     </div>
+     <!-- COUNTERS -->
+    <div class="bg-hive-beige px-5 py-16">
+      <ul
+        class="mx-auto flex max-w-4xl flex-col items-center gap-7 sm:flex-row sm:justify-center sm:gap-0 xl:max-w-5xl"
+      >
+        <li
+          class="py-4 text-center sm:border-r sm:border-gray-300 sm:pr-6 md:pr-11 lg:pr-14"
+        >
+          <div
+            class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+          >
+            20
+          </div>
+          <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
+            Active Volunteers
+          </div>
+        </li>
+        <li
+          class="py-4 text-center sm:border-r sm:border-gray-300 sm:px-6 md:px-11 lg:px-14"
+        >
+          <div
+            class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+          >
+            2300+
+          </div>
+          <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
+            Women assisted
+          </div>
+        </li>
+        <li class="py-4 text-center sm:pl-6 md:pl-11 lg:pl-14">
+          <div
+            class="mb-2 text-5xl font-bold text-hive-purple lg:mb-5 lg:text-6xl xl:mb-6 xl:text-7xl"
+          >
+            20K
+          </div>
+          <div class="text-lg font-semibold lg:text-xl xl:text-2xl">
+            Donations
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- RISK ASSESSMENT BOT -->
     <div
       class="flex flex-col items-center bg-red-200 bg-opacity-20 bg-[url('~/assets/images/ourcenter.png')] bg-center bg-cover bg-fixed bg-no-repeat px-5 py-10 text-center text-white md:px-10 md:py-16 xl:px-20 xl:py-20"
     >
-      <h2 class="mb-6 text-4xl font-bold md:mb-11 md:text-5xl">Our Center</h2>
+      <h2 class="mb-6 text-4xl font-bold md:mb-11 md:text-5xl">Risk Assessment</h2>
       <p class="mb-8 max-w-3xl xl:mb-12 xl:text-lg">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet quam
-        exercitationem enim nihil sed itaque sunt porro iste totam veritatis
-        deserunt tempora necessitatibus eum, ab possimus placeat ullam similique
-        modi quisquam, consequatur omnis dolore dignissimos. Error dolor
-        provident tempora repellendus.
+        We have developed Bee, our virtual assistant capable of providing a live risk assessment of a dangerous situation 
+        you or someone you know might be going through. Bee will ask some questions to better understand the severity of the case and tailor 
+        a response with suggestions about the most important emergency contacts or services that can be of help. 
       </p>
       <NuxtLink
-        to="/who-we-are/about"
+        to="/chat"
         class="max-w-64 rounded-lg bg-white px-8 py-3 text-black md:text-lg lg:text-xl xl:max-w-80 hover:bg-gray-200 hover:ease-in hover:duration-150"
       >
-        Discover The Hive
+        Chat with Bee
       </NuxtLink>
     </div>
 
@@ -192,10 +204,8 @@ useSeoMeta({
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Services</h3>
           <p class="mb-10">
-            Lorem ipsum, dolor sit amet orem ipsum, dolor sit amet orem ipsum,
-            dolor sit amet orem ipsum, dolor sit amet consectetur adipisicing
-            elit. Dolor, veritatis molestiae! Est, eligendi eaque? Consectetur
-            molestias quod similique doloribus iusto?
+            Our team of highly specialized people is responsible for the organization of many services to help women through
+            difficult times.
           </p>
           <NuxtLink
               to="/our-activities/our-services"
@@ -205,13 +215,12 @@ useSeoMeta({
           </NuxtLink>
         </div>
         <div
-          class="flex flex-col items-start rounded-lg bg-hive-yellow p-5 sm:basis-full md:p-7 text-hive-black"
+          class="flex flex-col items-start rounded-lg bg-hive-yellow p-5 font-medium sm:basis-full md:p-7 text-hive-black"
         >
           <h3 class="mb-4 text-2xl font-bold md:mb-6 md:text-3xl">Projects</h3>
           <p class="mb-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-            veritatis molestiae! Est, eligendi eaque? Consectetur molestias quod
-            similique doloribus iusto?
+            We collaborate with local and international institutions with the goal of providing education and information
+            about issues and struggles that women face in their life.
           </p>
           <NuxtLink
               to="/our-activities/our-projects"
