@@ -5,6 +5,13 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 
 
 class ChatConsumer(AsyncWebsocketConsumer):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        from src.apps.chatbot.clients import Assistant
+
+        self.assistant = Assistant()
+
     async def _get_query_params(self):
         # Decode and parse the query string to get room_id
         query_params = self.scope["query_string"].decode()
@@ -23,9 +30,11 @@ class ChatConsumer(AsyncWebsocketConsumer):
             try:
                 thread = await Thread.objects.aget(id=thread_id)
             except Thread.DoesNotExist:
-                thread = await Thread.objects.acreate()
+                thread_id = await self.assistant.create_thread()
+                thread = await Thread.objects.acreate(open_ai_thread_id=thread_id)
         else:
-            thread = await Thread.objects.acreate()
+            thread_id = await self.assistant.create_thread()
+            thread = await Thread.objects.acreate(open_ai_thread_id=thread_id)
 
         return thread
 
@@ -73,10 +82,13 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
         try:
             text_data_json = json.loads(text_data)
-            context = text_data_json.get("context")
+            # if we needed the context = text_data_json.get("context")
             query = text_data_json.get("query")
 
-            response_message = f"Context is: {context} and query is {query}"
+            response_message = await self.assistant.send_prompt(
+                thread.open_ai_thread_id, query
+            )
+            # response_message = f"Context is: {context} and query is {query}"
 
             await self.send(text_data=json.dumps({"message": response_message}))
         except Exception as e:

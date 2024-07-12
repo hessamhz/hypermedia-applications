@@ -9,3 +9,4 @@ django-tinymce==4.1.0
 channels==4.1.0
 channels_redis==4.2.0
 daphne==4.1.2
+openai==1.35.13
