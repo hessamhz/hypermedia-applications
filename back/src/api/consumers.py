@@ -41,7 +41,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             except Thread.DoesNotExist:
                 thread = None
         else:
-            thread = None
+            thread = "Empty thread ID provided"
 
         return thread
 
@@ -56,6 +56,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             text_data=json.dumps(
                 {
                     "thread_id": str(thread.id),
+                    "message": "First response from the server!",
                 }
             )
         )
