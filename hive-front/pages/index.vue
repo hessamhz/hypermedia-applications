@@ -19,7 +19,7 @@ if (Array.isArray(data)) {
   let avatars = data.map(item => item.avatar.file);
   shuffleArray(avatars);
 
-  const MAX_HEXAGONS_PER_ROW = 7; // Adjust based on your layout
+  const MAX_HEXAGONS_PER_ROW = 8; // Adjust based on your layout
   hexagon = [];
   let currentRow = [];
 
@@ -75,7 +75,7 @@ function hexagonColumnClass(i) {
         <img
             src="~/assets/images/heronew.png"
             alt="Hero Image"
-            class="object-cover object-[left_calc(30%)_top_calc(0%)] sm:object-left h-[36rem] md:w-[120rem] md:h-[48rem]"
+            class="object-cover object-[left_calc(30%)_top_calc(0%)] sm:object-left h-[36rem] md:w-[120rem] md:h-[48rem] xl:w-[200rem] 2xl:w-[250rem]"
         />
         </div>
     </div>
