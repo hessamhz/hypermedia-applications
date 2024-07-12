@@ -40,7 +40,7 @@ defineEmits(['close']);
         class="ml-2 block"
         @click="$emit('close')"
       >
-        About Us
+        The Center
       </NuxtLink>
       <div class="mb-1 mt-8 text-xs text-gray-400">Our Activities</div>
       <NuxtLink
@@ -48,14 +48,14 @@ defineEmits(['close']);
         class="mb-2 ml-2 block"
         @click="$emit('close')"
       >
-        Projects
+        Our Projects
       </NuxtLink>
       <NuxtLink
         to="/our-activities/our-services"
         class="ml-2 block"
         @click="$emit('close')"
       >
-        Services
+        Our Services
       </NuxtLink>
       <div class="mb-1 mt-8 text-xs text-gray-400">Talk To Us</div>
       <NuxtLink
@@ -63,7 +63,7 @@ defineEmits(['close']);
         class="mb-2 ml-2 block"
         @click="$emit('close')"
       >
-        Contacts
+        Contact Us
       </NuxtLink>
       <NuxtLink
         to="/chat"

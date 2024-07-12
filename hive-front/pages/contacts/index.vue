@@ -37,7 +37,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <SectionHeader title="Contacts"></SectionHeader>
+    <SectionHeader title="Contact Us"></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] items-start gap-10 px-5 py-10 md:px-10 md:py-16 lg:flex xl:gap-11 xl:px-24 xl:py-28 2xl:gap-12"
     >

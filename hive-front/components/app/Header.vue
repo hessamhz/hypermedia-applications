@@ -35,7 +35,7 @@ const isMobileMenuOpen = ref(false);
                   to="/who-we-are/about"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
-                  About Us
+                  The Center
                 </NuxtLink>
               </li>
               <li>
@@ -66,7 +66,7 @@ const isMobileMenuOpen = ref(false);
                   to="/our-activities/our-services"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
-                  Services
+                  Our Services
                 </NuxtLink>
               </li>
               <li>
@@ -74,7 +74,7 @@ const isMobileMenuOpen = ref(false);
                   to="/our-activities/our-projects"
                   class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey"
                 >
-                  Projects
+                  Our Projects
                 </NuxtLink>
               </li>
             </ul>
@@ -85,7 +85,7 @@ const isMobileMenuOpen = ref(false);
             to="/contacts"
             class="rounded-xl p-2 hover:bg-hive-grey"
           >
-            Contacts
+            Contact Us
           </NuxtLink>
         </li>
         <li>
