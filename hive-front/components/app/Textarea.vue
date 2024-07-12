@@ -27,7 +27,7 @@ const model = defineModel();
 <template>
   <div class="flex flex-col">
     <label
-      :class="`mb-1 pl-1 text-sm font-medium text-purple-700 md:text-base ${labelClass}`"
+      :class="`mb-1 pl-1 text-sm font-medium text-hive-purple md:text-base ${labelClass}`"
       :for="name"
     >
       {{ label }}
