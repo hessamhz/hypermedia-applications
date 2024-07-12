@@ -25,7 +25,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
       <img
         src="https://images.pexels.com/photos/3811108/pexels-photo-3811108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt=""
-        class="mx-auto max-w-96 rounded-xl drop-shadow-md lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
+        class="sm:mx-auto sm:max-w-96 rounded-xl drop-shadow-md lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
       />
     </div>
     <div class="flex flex-col text-center py-12 bg-hive-beige">
@@ -58,7 +58,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
         <img
           src="https://images.pexels.com/photos/3811082/pexels-photo-3811082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
-          class="mx-auto max-w-96 rounded-xl drop-shadow-md lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
+          class="sm:mx-auto sm:max-w-96 rounded-xl drop-shadow-md lg:max-w-md xl:max-w-lg xl:rounded-2xl 2xl:max-w-xl"
         />
         <div class="">
           <h2 class="mb-4 text-2xl font-bold text-hive-purple lg:mb-7 lg:text-3xl xl:text-4xl">
