@@ -125,7 +125,24 @@ export function useWebSocket() {
     messages.value = []; // Clear messages array
     localStorage.removeItem("chatHistory"); // Remove chat history from localStorage
     localStorage.removeItem("chatContext"); // Remove chat context from localStorage
+    localStorage.removeItem("thread_id"); // Remove thread_id from localStorage
+
+    connect()
+    setTimeout(() => {
+      reconnect()
+    }, 1000)
   };
+
+  const reconnect = () => {
+    reconnectAttempts = maxReconnectAttempts; // Stop reconnecting
+    socket.value.close();
+
+    socket.value = null; // Reset socket
+    setTimeout(() => {
+      reconnectAttempts = 0;
+      connect();
+    }, 1000);
+  }
 
   return {
     messages,
