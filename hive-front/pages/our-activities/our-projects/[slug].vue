@@ -8,7 +8,7 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
 
 <template>
   <div>
-    <SectionHeader :title="data?.title" backgroundColor="bg-yellow-400" color="black" linkTo="/our-activities/our-projects"></SectionHeader>
+    <SectionHeader :title="data?.title" backgroundColor="bg-hive-yellow" color="black" linkTo="/our-activities/our-projects"></SectionHeader>
     <div
       class="mx-auto px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
     >

@@ -29,7 +29,7 @@ export default {
     backgroundColor: {
       type: String,
       required: false,
-      default: 'bg-gradient-to-r from-purple-700 to-yellow-400'
+      default: 'bg-gradient-to-r from-hive-purple to-hive-yellow'
     },
     color: {
       type: String,

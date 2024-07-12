@@ -8,7 +8,7 @@ const { data } = await useApi(`members/${route.params.slug}/`);
 
 <template>
   <div>
-    <SectionHeader :title="data?.name" background-color="bg-purple-700" linkTo="/who-we-are/our-team"></SectionHeader>
+    <SectionHeader :title="data?.name" background-color="bg-hive-purple" linkTo="/who-we-are/our-team"></SectionHeader>
     <div
       class="mx-auto flex max-w-[1240px] items-start gap-4 px-5 pb-10 pt-32 md:px-20 md:py-16 xl:px-24 xl:py-28"
     >
@@ -77,7 +77,7 @@ const { data } = await useApi(`members/${route.params.slug}/`);
           </li>
         </ul>
         <div
-          class="hexagon absolute -top-28 right-1/2 mb-4 flex w-[144px] translate-x-1/2 items-center justify-center bg-orange-300 sm:-right-12 sm:-top-36 sm:w-[200px] sm:translate-x-0 md:-right-24 md:-top-28 xl:-top-52 xl:w-[280px]"
+          class="hexagon absolute -top-28 right-1/2 mb-4 flex w-[144px] translate-x-1/2 items-center justify-center bg-hive-dark-yellow sm:-right-12 sm:-top-36 sm:w-[200px] sm:translate-x-0 md:-right-24 md:-top-28 xl:-top-52 xl:w-[280px]"
         >
           <img
             :src="data?.avatar.file"
@@ -88,16 +88,16 @@ const { data } = await useApi(`members/${route.params.slug}/`);
       </div>
       <ul class="sticky top-0 hidden basis-44 pt-28 text-gray-500 sm:block">
         <li>
-          <a href="#education">Education</a>
+          <a class="hover:text-gray-700" href="#education">Education</a>
         </li>
         <li>
-          <a href="#main-expertise">Main Expertise</a>
+          <a class="hover:text-gray-700" href="#main-expertise">Main Expertise</a>
         </li>
         <li>
-          <a href="#main-role">Main Role</a>
+          <a class="hover:text-gray-700" href="#main-role">Main Role</a>
         </li>
         <li>
-          <a href="#activities">Activities</a>
+          <a class="hover:text-gray-700" href="#activities">Activities</a>
         </li>
       </ul>
     </div>
