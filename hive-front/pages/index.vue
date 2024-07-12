@@ -89,7 +89,7 @@ useSeoMeta({
         </p>
       <NuxtLink
         to="/who-we-are/about"
-        class="max-w-64 rounded-lg bg-hive-purple px-8 py-3 text-white md:text-lg lg:text-xl xl:max-w-80 hover:bg-gray-200 hover:ease-in hover:duration-150"
+        class="max-w-64 rounded-lg bg-hive-purple px-8 py-3 text-white md:text-lg lg:text-xl xl:max-w-80 hover:bg-hive-dark-purple hover:ease-in hover:duration-150"
       >
         Discover The Hive
       </NuxtLink>
