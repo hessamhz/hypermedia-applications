@@ -1,5 +1,14 @@
 <script setup lang="js">
 
+useSeoMeta({
+  title: "Home",
+  description: "This is home page of The Hive.",
+  // ogTitle: "My Amazing Site",
+  // ogDescription: "This is my amazing site, let me tell you all about it.",
+  // ogImage: "https://example.com/image.png",
+  // twitterCard: "summary_large_image",
+});
+
 import { shuffleArray } from "~/utils/shuffleArray.js";
 
 const data = await useApi('/members/avatars').data.value;
@@ -130,7 +139,7 @@ function hexagonColumnClass(i) {
         Discover The Hive
       </NuxtLink>
     </div>
-    
+
     <!-- WHO WE ARE -->
     <div class="py-10 text-center md:py-16 xl:py-20">
       <h2 class="mb-6 text-4xl font-bold text-hive-purple md:mb-11 md:text-5xl">

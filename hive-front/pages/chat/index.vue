@@ -2,8 +2,8 @@
 import { useWebSocket } from '~/composables/useWebSocket';
 
 definePageMeta({
-  layout: 'chat-layout'
-})
+  layout: "chat-layout",
+});
 
 const { messages, sendMessage: send, clearHistory } = useWebSocket();
 
@@ -43,10 +43,12 @@ function deleteMessages() {
 }
 </script>
 <template>
-  <div class="">
+  <div
+    class="absolute bottom-0 left-0 right-0 top-[89px] flex flex-col overflow-y-hidden"
+  >
     <!-- MESSAGES -->
     <div
-      class="flex h-[80vh] flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 lg:pb-9 xl:pb-14"
+      class="flex h-full flex-grow flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 xl:pb-8"
     >
       <div
         v-for="(message, index) in messages"
@@ -77,9 +79,7 @@ function deleteMessages() {
       </div>
     </div>
     <!-- INPUT -->
-    <div
-      class="g:left-10 fixed bottom-8 left-5 right-5 flex items-center gap-2 lg:right-14"
-    >
+    <div class="flex items-center gap-2 bg-white px-5 py-4 md:py-5">
       <button
         class="flex aspect-square w-14 items-center justify-center rounded-full bg-gray-100 md:w-[68px]"
         @click="openDialog"

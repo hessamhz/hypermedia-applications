@@ -1,13 +1,12 @@
 <script setup lang="js">
-
 import { shuffleArray } from "~/utils/shuffleArray.js";
 
-const data = await useApi('/members/avatars').data.value;
+const data = await useApi("/members/avatars").data.value;
 
 let hexagon = [];
 
 if (Array.isArray(data)) {
-  let avatars = data.map(item => item.avatar.file);
+  let avatars = data.map((item) => item.avatar.file);
   shuffleArray(avatars);
 
   const MAX_HEXAGONS_PER_ROW = 8; // Adjust based on your layout
@@ -23,7 +22,7 @@ if (Array.isArray(data)) {
     }
   });
 
-// Add the last row if it has any hexagons
+  // Add the last row if it has any hexagons
   if (currentRow.length > 0) {
     // Fill the rest of the row with 'EMPTY' if needed
     while (currentRow.length < MAX_HEXAGONS_PER_ROW) {
@@ -33,13 +32,13 @@ if (Array.isArray(data)) {
     hexagon.push(currentRow);
   }
 } else {
-  console.error('Data is not an array:', data);
+  console.error("Data is not an array:", data);
 }
 
 function hexagonColumnClass(i) {
-  let classes = '';
-  if (i > 0) classes += ' -mt-[20px] md:-mt-[30px] xl:-mt-[40px] ';
-  if (i % 2 === 0) classes += ' pl-[45px] md:pl-[67px] xl:pl-[87px] ';
+  let classes = "";
+  if (i > 0) classes += " -mt-[20px] md:-mt-[30px] xl:-mt-[40px] ";
+  if (i % 2 === 0) classes += " pl-[45px] md:pl-[67px] xl:pl-[87px] ";
   return classes;
 }
 </script>
@@ -163,8 +162,8 @@ function hexagonColumnClass(i) {
       </div>
       <div class="pt-14">
         <NuxtLink
-            class="rounded-lg bg-purple-700 px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4"
-            to="/who-we-are/our-team"
+          class="rounded-lg bg-purple-700 px-7 py-3 text-white md:text-xl xl:rounded-2xl xl:px-10 xl:py-4"
+          to="/who-we-are/our-team"
         >
           Meet the Team
         </NuxtLink>
@@ -187,8 +186,8 @@ function hexagonColumnClass(i) {
             molestias quod similique doloribus iusto?
           </p>
           <NuxtLink
-              to="/our-activities/our-services"
-              class="mt-auto rounded-lg bg-white px-5 py-2 text-black"
+            to="/our-activities/our-services"
+            class="mt-auto rounded-lg bg-white px-5 py-2 text-black"
           >
             Read More
           </NuxtLink>
@@ -203,8 +202,8 @@ function hexagonColumnClass(i) {
             similique doloribus iusto?
           </p>
           <NuxtLink
-              to="/our-activities/our-projects"
-              class="mt-auto rounded-lg bg-white px-5 py-2"
+            to="/our-activities/our-projects"
+            class="mt-auto rounded-lg bg-white px-5 py-2"
           >
             Read More
           </NuxtLink>

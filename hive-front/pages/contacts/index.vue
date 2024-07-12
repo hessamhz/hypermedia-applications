@@ -28,14 +28,12 @@ async function submit() {
 <template>
   <div>
     <SectionHeader title="Contacts"></SectionHeader>
-    
     <div
       class="mx-auto max-w-[1240px] items-start gap-10 px-5 py-10 md:px-10 md:py-16 lg:flex xl:gap-11 xl:px-24 xl:py-28 2xl:gap-12"
     >
-    
       <p class="mb-10 lg:basis-5/12 xl:text-lg 2xl:text-xl">
-        The Hive is here to support and assist you. 
-        If you need help, have questions, or want to learn more about our services, 
+        The Hive is here to support and assist you.
+        If you need help, have questions, or want to learn more about our services,
         please reach out to us with an email by filling this form
       </p>
       <form

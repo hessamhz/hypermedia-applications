@@ -8,7 +8,12 @@ const { data } = await useApi(`services/${route.params.slug}/`);
 
 <template>
   <div>
-    <SectionHeader :title="data?.title" background-color="bg-hive-purple" color="white" linkTo="/our-activities/our-services"></SectionHeader>
+    <SectionHeader
+      :title="data?.title"
+      background-color="bg-hive-purple"
+      color="white"
+      linkTo="/our-activities/our-services"
+    ></SectionHeader>
     <div
       class="mx-auto max-w-[1240px] space-y-3 px-5 py-10 md:px-10 md:py-16 lg:space-y-4 xl:px-24 xl:py-28 2xl:space-y-5"
     >
@@ -33,7 +38,15 @@ const { data } = await useApi(`services/${route.params.slug}/`);
             v-if="data.manager"
             class="pb-2 italic text-purple-700 lg:text-lg xl:text-xl"
           >
-            {{ data.manager.name }}
+            <!-- {{ data.manager.name }} -->
+            <NuxtLink
+              :to="{
+                name: 'who-we-are-our-team-slug',
+                params: { slug: data.manager.slug },
+              }"
+            >
+              {{ data.manager.name }}
+            </NuxtLink>
           </h4>
           <span class="italic lg:text-lg xl:text-xl">
             {{ data.working_time }}
@@ -46,10 +59,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
         {{ data.description }}
       </div>
     </div>
-    <div
-      v-if="data.comments.length > 0"
-      class="px-5"
-    >
+    <div v-if="data.comments.length > 0" class="px-5">
       <h2
         class="mt-10 text-center text-3xl font-bold text-purple-700 md:text-4xl xl:text-5xl 2xl:text-6xl"
       >
