@@ -61,7 +61,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
     </div>
     <div v-if="data.comments.length > 0" class="px-5">
       <h2
-        class="mt-10 text-center text-3xl font-bold text-purple-700 md:text-4xl xl:text-5xl 2xl:text-6xl"
+        class="mt-10 text-center text-3xl font-bold text-hive-purple md:text-4xl xl:text-5xl 2xl:text-6xl"
       >
         Your Opinion Matters
       </h2>
