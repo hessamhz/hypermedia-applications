@@ -2,6 +2,16 @@
 import SectionHeader from "~/components/app/SectionHeader.vue";
 
 const { data } = await useApi('projects/');
+
+useSeoMeta({
+  title: "Our Projects | The hive",
+  description: "Learn more about the projects we are working on at The Hive, Anti-Violence Center for Women.",
+  ogTitle: "Our Projects | The hive",
+  ogType: "website",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive"
+});
 </script>
 
 <template>

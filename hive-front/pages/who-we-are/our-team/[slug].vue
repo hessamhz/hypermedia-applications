@@ -4,6 +4,15 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 const route = useRoute();
 
 const { data } = await useApi(`members/${route.params.slug}/`);
+
+useSeoMeta({
+  title: `${data.value.name} | Team | The Hive`,
+  ogTitle: "Our Projects | The hive",
+  ogType: "profile",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive"
+});
 </script>
 
 <template>

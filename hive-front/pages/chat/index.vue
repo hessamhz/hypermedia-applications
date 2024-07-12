@@ -41,6 +41,16 @@ function deleteMessages() {
   clearHistory();
   closeDialog();
 }
+
+useSeoMeta({
+  title: "Chat With Bee | The hive",
+  description: "Chat with Bee about The Hive, Anti-Violence Center for Women.",
+  ogTitle: "Chat With Bee | The hive",
+  ogType: "website",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive"
+});
 </script>
 <template>
   <div

@@ -23,6 +23,16 @@ async function submit() {
     };
   }
 }
+
+useSeoMeta({
+  title: "Contact Us | The hive",
+  description: "Get in touch with The Hive, Anti-Violence Center for Women.",
+  ogTitle: "Contact Us | The hive",
+  ogType: "website",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive"
+});
 </script>
 
 <template>

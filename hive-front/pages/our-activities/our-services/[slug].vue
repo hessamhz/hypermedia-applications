@@ -4,6 +4,16 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 const route = useRoute();
 
 const { data } = await useApi(`services/${route.params.slug}/`);
+
+useSeoMeta({
+  title: `${data.value.title} | Services | The Hive`,
+  description: `"${data.value.description}" at The Hive`,
+  ogTitle: "Our Projects | The hive",
+  ogType: "website",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive"
+});
 </script>
 
 <template>
@@ -87,7 +97,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
           :key="comment.id"
           class="!flex min-h-52 items-center justify-center rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px] xl:text-lg 2xl:text-xl"
         >
-          
+
           <div
             class="flex-col items-start flex gap-2 text-sm px-3 text-gray-500"
           >

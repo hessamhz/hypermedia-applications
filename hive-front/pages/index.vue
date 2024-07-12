@@ -1,14 +1,5 @@
 <script setup lang="js">
 
-useSeoMeta({
-  title: "Home",
-  description: "This is home page of The Hive.",
-  // ogTitle: "My Amazing Site",
-  // ogDescription: "This is my amazing site, let me tell you all about it.",
-  // ogImage: "https://example.com/image.png",
-  // twitterCard: "summary_large_image",
-});
-
 import { shuffleArray } from "~/utils/shuffleArray.js";
 
 const data = await useApi('/members/avatars').data.value;
@@ -51,6 +42,16 @@ function hexagonColumnClass(i) {
   if (i % 2 === 0) classes += ' pl-[45px] md:pl-[67px] xl:pl-[87px] ';
   return classes;
 }
+
+useSeoMeta({
+  title: "Main Page | The Hive",
+  description: "The home page of The Hive Anti-Violence Center for Women.",
+  ogTitle: "Main Page | The Hive",
+  ogType: "website",
+  ogUrl: "https://the-hive.space/",
+  canonical: "https://the-hive.space/",
+  ogSiteName: "The Hive",
+});
 </script>
 
 <template>
