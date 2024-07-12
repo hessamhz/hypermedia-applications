@@ -6,7 +6,7 @@ const { data } = await useApi('members/');
 useSeoMeta({
   title: `The Team | The Hive`,
   description: "Meet the team of The Hive, Anti-Violence Center for Women.",
-  ogTitle: "The Team | The hive",
+  ogTitle: "The Team | The Hive",
   ogType: "profile",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",

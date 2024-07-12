@@ -8,7 +8,7 @@ const { data } = await useApi(`services/${route.params.slug}/`);
 useSeoMeta({
   title: `${data.value.title} | Services | The Hive`,
   description: `"${data.value.description}" at The Hive`,
-  ogTitle: "Our Projects | The hive",
+  ogTitle: "Our Projects | The Hive",
   ogType: "website",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",

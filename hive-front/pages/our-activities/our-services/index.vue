@@ -4,9 +4,9 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 const { data } = await useApi('services/');
 
 useSeoMeta({
-  title: "Our Services | The hive",
+  title: "Our Services | The Hive",
   description: "Learn more about the services offered at The Hive, Anti-Violence Center for Women.",
-  ogTitle: "Our Services | The hive",
+  ogTitle: "Our Services | The Hive",
   ogType: "website",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",

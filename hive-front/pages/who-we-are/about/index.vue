@@ -2,9 +2,9 @@
 import SectionHeader from "~/components/app/SectionHeader.vue";
 
 useSeoMeta({
-  title: "The Center | The hive",
+  title: "The Center | The Hive",
   description: "Learn more about the history of The Hive, Anti-Violence Center for Women.",
-  ogTitle: "The Center | The hive",
+  ogTitle: "The Center | The Hive",
   ogType: "website",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",

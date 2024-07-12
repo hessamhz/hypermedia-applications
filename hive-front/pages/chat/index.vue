@@ -43,9 +43,9 @@ function deleteMessages() {
 }
 
 useSeoMeta({
-  title: "Chat With Bee | The hive",
+  title: "Chat With Bee | The Hive",
   description: "Chat with Bee about The Hive, Anti-Violence Center for Women.",
-  ogTitle: "Chat With Bee | The hive",
+  ogTitle: "Chat With Bee | The Hive",
   ogType: "website",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",

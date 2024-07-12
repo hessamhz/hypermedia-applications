@@ -25,9 +25,9 @@ async function submit() {
 }
 
 useSeoMeta({
-  title: "Contact Us | The hive",
+  title: "Contact Us | The Hive",
   description: "Get in touch with The Hive, Anti-Violence Center for Women.",
-  ogTitle: "Contact Us | The hive",
+  ogTitle: "Contact Us | The Hive",
   ogType: "website",
   ogUrl: "https://the-hive.space/",
   canonical: "https://the-hive.space/",
