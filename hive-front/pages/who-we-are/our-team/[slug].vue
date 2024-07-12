@@ -42,40 +42,45 @@ const { data } = await useApi(`members/${route.params.slug}/`);
         <p class="mb-8 lg:mb-12 lg:text-xl xl:mb-16 xl:text-2xl">
           {{ data?.role_description }}
         </p>
-        <h2
-          id="activities"
-          class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+        <!-- Activities -->
+        <div
+            v-show="data && (data?.activities.services.length || data?.activities.projects.length)"
         >
-          Activities
-        </h2>
-        <ul class="space-y-2 lg:text-xl xl:text-2xl">
-          <li
-            v-for="service in data?.activities.services"
-            :key="service.slug"
+          <h2
+              id="activities"
+              class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
           >
-            <NuxtLink
-              :to="`/our-activities/our-services/${service.slug}`"
-              class="border-b border-current text-purple-700"
+            Activities
+          </h2>
+          <ul class="space-y-2 lg:text-xl xl:text-2xl">
+            <li
+                v-for="service in data?.activities.services"
+                :key="service.slug"
             >
-              {{ service.title }}
-            </NuxtLink>
-            <span>:</span>
-            <p class="inline">&nbsp;{{ service.overview }}</p>
-          </li>
-          <li
-            v-for="project in data?.activities.projects"
-            :key="project.slug"
-          >
-            <NuxtLink
-                :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
-                class="border-b border-current text-purple-700"
+              <NuxtLink
+                  :to="`/our-activities/our-services/${service.slug}`"
+                  class="border-b border-current text-purple-700"
+              >
+                {{ service.title }}
+              </NuxtLink>
+              <span>:</span>
+              <p class="inline">&nbsp;{{ service.overview }}</p>
+            </li>
+            <li
+                v-for="project in data?.activities.projects"
+                :key="project.slug"
             >
-              {{ project.title }}
-            </NuxtLink>
-            <span>:</span>
-            <p class="inline">&nbsp;{{ project.overview }}</p>
-          </li>
-        </ul>
+              <NuxtLink
+                  :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
+                  class="border-b border-current text-purple-700"
+              >
+                {{ project.title }}
+              </NuxtLink>
+              <span>:</span>
+              <p class="inline">&nbsp;{{ project.overview }}</p>
+            </li>
+          </ul>
+        </div>
         <div
           class="hexagon absolute -top-28 right-1/2 mb-4 flex w-[144px] translate-x-1/2 items-center justify-center bg-hive-dark-yellow sm:-right-12 sm:-top-36 sm:w-[200px] sm:translate-x-0 md:-right-24 md:-top-28 xl:-top-52 xl:w-[280px]"
         >
