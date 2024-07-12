@@ -28,14 +28,15 @@ async function submit() {
 <template>
   <div>
     <SectionHeader title="Contacts"></SectionHeader>
+    
     <div
       class="mx-auto max-w-[1240px] items-start gap-10 px-5 py-10 md:px-10 md:py-16 lg:flex xl:gap-11 xl:px-24 xl:py-28 2xl:gap-12"
     >
+    
       <p class="mb-10 lg:basis-5/12 xl:text-lg 2xl:text-xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-        architecto perspiciatis. Hic doloremque a sequi odit possimus dolorum
-        repudiandae ratione, dolores ipsum molestiae, culpa consequatur
-        cupiditate molestias accusantium vel quae!
+        The Hive is here to support and assist you. 
+        If you need help, have questions, or want to learn more about our services, 
+        please reach out to us with an email by filling this form
       </p>
       <form
         class="space-y-5 rounded-xl bg-purple-100 p-4 sm:p-5 md:p-7 lg:basis-7/12"
@@ -61,28 +62,26 @@ async function submit() {
         />
         <button
           type="submit"
-          class="rounded-full bg-purple-700 px-10 py-2 text-sm text-white md:!mt-12 md:px-12 md:py-3 md:text-base"
+          class="rounded-full bg-hive-purple px-10 py-2 text-sm text-white md:!mt-12 md:px-12 md:py-3 md:text-base hover:bg-hive-dark-purple"
         >
           Submit
         </button>
       </form>
     </div>
     <div
-      class="mt-14 bg-orange-50 px-5 py-10 md:px-10 md:py-14 xl:px-24 xl:py-28"
+      class="mt-14 bg-hive-beige px-5 py-10 md:px-10 md:py-14 xl:px-24 xl:py-28"
     >
       <h2
-        class="mb-7 text-center text-3xl font-bold text-purple-700 md:text-4xl lg:mb-10 xl:mb-14 xl:text-5xl 2xl:mb-16 2xl:text-6xl"
+        class="mb-7 text-center text-3xl font-bold text-hive-purple md:text-4xl lg:mb-10 xl:mb-14 xl:text-5xl 2xl:mb-16 2xl:text-6xl"
       >
-        Useful Contacts
+        More Useful Contacts
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        exercitationem, facilis possimus illo totam, laboriosam, esse alias a
-        iure assumenda architecto vitae ab corrupti eos dicta doloremque illum
-        voluptatibus nihil dolores. Recusandae hic minus tempora, nulla ipsum at
-        natus suscipit praesentium architecto expedita, nam nobis id, quo autem
-        corrupti culpa.
-      </p>
+      <div class="flex flex-col gap-1 items-center md:grid md:grid-cols-2 md:justify-items-end md:gap-x-12 md:gap-y-4 xl:px-48 text-2xl">
+        <p class="font-semibold  text-hive-purple">+1522</p>
+        <p class="justify-self-start mb-3 md:mb-0">Telefono Rosa</p>
+        <p class="font-semibold text-2xl text-hive-purple">+1 254 154 1221</p>
+        <p class="justify-self-start">The Hive</p>
+      </div>
     </div>
   </div>
 </template>
