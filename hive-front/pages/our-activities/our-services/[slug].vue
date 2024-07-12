@@ -52,8 +52,9 @@ useSeoMeta({
             <NuxtLink
               :to="{
                 name: 'who-we-are-our-team-slug',
-                params: { slug: data.manager.slug },
+                params: { slug: data.manager.slug }
               }"
+              class="underline"
             >
               {{ data.manager.name }}
             </NuxtLink>
