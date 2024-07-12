@@ -1,4 +1,5 @@
 from django.urls import include, path
+from django.views.decorators.csrf import csrf_exempt
 from src.api.views import (
     ContactUsCreateView,
     MemberAvatarListView,
@@ -18,7 +19,11 @@ v_1_url_patterns = [
     path("projects/<slug:slug>/", ProjectDetailView.as_view(), name="project-detail"),
     path("services/", ServiceListView.as_view(), name="service-list"),
     path("services/<slug:slug>/", ServiceDetailView.as_view(), name="service-detail"),
-    path("contact-us/", ContactUsCreateView.as_view(), name="contact-us-create"),
+    path(
+        "contact-us/",
+        csrf_exempt(ContactUsCreateView.as_view()),
+        name="contact-us-create",
+    ),
     path("tinymce/", include("tinymce.urls")),
 ]
 
