@@ -19,7 +19,7 @@ if (Array.isArray(data)) {
   let avatars = data.map(item => item.avatar.file);
   shuffleArray(avatars);
 
-  const MAX_HEXAGONS_PER_ROW = 8; // Adjust based on your layout
+  const MAX_HEXAGONS_PER_ROW = 7; // Adjust based on your layout
   hexagon = [];
   let currentRow = [];
 

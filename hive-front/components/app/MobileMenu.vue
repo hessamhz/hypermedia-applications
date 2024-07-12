@@ -62,7 +62,7 @@ defineEmits(['close']);
         class="mt-8 block"
         @click="$emit('close')"
       >
-        Chat with us
+        Chat with Bee
       </NuxtLink>
     </nav>
   </div>
