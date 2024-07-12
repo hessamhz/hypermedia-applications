@@ -4,7 +4,7 @@ const isMobileMenuOpen = ref(false);
 
 <template>
   <header
-    class="app-header sticky top-0 z-[99] bg-white w-full drop-shadow-md sm:py-4! flex items-center justify-between px-5 py-5 sm:px-8 md:px-12 lg:px-20"
+    class="app-header sticky top-0 z-[99] bg-white bg-opacity-70 backdrop-blur-lg w-full drop-shadow-md sm:py-4! flex items-center justify-between px-5 py-5 sm:px-8 md:px-12 lg:px-20"
   >
     <nav class="flex w-full items-center justify-between">
       <NuxtLink
@@ -46,7 +46,7 @@ const isMobileMenuOpen = ref(false);
                   Our Team
                 </NuxtLink>
               </li>
-              
+
             </ul>
           </nav>
         </li>
