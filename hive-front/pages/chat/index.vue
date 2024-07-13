@@ -2,7 +2,7 @@
 import { useWebSocket } from '~/composables/useWebSocket';
 
 definePageMeta({
-  layout: "chat-layout",
+  layout: "no-footer",
 });
 
 const { messages, sendMessage: send, clearHistory, isBotTyping, simulateBotTyping } = useWebSocket();
