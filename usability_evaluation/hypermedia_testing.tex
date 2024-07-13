@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt]{report}
 
 \input{1_header/packages.tex}
 
@@ -12,24 +12,28 @@
 \tableofcontents
 \listoffigures
 \listoftables
-\pagebreak
 
 \justify
 
-\section{Introduction}
+\chapter{Introduction}
 \input{2_body/Introduction.tex}
 \pagebreak
 
-\section{Inspection}
+\chapter{Inspection}
 \input{2_body/Inspection.tex}
 \pagebreak
 
-\section{User Testing}
+\chapter{User Testing}
 \input{2_body/User_testing.tex}
 \pagebreak
 
-\section{Conclusions}
+\chapter{Conclusions}
 \input{3_footer/Conclusions.tex}
+\pagebreak
+
+\appendix
+\chapter{Final scores}
+\input{appendixes/final_scores_appendix.tex}
 \pagebreak
 
 \printbibliography
