@@ -1,9 +1,789 @@
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 \section{Introduction}
+In this Appendix the individual scores and comments for each inspector are presented. Each section represents a different set of Heuristics. For simplicity, only the names of the inspectors are showed in each table.
 
 \section{Nielsen's Heuristics}
 
+% N1
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N1 Visibility of system status} \label{tab:N1_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N1 Visibility of system status}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N1 Visibility of system status}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+%N1.1
+\multicolumn{3}{|c|}{\textbf{Are the states of the on-going processes of the website always clear?}} \\
+\hline
+Hessam & 3 & Beside the breadcrumbs (which is not always present). Even inside the nested pages, the only way to understand what is going on is looking for the headlines.  \\
+\hline
+Filippo & 5 & Both Donate and Job Application processes provide useful breadcrumbs that signal the state of the process. \\
+\hline
+Mobina & 4 & The donation page lacks immediate feedback after clicking "Donate," causing user confusion  \\
+\hline
+Virginia & 5 & For example when you're making a donation you get an intuitive screen for the steps to accomplish which gives an idea of the state you're in in the process \\
+\hline
+
+\pagebreak
+%N1.2
+\multicolumn{3}{|c|}{\textbf{Does the website provide breadcrumbs to define the user position? }} \\
+\hline
+Hessam & 3 & breadcrumbs were mostly provided but sometimes it has a '+' sign on the parents. this feature is not shown on the actual parent node but the first one (after home) (example: \url{https://www.unicef.org/protection/harmful-practices}). This feature is also not available everywhere (e.g. emergencies).   \\
+\hline
+Filippo & 2 & Mixed feelings: sometimes they're presented, sometimes they're not. When presented, they don't offer the full path that was used to reach a given page. Clicking Home brings back to home-page, instead of the. "What we do" section from which pages that present this specific breadcrumbs are suggested. Sometimes a breadcrumb button brings forward into a sub-page, rather than back to a parent page, there's no apparent way to go back to a parent page \\
+\hline
+Mobina & 3 & Breadcrumbs are used inconsistently across the site, with some sections having them and others not. when you click on some parts in navigation bar, it will lead you to a point of no return that you can not find the parent node (ex. supply and logistic)  \\
+\hline
+Virginia & 2 & The website does have breadcrumbs but they are only available on some specific pages and sub-categories. Overall even when available they are not very detailed in describing how the user reached the specific page they're in \\
+\hline
+
+%N1.3
+\multicolumn{3}{|c|}{\textbf{Does the website use visual elements to highlight user interaction?}} \\
+\hline
+Hessam & 4 & "The only visual elements present is one single line under selected main tabs and arrows being reverted when focused on which was inside only section. (only in donation there is a color change for selected items).
+The other part was when selecting a news that the pictures get zoomed and the texts were underlined which felt lackluster. The rest of visual insights were only texts being underlined."   \\
+\hline
+Filippo & 4 & Most of the interactive elements (such as menus, links, etc. animate to convey the presence of an action that changes the page significantly). Such animations are not present in some still images that are supposed to be buttons, while other buttons are animated or change appearance when hovering (see \url{https://www.unicef.org/child-protection)})\\
+\hline
+Mobina & 4 & there are visual changes such as color change, underline when hovering over clickable elements also there is visual changes in buttons when they are clicked or pressed, indicating that the click has been registered. Interacting with input field in donation part has visual cues by changing the color of the input box. Also whenever you are willing to leave the donation page without actually donating or not be able to donate because of the error of the website you will see a feedback on Actions. But I could not find any interactive element such as maps or sliding pictures.  \\
+\hline
+Virginia & 3 & Overall it is shown when the user is hovering on some elements with brief animations (zoom on picture of articles, blue bar under navigation boxes). In general it is little visible or non present. \\
+\hline
+
+\end{longtable}
+
+% N2
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N2 Match between system and the real world} \label{tab:N2_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N2 Match between system and the real world}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N2 Match between system and the real world}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+%N2.1
+\multicolumn{3}{|c|}{\textbf{Does the website use understandable language for its main functionalities? }} \\
+\hline
+Hessam & 5 & For most of the parts it has used a simple language. Note that this was only evaluated in English.  \\
+\hline
+Filippo & 4 & All buttons include text in some way (except for a few exceptions, such as the share button which uses a share that's usually associated with sharing, but uses an icon style typical of the Flutter or Material design systems, so iOS/Mac users might not know about it). Also, again, some buttons are not appear as buttons at all as they're clickable images. \\
+\hline
+Mobina & 4 &  Content is written in clear and straightforward language, buttons such as "Donate" and "Join Us" effectively communicate their purpose. But, Error messages do not indicate specific issues.  \\
+\hline
+Virginia & 5 & For example when you're making a donation you get an intuitive screen for the steps to accomplish which gives an idea of the state you're in in the process \\
+\hline
+
+%N2.2
+\multicolumn{3}{|c|}{\textbf{Does the website include icons and assets }} \\
+\multicolumn{3}{|c|}{\textbf{that are familiar and resemble the real world? }} \\
+\hline
+Hessam & 4 & The icons which were used were decent and normal. The only downside was the quantity, the number of icons in the website was fairly limited.   \\
+\hline
+Filippo & 4 & Yes and no. The search and share buttons use icons only. Some buttons represent the type of content they will present but are not visually and clearly marked as buttons.  \\
+\hline
+Mobina & 4 & Breadcrumbs are used inconsistently across the site, with some sections having them and others not. when you click on some parts in navigation bar, it will lead you to a point of no return that you can not find the parent node (ex. supply and logistic)  \\
+\hline
+Virginia & 5 & The website does have breadcrumbs but they are only available on some specific pages and sub-categories. Overall even when available they are not very detailed in describing how the user reached the specific page they're in \\
+\hline
+
+\end{longtable}
+
+% N3
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N3 User control and freedom} \label{tab:N3_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N3 User control and freedom}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N3 User control and freedom}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N3.1
+\multicolumn{3}{|c|}{\textbf{Does the website allow the user to revert or cancel an action? }} \\
+\hline
+Hessam & 4 & Mostly it would satisfy. in this search page if I wanted to cancel my search there was no option beside reloading (\url{https://jobs.unicef.org/en-us/search/?search-keyword=sth\%20)}  \\
+\hline
+Filippo & 5 & Yes if it comes only to forms or guided actions to donate. The user is frequently asked to check their input and save the input for later revision.  \\
+\hline
+Mobina & 3 & Mostly yes for example in https://www.unicef.org/partnerships you can get back to the page. But as there is no consistency in style you do not have it in all pages for example donation or https://www.unicef.org/careers/get-prepared where you can not even get back to home page.  \\
+\hline
+Virginia & N/A & I haven't found any relevant cases that would make me have an opinion on this \\
+\hline
+
+% N3.2
+\multicolumn{3}{|c|}{\textbf{Does the website allow the user to correctly }} \\
+\multicolumn{3}{|c|}{\textbf{navigate back to a previous section or page? }} \\
+\hline
+Hessam & 3 & For some parts yes. but when you for example click on the subdomains of the website (donation, data, jobs and etc) the back option does not bring you back to the unicef website.  (https://jobs.unicef.org/en-us/listing/), (https://data.unicef.org/)   \\
+\hline
+Filippo & 2 & Breadcrumbs are not always presented, they're inconsistent as they present buttons to go back to the main page and not to the page that caused the current one to open.   \\
+\hline
+Mobina & 2 & There is almost no back buttons or links that allow users to easily return to the previous page they visited and as the breadcrumbs are not used consistently it is not easy to navigate back to higher-level sections. In some pages suck as "supply and logistic" from navigation bar, the navigation bar would change completely and you cannot even find the homepage.  \\
+\hline
+Virginia & 1 & The main website is connected with multiple other domains that extend the original one (i.e.: careers ) and it's really not intuitive to understand how to get back from them. The link back to the main website is made through the "Unicef global" on the top right corner (I had to discover it by accident). There is also one specific case in which it's just impossible to go back (career login page). \\
+\hline
+
+\pagebreak
+
+% N3.3
+\multicolumn{3}{|c|}{\textbf{Does the website use visual elements to highlight user interaction?}} \\
+\hline
+Hessam & 5 & All the pop up pages have a proper closing button. although I have tested this on PC and not the responsive behavior.  \\
+\hline
+Filippo & N/A & No additional windows are presented. \\
+\hline
+Mobina & 5 & Close buttons (represented by an "X" icon) are consistently present on pop-ups, allowing users to dismiss them easily.  \\
+\hline
+Virginia & 5 & The only two cases of over-windows that I found (newsletter subscription form - couldn't replicate, and trying to get out of the donation website) had both x to close them \\
+\hline
+
+\end{longtable}
+
+% N4
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N4 Consistency and standards} \label{tab:N4_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N4 Consistency and standards}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N4 Consistency and standards}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N4.1
+\multicolumn{3}{|c|}{\textbf{Is the website consistent with wording, visual and routing elements? }} \\
+\hline
+Hessam & 2 & The consistency between sub domains and the website is non-existent. For example the donation (\href{https://donazioni.unicef.it/?utm_source=uniceforg&utm_medium=unicef.org&_gl=1\%2Am6wyhc\%2A_ga\%2AMzQwMDE3Nzk5LjE3MTMzNjQ5NjE.\%2A_ga_ZEPV2PX419\%2AMTcxNDg0NTI1My40LjEuMTcxNDg0NzIwOC41Ni4wLjA.#/home}{\underline{Click here for an example}}) uses completely different assets. this pattern continues among all the main subsections of the website.  \\
+\hline
+Filippo & 2 & As already said, breadcrumbs are not consistent. Also some links bring to main pages, while others bring to sub-pages nested into a main-page's directory.  \\
+\hline
+Mobina & 2 & I would say one of the biggest downsides of this website in the inconsistency in any terms. It fails to maintain consistency in wording, visual elements, and routing elements. However some pages are similar to each other that is more like that is happened accidently!  \\
+\hline
+Virginia & 1 & Words are not always super familiar and I wouldn't really consider it very consistent \\
+\hline
+
+\pagebreak
+
+% N4.2
+\multicolumn{3}{|c|}{\textbf{Is the placement of the main components consistent }} \\
+\multicolumn{3}{|c|}{\textbf{throughout different pages? }} \\
+\hline
+Hessam & 2 & The order and usage of components is not consistent although it is selected through a finite set of pools. for example here in (\href{https://www.unicef.org/immunization}{\underline{example here}}) it has a 'latest' section at the end. but a pretty similar page like (\href{https://unicef.org/nutrition}{\underline{example here}}) you see 'more from unicef' and 'recourses' as the substitute. this is just one of many cases within pages that the consistency is non-existent.    \\
+\hline
+Filippo & 4 & Except when moving to different websites (such as "careers" and "donation" website) and for breadcrumbs, the UI elements' positions are consistent around the website   \\
+\hline
+Mobina & 4 & Almost yes, also component placement adapts to different screen sizes. But in some pages such as "supply and logistic" ,"donation" and "career" the navigation bar or other main components changes completely.  \\
+\hline
+Virginia & 4 & The placement is overall pretty much the same, nav-bar glitches a bit in the homepage though, for some reason you have to scroll through the entire hero to see it again. The language options change position in articles. \\
+\hline
+
+\end{longtable}
+
+\pagebreak
+
+% N5
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N5 Error prevention} \label{tab:N5_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N5 Error prevention}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N5 Error prevention}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+% N5.1
+\multicolumn{3}{|c|}{\textbf{Are user's inputs, when required, checked for correctness? }} \\
+\hline
+Hessam & 2 & The validations are inconsistent for example for this page (\href{https://donazioni.unicef.it/?utm_source=uniceforg&utm_medium=unicef.org&_gl=1\%2Akvney7\%2A_ga\%2AMzQwMDE3Nzk5LjE3MTMzNjQ5NjE.\%2A_ga_ZEPV2PX419\%2AMTcxNDg0NTI1My40LjEuMTcxNDg0NzQzMC40OS4wLjA.#/home}{\underline{Example here}}) you can choose a number which is invalid for donation (-10) the error sometimes appear but a lot of the times it will not pop.
+
+Also for the job search (\href{https://jobs.unicef.org/en-us/filter/?search-keyword=sth\%20&work-type=fellowship&location=cambodia&category=emergency&pay-scale=consultancy}{\underline{Example here}}) I would prefer the list to be limited if a position is not available instead of letting me to select whatever I want and say that just the job is not found.
+
+This constraints were more polished in the data section.   \\
+\hline
+Filippo & 5 & At all times the user is presented with errors and correction actions if the input in form field is not valid (this is the case when applying for a job in the "careers" section).  \\
+\hline
+Mobina & 4 & Donation form validate inputs for correctness, displaying error messages for invalid data:"It is not possible to make a donation of less than €5" or inserting invalid email addresses : "The field must be an email address". But it will appears in any case of error even if you type word "e" in the input box or "-10". Also expect for "e" and "-" you can not insert any other character. Inserting more number than the phone number would not let you go for further actions but will not show you any errors as well.  \\
+\hline
+Virginia & 4 & I only got to check it for the newsletter form, it checks the validity of the email but not of the name and surname (numbers can be inserted), it does check the donation and communicates when it's not the minimum required (5 euro). \\
+\hline
+
+\pagebreak
+
+% N5.2
+\multicolumn{3}{|c|}{\textbf{Does the website provide options to insert information }} \\
+\multicolumn{3}{|c|}{\textbf{in a guided manner? }} \\
+\hline
+Hessam & 4 & It was suggesting default values for the donation and data. but for job search it was not there. you had to manually choose between a big set of options.     \\
+\hline
+Filippo & 3 & The careers website, for instance, provides calendars when inserting a date  \\
+\hline
+Mobina & 4 & for donation it was suggesting autofill for some parts. for work with us part there are some  options for guided information insertion such as: date input fields include a calendar widget for easy selection, for location, contract type, functional area and position level user can find default values. In "search for job" there is no option to insert information in a guided manner  \\
+\hline
+Virginia & 3 & Didn't seem relevant. The only case is the donation suggestions. \\
+\hline
+
+\end{longtable}
+
+% N6
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N6 Recognition rather than recall} \label{tab:N6_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N6 Recognition rather than recall}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N6 Recognition rather than recall}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N6.1
+\multicolumn{3}{|c|}{\textbf{Are the website's commands and functionalities }} \\
+\multicolumn{3}{|c|}{\textbf{visible or easily retrievable when needed? }} \\
+\hline
+Hessam & 4 & Sometimes the close button were not easily clickable.   \\
+\hline
+Filippo & 4 & The main website provides access to the main links at all times by keeping the navigation bar anchored to the top.  \\
+\hline
+Mobina & 4 & Navigation bars, the search bar and also action buttons like "Donate" are almost always displayed at the top of each page.  \\
+\hline
+Virginia & 3 & Since it's mostly based on browsing and reading articles, the navbar seems sufficient. Plus the quick way to access donation. Overall the website doesn't have specific functions other than information. \\
+\hline
+
+\pagebreak
+
+% N6.2
+\multicolumn{3}{|c|}{\textbf{Does the website suggest a set of options to select }} \\
+\multicolumn{3}{|c|}{\textbf{from for navigation? }} \\
+\hline
+Hessam & 4 & The options were there but sometimes it is not suggested (look at the example in the breadcrumbs).      \\
+\hline
+Filippo & 4 & By hovering on a menu option on the navigation bar, multiple links are presented to quickly move to a sub-page.  \\
+\hline
+Mobina & 4 & Yes it does however they are not always the same.  \\
+\hline
+Virginia & 4 & N/A \\
+\hline
+
+\end{longtable}
+
+% N7
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N7 Flexibility and efficiency of use} \label{tab:N7_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N6 Recognition rather than recall}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N7 Flexibility and efficiency of use}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N7.1
+\multicolumn{3}{|c|}{\textbf{Does the website offer shortcuts to common functions? }} \\
+\hline
+Hessam & 1 & I could not find any shortcuts for any action beside the one that os provides.    \\
+\hline
+Filippo & 3 & Links to access Donation and Careers are always displayed in the navigation bar.  \\
+\hline
+Mobina & 2 & The "Donate" buttons is always there for short cut to donations, but overall, I could not find various shortcuts  \\
+\hline
+Virginia & 3 & Clicking on the logo on the up left always brings you back to the homepage (unless you're in the career page) the navbar titles also bring you to main subpages. \\
+\hline
+
+\pagebreak
+
+% N7.2
+\multicolumn{3}{|c|}{\textbf{Does the website allow customization and personalization of interaction,}} \\
+\multicolumn{3}{|c|}{\textbf{catering to both expert and novice users? }} \\
+\hline
+Hessam & 1 & No customization or personalization were provided.       \\
+\hline
+Filippo & 1 & the design of the pages is fixed, no possibility to personalize the behavior or the design of the page   \\
+\hline
+Mobina & 2 & The only customization that I could find was the "high contrast" button at the top of the website which would change the light blue items such as buttons or bar or context boxes in to dark blue.  \\
+\hline
+Virginia & N/A & Doesn't seem relevant for the type of website, it doesn't offer these kinds of options. \\
+\hline
+
+\end{longtable}
+
+% N8
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N8 Aesthetic and minimalist design} \label{tab:N8_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N6 Recognition rather than recall}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N8 Aesthetic and minimalist design}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N8.1
+\multicolumn{3}{|c|}{\textbf{Is the website exempt from unnecessary information or links? }} \\
+\hline
+Hessam & 2 & I would find the pages of information bombarded with articles and data which I did not found useful. for example most of the what we do sections or reports were in this category. \\
+\hline
+Filippo & 2 & The website purpose is to explain as much as possible and in detail the activity of Unicef. Sometimes they summarize and then provide details, if needed   \\
+\hline
+Mobina & 1 & there are so many articles and unnecessary information or links. Some of them even would lead you to a completely blank page but the link is still there.  \\
+\hline
+Virginia & 2 & Too much information, in general very overwhelming to look at or read through. It is probably out of transparency, but still makes it very difficult to navigate through. There are links to new pages every paragraph of text. \\
+\hline
+
+\pagebreak
+
+% N8.2
+\multicolumn{3}{|c|}{\textbf{Are aesthetic choices prioritizing the core elements}} \\
+\multicolumn{3}{|c|}{\textbf{of the website? }} \\
+\hline
+Hessam & 4 & N/A \\
+\hline
+Filippo & 3 & the website keeps a simple style to give more importance to imagery and content.   \\
+\hline
+Mobina & 4 & The choice of color and image format and fonts are the same so I would say the the overall design elements are considered.   \\
+\hline
+Virginia & 3 & There is much much text and very little accents. Titles are correct in prioritization but for the rest it is all a bit left to links. \\
+\hline
+
+\end{longtable}
+
+% N9
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N9 Help users recognize, diagnose and recover from errors} \label{tab:N9_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N9 Help users recognize, diagnose and recover from errors}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N9 Help users recognize, diagnose and recover from errors}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N9.1
+\multicolumn{3}{|c|}{\textbf{Does the website present errors in a user-friendly manner? }} \\
+\hline
+Hessam & 2 & The only part which I found which errors were given beside the not found was in donation that it was sometimes present. (\href{https://donazioni.unicef.it/?utm_source=uniceforg&utm_medium=unicef.org&_gl=1\%2Akvney7\%2A_ga\%2AMzQwMDE3Nzk5LjE3MTMzNjQ5NjE.\%2A_ga_ZEPV2PX419\%2AMTcxNDg0NTI1My40LjEuMTcxNDg0NzQzMC40OS4wLjA.#/home}{\underline{Example here}}). even if the validation is working it is not giving me a proper error.  \\
+\hline
+Filippo & 4 & The careers and donation pages present errors next to the fields that caused errors.   \\
+\hline
+Mobina & 3 & In overall the website can find errors. But  presenting them is not always in a user friendly manner. for instance, in the phone number field, in donation page, you can not see what is the problem of the number you have inserted. Also, each filed has it own specific error always for example if users insert "-10" or "123456765432345676543234567543456543" in the donation box they would get the same error: "It is not possible to make a donation of less than €5"  \\
+\hline
+Virginia & 4 & Uses red for fields filled in incorrectly \\
+\hline
+
+\pagebreak
+
+% N9.2
+\multicolumn{3}{|c|}{\textbf{Are aesthetic choices prioritizing the core elements}} \\
+\multicolumn{3}{|c|}{\textbf{of the website? }} \\
+\hline
+Hessam & 1 & Validations were made but it was never suggested to what should I do. (\href{https://donazioni.unicef.it/?utm_source=uniceforg&utm_medium=unicef.org&_gl=1\%2Akvney7\%2A_ga\%2AMzQwMDE3Nzk5LjE3MTMzNjQ5NjE.\%2A_ga_ZEPV2PX419\%2AMTcxNDg0NTI1My40LjEuMTcxNDg0NzQzMC40OS4wLjA.#/home}{\underline{Example here}}).  \\
+\hline
+Filippo & 4 & It's easy to understand how to recover from the error (which is usually non-blocking, in the sense that the user can rollback and solve the problem with a different input).   \\
+\hline
+Mobina & 4 & By considering the previous comment, more yes than no.  \\
+\hline
+Virginia & N/A & I couldn't reproduce this \\
+\hline
+
+\end{longtable}
+
+% N10
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{N10 Help and documentation} \label{tab:N10_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N10 Help and documentation}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{N10 Help and documentation}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+% N10.1
+\multicolumn{3}{|c|}{\textbf{Is the documentation of the website, when provided,}} \\
+\multicolumn{3}{|c|}{\textbf{earchable and navigable? }} \\
+\hline
+Hessam & 4 & The only part which documentations were provided was the data.   \\
+\hline
+Filippo & N/A & No documentation is provided.   \\
+\hline
+Mobina & 1 & I could not find any documentations.  \\
+\hline
+Virginia & N/A & N/A \\
+\hline
+
+\pagebreak
+
+% N10.2
+\multicolumn{3}{|c|}{\textbf{Are aesthetic choices prioritizing the core elements}} \\
+\multicolumn{3}{|c|}{\textbf{of the website? }} \\
+\hline
+Hessam & 1 & Validations were made but it was never suggested to what should I do. (\href{https://donazioni.unicef.it/?utm_source=uniceforg&utm_medium=unicef.org&_gl=1\%2Akvney7\%2A_ga\%2AMzQwMDE3Nzk5LjE3MTMzNjQ5NjE.\%2A_ga_ZEPV2PX419\%2AMTcxNDg0NTI1My40LjEuMTcxNDg0NzQzMC40OS4wLjA.#/home}{\underline{Example here}}).  \\
+\hline
+Filippo & 4 & It's easy to understand how to recover from the error (which is usually non-blocking, in the sense that the user can rollback and solve the problem with a different input).   \\
+\hline
+Mobina & 4 & By considering the previous comment, more yes than no.  \\
+\hline
+Virginia & N/A & I couldn't reproduce this \\
+\hline
+
+\end{longtable}
+
+
 \section{MiLE Content}
+
+% MC1
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MC1 Information overload} \label{tab:MC1_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC1 Information overload}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC1 Information overload}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{Is the information in a page too much or too little?}} \\
+\hline
+Hessam & 2 & In almost all of the places you are bombarded with the information and texts. even the number of subsections are absurdly high, although Unicef is a big organization the domain of the jobs it is doing is big but it is still making the website user frustrated.    \\
+\hline
+Filippo & 5 & It is quite a lot. But at the same time that's the purpose of the website. They want to show and present as much as possible for transparency purposes.   \\
+\hline
+Mobina & 5 & The information are almost too much in all pages that will be overwhelming for users  \\
+\hline
+Virginia & 3 & It tends to be a lot of information, but for the type of website we are examining it makes sense that it is done out of transparency \\
+\hline
+
+\end{longtable}
+
+% MC2
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MC2 Consistency of page content structure} \label{tab:MC2_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC2 Consistency of page content structure}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC2 Consistency of page content structure}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{Is the information in a page too much or too little?}} \\
+\hline
+Hessam & 2 & Pretty inconsistent. for example in these two pages (\href{https://www.unicef.org/immunization}{\underline{Example here}}) and (\url{https://www.unicef.org/health}{\underline{Example here}}) we see that the 'latest' section has two different grid design.     \\
+\hline
+Filippo & 3 & sometimes different topics of the same category present different designs or elements (breadcrumbs are not presented at all times). Same pages in different languages also present different images sometimes.   \\
+\hline
+Mobina & 2 & more no than yes as the website lacks consistency in any terms.  \\
+\hline
+Virginia & 4 & For the major part yes, they follow a type of structure with title, text paragraphs interluded with pictures or graphs to better show or explain certain things and then more articles links on the topic \\
+\hline
+
+\end{longtable}
+
+% MC3
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MC3 Contextualized information} \label{tab:MC3_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC3 Contextualized information}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC3 Contextualized information}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{Do pages that present topics of the same category }} \\
+\multicolumn{3}{|c|}{\textbf{have the same types of elements?}} \\
+\hline
+Hessam & 4 & Breadcrumbs are provided. but the hierarchies are not well defined.      \\
+\hline
+Filippo & 3 & Sometimes yes, sometimes no due to the absence of breadcrumbs (which do not present the full path used to reach a specific page)   \\
+\hline
+Mobina & 3 & The Breadcrumbs are not provided in all the pages and the ones that have the Breadcrumbs are also so confusing with no bad defined hierarchies  \\
+\hline
+Virginia & 1 & Breadcrumbs exist but they're inconsistent, and even when they exist they are just home->current-page, so they don't really explain how you get somewhere. Clicking on any type of link just redirects to that page but in the breadcrumbs it will still be shown as if you're coming from "home". In the end you only understand from the titles of the articles, but not always . \\
+\hline
+
+\end{longtable}
+
+% MC4
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MC4 Content organization (hierarchy)} \label{tab:MC4_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC4 Content organization (hierarchy)}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MC4 Content organization (hierarchy)}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{Is the hierarchical organization of topics appropriate}} \\
+\multicolumn{3}{|c|}{\textbf{for the topics relevance?}} \\
+\hline
+Hessam & 2 & Breadcrumbs are provided. but the hierarchies are not well defined. This is not well defined. for example on the 'What do we do' -> 'How do we do` -> `invovation` has no relation between any of the childeren and parents. even when you open it (https://www.unicef.org/innovation/) there is not even a bread crumb to follow to the parents.      \\
+\hline
+Filippo & 3 & Separation of topics is somewhat present, even though different links on the menu on different sub-pages might point to the same page at different levels of the site hierarchy, which might be confusing, especially when there's no way to understand the path that brought the user there.   \\
+\hline
+Mobina & 3 & The website has some issues with organizing topics. For example, different menu links on sub-pages often go to the same page at different levels of the site. This can confuse users, especially when there are no breadcrumbs or other ways to follow their path.  \\
+\hline
+Virginia & 4 & Given the nature of most pages being article-like, they mostly have a title and text, for which the hierarchy is clear. The same thing applies to the navigation bar and its content. \\
+\hline
+
+\end{longtable}
+
+\pagebreak
 
 \section{MiLE Navigation}
 
+% MN1
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MN1 Interaction consistency} \label{tab:MN1_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MN1 Interaction consistency}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MN1 Interaction consistency}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{Do pages of the same type have the same navigation}} \\
+\multicolumn{3}{|c|}{\textbf{links and interaction capability?}} \\
+\hline
+Hessam & 1 & Extremely inconsistent to the point of frustration. for example in the main page (https://www.unicef.org/) we have a navbar. from the navbar we go to innovation (https://www.unicef.org/innovation/) then the navbar changes! it is not even in a different subdomain and another note is when you click on the unicef logos in the main page you will be redirected to the unicef page but with in this section you are redirected to the innovation page which makes the return almost impossible. The data section also has a completely different navbar.     \\
+\hline
+Filippo & 3 & Sometimes images are used as buttons, sometimes breadcrumbs are not presented at all.  \\
+\hline
+Mobina & N/A & N/A  \\
+\hline
+Virginia & 1 & Even though some pages may belong to the same category or sub category in the navigation menus, the types of links you can find inside are much different. Sometimes even the tabs that are styled in the same way actually contain links to different kinds of content. \\
+\hline
+
+\end{longtable}
+
+\pagebreak
+
+% MN2
+\begin{longtable}{|>{\RaggedRight}m{0.13\linewidth}|>{\RaggedRight}m{0.1\linewidth}|>{\RaggedRight}m{0.6\linewidth}|}
+    \caption{MN2 Group navigation-1} \label{tab:MN2_scores}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MN2 Group navigation-1}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MN2 Group navigation-1}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Comment} \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{3}{|c|}{\textbf{It is easy to navigate from/among groups of “items”,}} \\
+\multicolumn{3}{|c|}{\textbf{and within the items?}} \\
+\hline
+Hessam & 2 & For example if we go to the appeal page. (\href{https://www.unicef.org/appeals}{\underline{Example here}}) we see that from the breadcrumb this page has subsections but it is not accessible from there. we need to go and select it on the parent!     \\
+\hline
+Filippo & 3 & Due to the presence of a lot of webpages, navigation is not consistent at all times. Breadcrumbs are not useful enough to solve this problem. The navigation bar is the only element that stays consistent and explains the hierarchy of the website.  \\
+\hline
+Mobina & N/A & N/A  \\
+\hline
+Virginia & 1 & You can navigate to a list of items to a specific item but coming back is not as straightforward. Navigation between groups is pretty much impossible without the navigation bar, and when done in one direction doesn't make it easy to go back.  \\
+\hline
+
+\end{longtable}
+
+		\begin{enumerate}
+			\item \textbf{MN3 Group navigation-2} Do menus create Cognitive Overload?
+			\item \textbf{MN4 Structural navigation} Is it easy to navigate among the “components” (“parts”) of a topic?
+			\item \textbf{MN5 Semantic navigation} Is it easy to navigate from a topic to a related one (in both directions)?
+			\item \textbf{MN6 Landmarks} Are “Landmarks” effective for the user to reach the “key” (most relevant) parts of the web site?
+		\end{enumerate}
+
+
 \section{MiLE Presentation}
+
+		\begin{enumerate}
+			\item \textbf{MP1 Text layout} Is the text readable? Is the font size appropriate?
+			\item \textbf{MP2 Interaction placeholders-semiotics} Interactive elements are “intuitive”?
+			\item \textbf{MP3 Interaction placeholders-consistency} Textual or visual labels of interactive elements are consistent in terms of wording, shape, color, position, etc.
+			\item \textbf{MP4 Consistency of Visual Elements} In pages of the same type do visual elements have the same visual properties?
+			\item \textbf{MP5 Hierarchy-1} Is the on-screen allocation of contents within a page appropriate for their relevance?
+			\item \textbf{MP6 Hierarchy-2} Is the on-screen allocation of visual elements appropriate for their relevance?
+			\item \textbf{MP7 Spatial allocation-1} Are “Semantically related” elements close to each other?
+			\item \textbf{MP8 Spatial allocation-2} Are "Semantically distant” element placed distant from each other?
+			\item \textbf{MP9 Consistency of Page Spatial Structure} Do pages of the same type have the same spatial organization for the various visual elements?
+		\end{enumerate}
