@@ -28,10 +28,10 @@ useSeoMeta({
         >
           <NuxtLink
               :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
-              class="block h-full w-full rounded-xl bg-cover bg-center bg-no-repeat px-5 py-8 text-white shadow-[inset_0_0_0_2000px_rgba(1,1,1,0.5)] sm:px-6 sm:py-10 md:px-9 md:py-14 lg:rounded-[20px] lg:px-10 lg:py-16 xl:px-11 2xl:px-12 2xl:py-20"
               :style="{ backgroundImage: `url(${project.picture.file})` }"
+              class="block h-full w-full rounded-xl bg-cover bg-center bg-no-repeat px-5 py-8 text-white shadow-[inset_0_0_0_2000px_rgba(1,1,1,0.5)] sm:px-6 sm:py-10 md:px-9 md:py-14 lg:rounded-[20px] lg:px-10 lg:py-16 xl:px-11 2xl:px-12 2xl:py-20"
           >
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-start bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4">
               <h2
                 class="pb-4 text-xl font-bold md:pb-6 md:text-2xl lg:pb-8 lg:text-3xl"
               >
@@ -42,7 +42,7 @@ useSeoMeta({
               </p>
               <NuxtLink
               :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
-              class="mt-4 bg-white text-black rounded-lg py-2 px-3 sm:py-3 sm:px-4">Read more
+              class="mt-4 bg-white text-black rounded-lg py-2 px-3 sm:py-3 sm:px-4 hover:bg-gray-200 hover:ease-in hover:duration-150">Read more
               </NuxtLink>
             </div>
           </NuxtLink>
