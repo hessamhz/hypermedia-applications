@@ -21,7 +21,12 @@ async function submit() {
       email: '',
       message: '',
     };
-  }
+  } 
+
+  const submitButton = document.getElementById('submit-button')
+  submitButton.textContent = 'Submitted!'
+
+  setTimeout(function() {submitButton.textContent = 'Submit'}, 3000)
 }
 
 useSeoMeta({
@@ -69,6 +74,7 @@ useSeoMeta({
           name="message"
         />
         <button
+          id="submit-button"
           type="submit"
           class="rounded-full bg-hive-purple px-10 py-2 text-sm text-white md:!mt-12 md:px-12 md:py-3 md:text-base hover:bg-hive-dark-purple"
         >
