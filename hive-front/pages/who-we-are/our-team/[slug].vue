@@ -26,7 +26,7 @@ useSeoMeta({
       >
         <h2
           id="education"
-          class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+          class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
         >
           Education
         </h2>
@@ -35,7 +35,7 @@ useSeoMeta({
         </p>
         <h2
           id="main-expertise"
-          class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+          class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
         >
           Main Expertise
         </h2>
@@ -44,7 +44,7 @@ useSeoMeta({
         </p>
         <h2
           id="main-role"
-          class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+          class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
         >
           Main Role
         </h2>
@@ -57,7 +57,7 @@ useSeoMeta({
         >
           <h2
               id="activities"
-              class="mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+              class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
           >
             Activities
           </h2>
@@ -118,11 +118,23 @@ useSeoMeta({
   </div>
 </template>
 
+
 <style scoped>
 .hexagon {
   --size: 200px;
 }
 .hexagon.wrapper {
   --size: 205px;
+}
+.scroll-offset {
+  position: relative;
+}
+
+.scroll-offset::before {
+  content: "";
+  display: block;
+  height: 13vh; 
+  margin-top: -13vh; 
+  visibility: hidden;
 }
 </style>
