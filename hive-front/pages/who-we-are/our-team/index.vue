@@ -28,7 +28,7 @@ useSeoMeta({
         >
           <NuxtLink
               :to="{ name: 'who-we-are-our-team-slug', params: { slug: person.slug } }"
-              class="flex flex-col items-center"
+              class="flex flex-col items-center hover:opacity-50 hover:ease-in-out hover:duration-150"
           >
             <div
               class="hexagon mb-4 flex w-[144px] items-center justify-center bg-orange-300 sm:w-[180px] xl:w-[200px]"

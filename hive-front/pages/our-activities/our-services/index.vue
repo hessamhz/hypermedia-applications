@@ -49,9 +49,9 @@ useSeoMeta({
               {{ service.overview }}
             </p>
           </div>
-            <NuxtLink 
+            <NuxtLink
             :to="{ name: 'our-activities-our-services-slug', params: { slug: service.slug } }"
-            class="bg-white rounded-lg py-2 px-3 sm:py-3 sm:px-4"
+            class="bg-white rounded-lg py-2 px-3 sm:py-3 sm:px-4 hover:bg-gray-200 hover:ease-in hover:duration-150"
             :class="!service.picture && 'hidden sm:block'"> Read More</NuxtLink>
           </div>
         </li>
@@ -59,4 +59,3 @@ useSeoMeta({
     </div>
   </div>
 </template>
-

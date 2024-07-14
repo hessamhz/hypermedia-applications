@@ -2,10 +2,10 @@
   <header :class="`${backgroundColor} text-${color} px-5 py-4 font-bold md:px-14 md:py-10 xl:px-20 xl:py-14`">
     <NuxtLink
         :to=linkTo
-        class="mb-2 flex items-center gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl ${textColor}"
+        class="mb-2 flex items-center gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
         v-if="!isLinkEmpty"
     >
-      <span :class="`border-b border-${color} text-${color}`" v-if="!isLinkEmpty">{{ formattedLinkTitle }}</span>
+      <span class="hover:opacity-40 hover:ease-in-out hover:duration-150" :class="`border-b border-${color} `" v-if="!isLinkEmpty">{{ formattedLinkTitle }}</span>
       <IconChevron class="w-6 md:w-7 lg:w-8 xl:w-9" />
     </NuxtLink>
 
