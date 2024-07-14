@@ -65,7 +65,7 @@ useSeoMeta({
         </div>
       </div>
       <div
-        class="rounded-xl bg-purple-200 p-5 md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
+        class="sm:text-lg rounded-xl bg-purple-200 p-5 md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
       >
         {{ data.description }}
       </div>
@@ -106,11 +106,11 @@ useSeoMeta({
               <img
                 v-if="comment.picture"
                 :src="comment.picture.file"
-                class="aspect-square w-10 rounded-full mr-4"
+                class="aspect-square object-cover w-10 rounded-full mr-4"
               />
               <span>{{ comment.name }}</span>
             </div>
-            <p class="text-black">{{ comment.description }}</p>
+            <p class="text-black sm:text-lg">{{ comment.description }}</p>
           </div>
         </SwiperSlide>
       </Swiper>
