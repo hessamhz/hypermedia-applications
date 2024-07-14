@@ -16,3 +16,7 @@ TEMPLATE_DEBUG = DEBUG
 # Note: This key only used for development and testing.
 SECRET_KEY = "django-insecure-$s8)nd5a#=6mu--asj!uo@go%0y%m*px67jxnh8kd3^as#nw"
 # END OF SECRET CONFIGURATION
+
+# URL CONFIGURATION
+IS_LOCAL_URL = True
+# END OF URL CONFIGURATION
