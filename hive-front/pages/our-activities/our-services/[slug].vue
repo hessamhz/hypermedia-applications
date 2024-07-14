@@ -54,7 +54,7 @@ useSeoMeta({
                 name: 'who-we-are-our-team-slug',
                 params: { slug: data.manager.slug }
               }"
-              class="underline"
+              class="underline hover:opacity-50 hover:ease-in-out hover:duration-150"
             >
               {{ data.manager.name }}
             </NuxtLink>
