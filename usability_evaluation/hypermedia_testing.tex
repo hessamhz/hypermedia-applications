@@ -9,9 +9,15 @@
 \restoregeometry
 
 \setcounter{tocdepth}{5}
+
+\let\LaTeXStandardClearpage\clearpage
+\let\clearpage\relax % relax clearpage rule to allow listings to print on the same page
+
 \tableofcontents
 \listoffigures
 \listoftables
+
+\let\clearpage\LaTeXStandardClearpage % restore clearpage functionality
 
 \justify
 
