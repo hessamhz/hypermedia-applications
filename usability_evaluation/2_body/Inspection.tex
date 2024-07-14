@@ -74,7 +74,7 @@ The MiLE heuristics are an extension of Nielsen’s original heuristics, tailore
 
 \section{Execution of the inspection}
 \subsection{Inspection Sheet}
-An inspection sheet (in the form of a Google Form) was used to collect the scores and comments from each inspector. The form has been divided into sections (as shown in Figure \ref{fig:nielsenForm}) in representing the current subset of Heuristics being used to evaluate the website: Nielsen; MiLE: Content; MiLE: Navigation; MiLE: Presentation. Each section contains a subsection per-heuristics, which in turns contain a input field for each of the questions that are linked to the current heuristic. Next to each question a field to add comments about the score is also provided.
+An inspection sheet (in the form of a Google Form) was used to collect the scores and comments from each inspector. The form has been divided into sections (as shown in Figures \ref{fig:nielsenForm} and \ref{fig:mileForm}) in representing the current subset of Heuristics being used to evaluate the website: Nielsen; MiLE: Content; MiLE: Navigation; MiLE: Presentation. Each section contains a subsection per-heuristics, which in turns contain a input field for each of the questions that are linked to the current heuristic. Next to each question a field to add comments about the score is also provided.
 
 \subsection{Scale used}
 The scale that was agreed among inspectors is the 1-5 scale, where:
@@ -96,10 +96,271 @@ Finally, each question has been made not-mandatory to manage such cases in which
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/mile_content_form.png}
 	\caption{MiLE Content Heuristics' section on the Inspection form}
-	\label{fig:nielsenForm}
+	\label{fig:mileForm}
 \end{figure}
 
+\pagebreak
+
 \section{Final scores}
+After the Inspection phase, we reviewed the scores and discussed the results. The group decided to define the final scores as the averages of the partial scores and also defined a baseline over which the score would be considered acceptable. A score being over a baseline of \textbf{2,5} would mean that no further investigation would explicitly target the associated heuristic or question.
+
+Table \ref{tab:N_final_scores} shows the final scores for each heuristic and question:
+
+
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{Nielsen's Heuristics' Final Scores} \label{tab:N_final_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Nielsen's Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Question} & \textbf{Final Score} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Nielsen's Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{2}{|l|}{\textbf{N1 Visibility of system status}} \\
+\hline
+Are the states of the on-going processes of the website always clear? & 4,25  \\
+\hline
+Does the website provide breadcrumbs to define the user position? & \textbf{2,5} \\
+\hline
+Does the website use visual elements to highlight user interaction? & 3,75 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N2 Match between system and the real world}} \\
+\hline
+Does the website use understandable language for its main functionalities? & 4,5  \\
+\hline
+Does the website include icons and assets that are familiar and resemble the real world? & 4,25 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N3 User control and freedom}} \\
+\hline
+Does the website allow the user to revert or cancel an action? & 4  \\
+\hline
+Does the website allow the user to correctly navigate back to a previous section or page? & \textbf{2} \\
+\hline
+Does the website allow the user to close additional windows at all times? & 5 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N4 Consistency and standards}} \\
+\hline
+Is the website consistent with wording, visual and routing elements? & \textbf{1,75}  \\
+\hline
+Is the placement of the main components consistent throughout different pages? & 3,5 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N5 Error prevention}} \\
+\hline
+Are user's inputs, when required, checked for correctness? & 3,75  \\
+\hline
+Does the website provide options to insert information in a guided manner? & 3,5 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N6 Recognition rather than recall}} \\
+\hline
+Are the website's commands and functionalities visible or easily retrievable when needed? & 3,75  \\
+\hline
+Does the website suggest a set of options to select from for navigation? & 4 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N7 Flexibility and efficiency of use}} \\
+\hline
+Does the website offer shortcuts to common functions? & \text{2,5}  \\
+\hline
+Does the website allow customization and personalization of interaction, catering to both expert and novice users? & \textbf{1,33333} \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N8 Aesthetic and minimalist design}} \\
+\hline
+Is the website exempt from unnecessary information or links? & \textbf{1,75}  \\
+\hline
+Are aesthetic choices prioritizing the core elements of the website? & 3 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N9 Help users recognize, diagnose and recover from errors}} \\
+\hline
+Does the website present errors in a user-friendly manner? & 3,25  \\
+\hline
+Does an error state of the website give clear instructions on how to fix/recover from it? & 3 \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{N10 Help and documentation}} \\
+\hline
+Is the documentation of the website, when provided, searchable and navigable? & 2,5  \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{MiLE (Content) Heuristics' Final Scores} \label{tab:MC_final_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Content) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Question} & \textbf{Final Score} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Content) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{2}{|l|}{\textbf{MC1 Information overload}} \\
+\hline
+Is the information in a page too much or too little? & 3,75  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MC2 Consistency of page content structure}} \\
+\hline
+Do pages that present topics of the same category have the same types of elements? & 2,75  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MC3 Contextualized information}} \\
+\hline
+Do the pages include information that help users understand where they are? & 2,75  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MC4 Content organization (hierarchy)}} \\
+\hline
+Is the hierarchical organization of topics appropriate for the topics relevance? & 3  \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{MiLE (Navigation) Heuristics' Final Scores} \label{tab:MN_final_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Navigation) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Question} & \textbf{Final Score} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Navigation) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{2}{|l|}{\textbf{MN1 Interaction consistency}} \\
+\hline
+Do pages of the same type have the same navigation links and interaction capability? & \textbf{1,66667}  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MN2 Group navigation-1}} \\
+\hline
+It is easy to navigate from/among groups of “items”, and within the items? & \textbf{2}  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MN3 Group navigation-2}} \\
+\hline
+Do menus create Cognitive Overload? & 3,66667  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MN4 Structural navigation}} \\
+\hline
+Is it easy to navigate among the “components” (“parts”) of a topic? & 2,66667  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MN5 Semantic navigation}} \\
+\hline
+Is it easy to navigate from a topic to a related one (in both directions)? & 3  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MN6 Landmarks}} \\
+\hline
+Are “Landmarks” effective for the user to reach the “key” (most relevant) parts of the web site? & 3  \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{MiLE (Presentation) Heuristics' Final Scores} \label{tab:MP_final_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Presentation) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Question} & \textbf{Final Score} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{MiLE (Presentation) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\multicolumn{2}{|l|}{\textbf{MP1 Text layout}} \\
+\hline
+Is the text readable? Is the font size appropriate? & 5  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP2 Interaction placeholders-semiotics}} \\
+\hline
+It is easy to navigate from/among groups of “items”, and within the items? & 4,66667  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP3 Interaction placeholders-consistency}} \\
+\hline
+Textual or visual labels of interactive elements are consistent in terms of wording, shape, color, position, etc. & 3  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP4 Consistency of Visual Elements}} \\
+\hline
+In pages of the same type do visual elements have the same visual properties? & 3  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP5 Hierarchy-1}} \\
+\hline
+Is the on-screen allocation of contents within a page appropriate for their relevance? & 4,33333  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP6 Hierarchy-2}} \\
+\hline
+Is the on-screen allocation of visual elements appropriate for their relevance? & 4  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP7 Spatial allocation-1}} \\
+\hline
+Are “Semantically related” elements close to each other? & 4,66667  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP8 Spatial allocation-2}} \\
+\hline
+Are "Semantically distant” element placed distant from each other? & 4,5  \\
+\hline
+
+\multicolumn{2}{|l|}{\textbf{MP9 Consistency of Page Spatial Structure}} \\
+\hline
+Do pages of the same type have the same spatial organization for the various visual elements? & 3  \\
+\hline
+
+\end{longtable}
 
 \section{Data Analysis - Aggregate}
 PROVIDE AGGREGATED DATA, e.g., MEAN VALUES FOR ALL Heuristics,

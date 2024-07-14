@@ -228,3 +228,5 @@ static
 # Nuxt
 node_modules
 .nuxt
+/hive-front/localhost.pem
+/hive-front/localhost-key.pem
