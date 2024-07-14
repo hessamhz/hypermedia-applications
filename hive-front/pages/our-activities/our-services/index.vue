@@ -35,7 +35,7 @@ useSeoMeta({
                 v-if="service.picture"
                 :src="service.picture.file"
                 :alt="service.title"
-                class=" sm:h-full sm:w-full sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
+                class="max-w-28 sm:max-w-max sm:h-full sm:w-full sm:p-12 rounded-xl object-cover lg:rounded-[20px]"
             />
           </NuxtLink>
           <div
