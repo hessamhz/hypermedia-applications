@@ -19,7 +19,7 @@ const isMobileMenuOpen = ref(false);
       <ul
         class="hidden gap-2 font-semibold md:flex md:gap-7 lg:gap-10 lg:text-md xl:gap-12 xl:text-lg 2xl:gap-16 2xl:text-xl"
       >
-        <li class="relative cursor-pointer [&>nav]:hover:block">
+        <li class="relative cursor-pointer [&>nav]:hover:block" onclick="">
           <NuxtLink
             to="/who-we-are"
             class="pointer-events-none p-2"
@@ -50,7 +50,7 @@ const isMobileMenuOpen = ref(false);
             </ul>
           </nav>
         </li>
-        <li class="relative cursor-pointer [&>nav]:hover:block">
+        <li class="relative cursor-pointer [&>nav]:hover:block" onclick="">
           <NuxtLink
             to="/our-activities"
             class="pointer-events-none p-2"
