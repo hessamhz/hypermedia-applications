@@ -100,6 +100,7 @@ const isMobileMenuOpen = ref(false);
       </ul>
     </nav>
     <button
+      aria-label="Open menu button"
       class="md:hidden"
       @click="isMobileMenuOpen = true"
     >
