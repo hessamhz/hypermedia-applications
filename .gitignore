@@ -222,11 +222,13 @@ static
 .vscode
 /usability_evaluation/hypermedia_testing.pdf
 /usability_evaluation/.texpadtmp/
-/technology_report/.texpadtmp/
-/technology_report/hypermedia_technology.pdf
+/design_report/.texpadtmp/
+/design_report/hypermedia_technology.pdf
 
 # Nuxt
 node_modules
 .nuxt
 /hive-front/localhost.pem
 /hive-front/localhost-key.pem
+/technology_report/.texpadtmp/
+/technology_report/hypermedia_technology.pdf
