@@ -36,6 +36,7 @@ const model = defineModel();
       v-model="model"
       :type="type"
       :name="name"
+      :aria-label="name"
       :class="`h-10 rounded-lg border bg-white px-4 md:rounded-xl ${inputClass}`"
     />
   </div>
