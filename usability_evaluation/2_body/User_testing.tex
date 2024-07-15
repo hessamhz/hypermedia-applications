@@ -11,7 +11,7 @@ The following is the user profile our group agreed to target for the purpose of 
 
 During the inspection, it became clearer who are the users the website is targeting when delivering so much information: these are people deeply interested in social matters and crisis and the consequences that these might have on children also. UNICEF wants to share as much details as possible to its audience to convince them to either \textbf{donate} or \textbf{take part} as volunteers or workers willing to help with the agency's operations around the world.
 
-% TODO background tech delle persone non importa in modo da avere opinioni varie da tutt3
+We specifically decided not to include any constraint regarding technical knowledge into the user profile, to make this activity open to a broader group of people. Later on we will discuss how such decision brought us to interesting results, data and behavior by the testers.
 
 \subsection{Tasks}
 In the previous chapter, we highlighted a set of heuristics and questions that failed to score an average higher than \textbf{2,5} points out of 5. We present them here for simplicity:
@@ -29,9 +29,7 @@ In the previous chapter, we highlighted a set of heuristics and questions that f
 
 Starting from such result, we designed the following tasks to try to tackle such flaws in the usability of the website, to check whether the testers would obtain the same results. We decided to provide the tester with a \textbf{context or scenario}, which would help the tester contextualize the task, and the \textbf{task} the testers would be asked to complete.
 
-For each task we also decided on a time limit, over which the task would be considered not completed. Also an error count have been tracked during the testing. \textit{We realized an error limit would have caused many tests to fail so we decided to keep it just as an additional piece of information for the discussion of the results.}
-
-% TODO see if what I wrote above is fine
+For each task we also decided on a time limit, over which the task would be considered not completed. Also an error count have been tracked during the testing. We realized an error limit was not ideal for the evaluation of this website, so we decided to keep it just as an additional piece of information for the discussion of the results.
 
 Table \ref{tab:task_details} details the tasks and the associated scenarios and time limits:
 
@@ -74,10 +72,61 @@ Table \ref{tab:task_details} details the tasks and the associated scenarios and 
 \end{longtable}
 
 \section{Execution of the study}
+\subsection{Inspection sheet}
+To deliver the test to the testers and gather data, insights and comments, we developed another Google Form, and linked it to a Google Sheet page to make data review easier. This form was divided into varios sections as well:
+\begin{itemize}
+	\item Data about the tester;
+	\item A section for each Task;
+	\item System Usability Scale section;
+	\item Comments section;
+\end{itemize}
+We designed the sheet to be used by the inspectors only until the SUS section. At that point, if possible, the user was allowed to reply on their own to the remaining questions through the same form instance.
+
+Each section, as suggested by Figure \ref{fig:testing_form}, would present detailed instruction for the inspector to follow. For instance, we would provide the scenario and task descriptions to explain to the user and add notes visible to the inspector only about the objective of the task and possible error or critical actions that the tester could make.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/testing_form.png}
+	\caption{User Testing form - notice that in this form User refers to the Tester, while the tester is the Inspector.}
+	\label{fig:testing_form}
+\end{figure}
+
+\subsection{Scale and scores}
+Through the form, we collected data regarding the following metrics:
+\begin{itemize}
+	\item \textbf{Effectiveness} Whether the task was completed and how. We decided the following set of scores to assign based on the outcome of the task:
+		\begin{itemize}
+			\item \textbf{1} The tester completed the task successfully without need for help or guidance.
+			\item \textbf{0.5} The task was completed but assistance was given to do so.
+			\item \textbf{0} The task was NOT completed because either the user gave up or the timer expired.
+		\end{itemize}
+	\item \textbf{Efficiency} The time taken to complete the task.
+	\item \textbf{Errors} Number of errors made by the tester.
+	\item \textbf{Perceived difficulty} How hard did the tester find the task. In this case we used the usual 1-5 scale, the same we used to evaluate during the Inspection phase.
+\end{itemize}
+
+For each task, the tester was asked to think aloud and report anything unusual in their testing phase. A comment field for each task section allowed us to record the flow of operation of the tester, any thoughts they wanted to share and comments in general.
+
+Finally, the System Usability Scale method has been implied to gather further feedback by the testers about the usability of the website. The questions were the following:
+\begin{itemize}
+	\item \textbf{SUS1} I think I would like to use this application frequently.
+	\item \textbf{SUS2} I found the application unnecessarily complex.
+	\item \textbf{SUS3} I would imagine that most people would learn to use this application very quickly.
+	\item \textbf{SUS4} I thought the application was easy to use.
+	\item \textbf{SUS5} I think that I would need the support of a technical person to be able to use this application.
+	\item \textbf{SUS6} I found the various functions in this application were well integrated.
+	\item \textbf{SUS7} I thought there was too much inconsistency between interactions in the application.
+	\item \textbf{SUS8} I found the application very cumbersome to use.
+	\item \textbf{SUS9} I felt very confident using the application.
+	\item \textbf{SUS10} I needed to learn a lot of things before I could get going with this application.
+\end{itemize}
 
 \section{Results}
 \subsection{Final scores}
 Agreed scores (with comments) and aggregated scored (with visualizations)
+
+\subsection{SUS score}
+% TODO compute SUS Score lol
 
 \subsection{Comments}
 % TODO aggiungere che una persona con esperienza lavorativa o un background più ampio (anche tra inspector) può creare delle differenze notevoli
