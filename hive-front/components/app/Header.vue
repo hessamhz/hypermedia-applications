@@ -12,6 +12,7 @@ const isMobileMenuOpen = ref(false);
         exact
       >
         <img
+          alt="The Hive Logo"
           class="w-28 lg:w-32 xl:w-40 hover:opacity-50 hover:ease-in-out hover:duration-150"
           src="/logo.svg"
         />
