@@ -1,11 +1,15 @@
 \section{Introduction}
 In this section the workflow and results of the User Testing phase are presented and discussed.
 
-This phase required asking new users to surf on the UNICEF and complete a series of tasks while being observed by the group components. The main objective was to confirm the critical flaws and issues detected during the Inspection phase and discover new ones thanks to unpredictability of behavior of a tester.
+This phase required asking new users to surf on the UNICEF and complete a series of tasks while being observed, with little to no intervention or help, by the inspectors. The main objective was to confirm the critical flaws and issues detected during the Inspection phase and discover new ones thanks to unpredictability of behavior of the tester.
 
 \section{Design of the study}
+User Testing requires a setup phase where choices are made on who the testers should be, what should they test and why should they test it. Following is a brief discussion on such phase.
+
 \subsection{User profiles}
-% TODO explain the user profile
+The following is the user profile our group agreed to target for the purpose of this testing phase: people in their 20s which are involved with or interested in politics and social matters.
+
+During the inspection, it became clearer who are the users the website is targeting when delivering so much information: these are people deeply interested in social matters and crisis and the consequences that these might have on children also. UNICEF wants to share as much details as possible to its audience to convince them to either \textbf{donate} or \textbf{take part} as volunteers or workers willing to help with the agency's operations around the world.
 
 \subsection{Tasks}
 In the previous chapter, we highlighted a set of heuristics and questions that failed to score an average higher than \textbf{2,5} points out of 5. We present them here for simplicity:
@@ -17,13 +21,55 @@ In the previous chapter, we highlighted a set of heuristics and questions that f
 	\item \textbf{N7.2} Does the website allow customization and personalization of interaction, catering to both expert and novice users?
 	\item \textbf{N8.1} Is the website exempt from unnecessary information or links?
 	\item \textbf{N10.1} Is the documentation of the website, when provided, searchable and navigable?
-	\item \textbf{MN1} Interaction consistency
-	\item \textbf{MN2} Group navigation-1
+	\item \textbf{MN1} Do pages of the same type have the same navigation links and interaction capability?
+	\item \textbf{MN2} It is easy to navigate from/among groups of “items”, and within the items?
 \end{itemize}
 
-From these results it's
+Starting from such result, we designed the following tasks to try to tackle such flaws in the usability of the website, to check whether the testers would obtain the same results. We decided to provide the tester with a \textbf{context or scenario}, which would help the tester contextualize the task, and the \textbf{task} the testers would be asked to complete.
 
-Starting from this list, our group
+For each task we also decided on a time limit, over which the task would be considered not completed. Also an error count have been tracked during the testing. \textit{We realized an error limit would have caused many tests to fail so we decided to keep it just as an additional piece of information for the discussion of the results.}
+
+% TODO see if what I wrote above is fine
+
+Table \ref{tab:task_details} details the tasks and the associated scenarios and time limits:
+
+\begin{longtable}{|>{\RaggedRight}m{0.5\linewidth}|>{\RaggedRight}m{0.3\linewidth}|>{\RaggedRight}m{0.1\linewidth}|}
+    \caption{Tasks details} \label{tab:task_details}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{MiLE (Navigation) Heuristics' Final Scores}} \\
+    \hline
+    \textbf{Scenario} & \textbf{Task} & \textbf{Time Limit} \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Tasks details}} \\
+    \hline
+    \textbf{Inspector} & \textbf{Score} & \textbf{Time Limit}\\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\hline
+\textbf{1} You are interested in the crisis in DRC (Democratic Republic of Congo) and what to donate a specific amount to the cause. Try to donate to the specific cause of DRC. & Donate to DRC cause & 10m:00s  \\
+\hline
+
+\textbf{2} Now you also want to learn more about the conflict in Gaza and want to find out how you could help (by donating). However you also want to make sure you know how your donation is going to be used. Try to donate to the specific cause of DRC. & Donate to Gaza cause and learn what the donation is used for & 05m:00s  \\
+\hline
+
+\textbf{3} Imagine you decided to put your effort into volunteering and wanted to apply to do so with Unicef. You want to find information about the application process and the type of job you can volunteer for. & Reach the Samia Aboni page and learn the role & 05m:00s  \\
+\hline
+
+\textbf{4a} Suppose you're doing a research about children rights so you navigate the UNICEF website to find at least 3 topics on the subject. & Find at least 3 pages on the Children Rights' topic. & 10m:00s  \\
+\hline
+
+\textbf{4b} Once you found the articles, you figure you should also specify human rights in general. & Find an exhaustive list of the human rights on the website. & 05m:00s  \\
+\hline
+
+\end{longtable}
 
 \section{Execution of the study}
 
