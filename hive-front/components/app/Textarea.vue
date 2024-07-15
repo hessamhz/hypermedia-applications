@@ -34,6 +34,7 @@ const model = defineModel();
     </label>
     <textarea
       v-model="model"
+      :aria-label="name"
       :name="name"
       :rows="rows"
       :class="`rounded-lg border bg-white p-4 md:rounded-xl ${teaxtareaClass}`"

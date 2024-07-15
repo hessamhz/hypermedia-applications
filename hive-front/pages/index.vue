@@ -173,6 +173,7 @@ useSeoMeta({
               <img
                 v-if="hexagon !== 'EMPTY'"
                 :src="hexagon"
+                alt="Member profile picture"
                 class="hexagon h-24 md:h-36 xl:h-48 object-cover"
                 :class="!hexagon && 'invisible'"
               />

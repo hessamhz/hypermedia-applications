@@ -12,6 +12,7 @@ defineEmits(['close']);
     :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
   >
     <button
+      aria-label="Close Menu Button"
       class="mb-10 self-end"
       @click="$emit('close')"
     >
