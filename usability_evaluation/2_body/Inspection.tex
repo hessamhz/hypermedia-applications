@@ -104,7 +104,7 @@ It should be noted that various sub-websites (such as the one to file an applica
 \pagebreak
 
 \section{Results}
-\subsection{Final scores}
+\subsection{Final scores} \label{subsec:final_score}
 After the Inspection phase, we reviewed the scores and discussed the results. The group decided to define the final scores as the averages of the partial scores and also defined a baseline over which the score would be considered acceptable. A score being over a baseline of \textbf{2,5} would mean that no further investigation would explicitly target the associated heuristic or question.
 
 Tables \ref{tab:N_final_scores}, \ref{tab:MC_final_scores}, \ref{tab:MN_final_scores}, \ref{tab:MP_final_scores} show the final scores for each heuristic and question:
@@ -145,8 +145,6 @@ Does the website use understandable language for its main functionalities? & 4,5
 \hline
 Does the website include icons and assets that are familiar and resemble the real world? & 4,25 \\
 \hline
-
-\pagebreak
 
 \multicolumn{2}{|l|}{\textbf{N3 User control and freedom}} \\
 \hline
@@ -460,10 +458,107 @@ Do pages of the same type have the same spatial organization for the various vis
 \subsection{Comments}
 % TODO aggiungere che una persona con esperienza lavorativa o un background più ampio (anche tra inspector) può creare delle differenze notevoli
 
-\section{Data Analysis - Aggregate}
-PROVIDE AGGREGATED DATA, e.g., MEAN VALUES FOR ALL Heuristics,
-(MEAN) SCORE BY DIMENSIONS (e.g., for CONTENT HEURISTICS,
-NAVIGATION HEURISTICS, ect.)
+\section{Aggregated Data}
+We introduce some aggregated data computed from the data we presented in Section \ref{subsec:final_score}:
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{Aggregated partial averages} \label{tab:agg_heur_part_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Aggregated partialaverages}} \\
+    \hline
+    \textbf{Heuristics Group} & \textbf{Average} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Aggregated partial averages}} \\
+    \hline
+    \textbf{Heuristics Group} & \textbf{Average} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\hline
+Nielsen & 3,15833  \\
+\hline
+
+MiLE (Content) & 3,0625  \\
+\hline
+
+MiLE (Navigation) & 2,6667  \\
+\hline
+
+MiLE (Presentation) & 4,01852  \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{|p{0.7\linewidth}|p{0.2\linewidth}|}
+    \caption{Aggregated averages and final score} \label{tab:agg_heur_scores}\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Aggregated averages and final score}} \\
+    \hline
+    \textbf{Heuristics Group} & \textbf{Average} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Aggregated averages and final score}} \\
+    \hline
+    \textbf{Heuristics Group} & \textbf{Average} \\
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    \endlastfoot
+
+\hline
+Nielsen & 3,15833  \\
+\hline
+
+MiLE & 3,24922  \\
+\hline
+
+\multicolumn{2}{|c|}{Final Score: \textbf{3,20378}} \\
+\hline
+
+\end{longtable}
+
+Figures \ref{fig:nielsen_graph}, \ref{fig:mile_content_graph}, \ref{fig:mile_navigation_graph}, \ref{fig:mile_presentation_graph} show a visual representation of how the scores are distributed compared to the others.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/nielsen_graph.png}
+	\caption{Nielsen Heuristics Graph (average per question)}
+	\label{fig:nielsen_graph}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/mile_content.png}
+	\caption{MiLE (Content) Heuristics Graph}
+	\label{fig:mile_content_graph}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/mile_navigation.png}
+	\caption{MiLE (Navigation) Heuristics Graph}
+	\label{fig:mile_navigation_graph}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/mile_presentation.png}
+	\caption{MiLE (Presentation) Heuristics Graph}
+	\label{fig:mile_presentation_graph}
+\end{figure}
+
+\pagebreak
 
 \section{Conclusions}
 The UNICEF website has the purpose to deliver as much information and details possible about the activity of this Agency to its readers for transparency in the operations and actions taken. Another goal is to convince potential new and recurring donators to help with UNICEF's cause and inspire the next generation of volunteers and workers at this agency.
