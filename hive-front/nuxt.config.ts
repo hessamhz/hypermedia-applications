@@ -10,6 +10,9 @@ export default defineNuxtConfig({
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
        */
+      htmlAttrs: {
+        lang: "en"
+      },
       link: [
         {
           rel: "apple-touch-icon",
