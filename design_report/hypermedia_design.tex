@@ -1,31 +1,36 @@
 \documentclass[10pt]{report}
 
-\input{1_header/packages.tex}
+\input{1_header/packages}
 
 \addbibresource{3_footer/ref.bib}
 
 \begin{document}
-\input{1_header/title.tex}
+\input{1_header/title}
 \restoregeometry
 
 \setcounter{tocdepth}{5}
+
+\let\LaTeXStandardClearpage\clearpage
+\let\clearpage\relax % relax clearpage rule to allow listings to print on the same page
+
 \tableofcontents
 \listoffigures
 \listoftables
+
+\let\clearpage\LaTeXStandardClearpage % restore clearpage functionality
+
 \pagebreak
 
-\justify
-
 \chapter{Introduction}
-\input{1_header/Introduction.tex}
+\input{1_header/introduction}
 \pagebreak
 
 \chapter{Design}
-\input{2_body/Design.tex}
+\input{2_body/Design}
 \pagebreak
 
 \chapter{Conclusions}
-\input{3_footer/Conclusions.tex}
+\input{3_footer/Conclusions}
 \pagebreak
 
 \printbibliography

@@ -232,3 +232,6 @@ node_modules
 /hive-front/localhost-key.pem
 /technology_report/.texpadtmp/
 /technology_report/hypermedia_technology.pdf
+/effort_report/hypermedia_effort.pdf
+/effort_report/.texpadtmp/
+/design_report/hypermedia_design.pdf
