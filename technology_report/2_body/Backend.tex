@@ -1,0 +1,28 @@
+\section{Frameworks and Technologies}
+We have used Django as the backend framework for our project.
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+It is a free and open-source framework that follows the MVC architectural pattern.
+More specifically we have used Django REST framework, which is a powerful and flexible toolkit for building RESTFUL APIs.
+Django enabled us to have a clean and maintainable codebase while providing a lot of built-in functionalities especially the Django ORM which made it easy to interact with the Postgres database that we utilized,
+While Django REST framework provided with an easy way to build APIs and serialize this data.
+By the use of Python we were able to easily connect the backend with OpenAI API, and connect them with the frontend using channels which is a socker programming library for Django.
+
+\section{Database}
+For the database we have used Postgresql which is an open-source relational database management system emphasizing extensibility and SQL compliance.
+Postgresql also has a great integration with Django and it is easy to use and maintain.
+We did not directly interact with the database, but we used Django ORM which made it easy to interact with the database and make queries and modify or create tables.
+
+\section{Websockets}
+In order to implement the chat functionality we used Django Channels which is a project that takes Django and extends its abilities beyond HTTP and API calls.
+This allowed us to maintain a persistent connection between the client and the server and send and receive messages in real-time.
+Since users were not required to be authenticated to use the chat functionality, we have used a query parameter to identify the user and the conversation they are in.
+This also allow us to keep track of all the conversations and messages sent by the different users.
+As for the datastore of these conversation (active websockets) we have setup a Redis server which is an in-memory data structure store.
+
+\section{OpenAI Integration}
+We have used the new OpenAI API for OpenAI assistant. We have already setup our OpenAI assistant with the right context and for each conversation with the user we keep a thread id which is the conversation id that we use to keep track of the conversation and
+an OpenAI thread id which keeps track of the conversation with the OpenAI assistant. Having two different ids allow us to mask the internal OpenAI thread id.
+When a user with a valid thread id that we keep in our database sends a message we add this message into the user thread.
+With this method we can use the context and history of our user conversation to generate a better response from the LLM.
+Since we utilized local storage to store the thread id in the front end, even if the user comes back in a different time we can still use the previous conversation context (user always have this option to delete the history).
+Another important note is this connection to OpenAI is done asynchronously, enabling us a much higher scalibility.
