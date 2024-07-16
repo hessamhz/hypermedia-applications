@@ -7,7 +7,6 @@ class Member(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     name = models.CharField(max_length=128)
-    email = models.EmailField(null=True, blank=True)
 
     education = models.TextField()
     role = models.CharField(max_length=128)

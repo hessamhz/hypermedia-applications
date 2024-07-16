@@ -11,8 +11,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Service
-        fields = "__all__"
-        # TODO: exclude email if not needed
+        exclude = ["id", "created_at", "updated_at"]
 
     def get_picture(self, instance):
         if instance.picture:

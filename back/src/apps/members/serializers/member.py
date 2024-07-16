@@ -13,8 +13,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = "__all__"
-        # TODO: exclude email if not needed
+        exclude = ["id", "created_at", "updated_at"]
 
     def get_avatar(self, instance):
         if instance.avatar:

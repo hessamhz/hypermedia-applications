@@ -79,10 +79,13 @@ django==4.2
     #   -r common.in
     #   channels
     #   django-cors-headers
+    #   django-extensions
     #   django-tinymce
     #   djangorestframework
 django-cors-headers==4.3.1
     # via -r common.in
+django-extensions==3.2.3
+    # via -r dev.in
 django-tinymce==4.1.0
     # via -r common.in
 djangorestframework==3.14.0

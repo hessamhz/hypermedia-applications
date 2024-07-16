@@ -38,7 +38,7 @@ useSeoMeta({
           <span
             class="font-semibold underline hover:bg-gray-200 hover:duration-150 hover:ease-in"
           >
-            {{ data.responsible }}
+            {{ data.manager.name }}
           </span>
         </NuxtLink>
       </div>
@@ -54,10 +54,6 @@ useSeoMeta({
       <div
         class="project-detail-content"
         v-html="data.description"
-      ></div>
-      <div
-        class="project-detail-content"
-        v-html="data.content"
       ></div>
     </div>
   </div>
