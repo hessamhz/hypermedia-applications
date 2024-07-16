@@ -7,7 +7,7 @@ This phase required asking new users to surf on the UNICEF and complete a series
 User Testing requires a setup phase where choices are made on who the testers should be, what should they test and why should they test it. Following is a brief discussion on such phase.
 
 \subsection{User profiles}
-The following is the user profile our group agreed to target for the purpose of this testing phase: people in their 20s which are involved with or interested in politics and social matters.
+The following is the user profile we agreed to target for the purpose of this testing phase: people in their 20s which are involved with or interested in politics and social matters.
 
 During the inspection, it became clearer who are the users the website is targeting when delivering so much information: these are people deeply interested in social matters and crisis and the consequences that these might have on children also. UNICEF wants to share as much details as possible to its audience to convince them to either \textbf{donate} or \textbf{take part} as volunteers or workers willing to help with the agency's operations around the world.
 
@@ -29,7 +29,7 @@ In the previous chapter, we highlighted a set of heuristics and questions that f
 
 Starting from such result, we designed the following tasks to try to tackle such flaws in the usability of the website, to check whether the testers would obtain the same results. We decided to provide the tester with a \textbf{context or scenario}, which would help the tester contextualize the task, and the \textbf{task} the testers would be asked to complete.
 
-For each task we also decided on a time limit, over which the task would be considered not completed. Also an error count have been tracked during the testing. We realized an error limit was not ideal for the evaluation of this website, so we decided to keep it just as an additional piece of information for the discussion of the results.
+For each task we also decided on a time limit, over which the task would be considered not completed. Also an error count has been tracked during the testing. We realized an error limit was not ideal for the evaluation of this website, so while we tracked it, it was scrapped from the discussion of the results.
 
 Table \ref{tab:task_details} details the tasks and the associated scenarios and time limits:
 
@@ -41,7 +41,7 @@ Table \ref{tab:task_details} details the tasks and the associated scenarios and 
     \textbf{Scenario} & \textbf{Task} & \textbf{Time Limit} \\
     \hline
     \endfirsthead
-    \multicolumn{3}{c}%
+    \multicolumn{3}{c}
     {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
     \hline
     \multicolumn{3}{|c|}{\textbf{Tasks details}} \\
@@ -128,26 +128,53 @@ We were able to find 19 people that matched our user profile. The activity was e
 
 \section{Results}
 \subsection{Final scores}
-Agreed scores (with comments) and aggregated scored (with visualizations)
+Figure \ref{fig:background_pie} shows the overall background of the testers' group, while Figures \ref{fig:effec_chart}, \ref{fig:effic_chart}, \ref{fig:perc_eff_chart} show the aggregated scores per-task.
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.7\textwidth]{img/svg/background_pie.svg}
+	\caption{Testers' background}
+	\label{fig:background_pie}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.7\textwidth]{img/svg/effectiveness_chart.svg}
+	\caption{Successes per-task (Effectiveness)}
+	\label{fig:effec_chart}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.7\textwidth]{img/svg/efficiency_chart.svg}
+	\caption{Average effectiveness per-task}
+	\label{fig:effic_chart}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.7\textwidth]{img/svg/perceived_effort_chart.svg}
+	\caption{Average perceived difficulty per-task}
+	\label{fig:perc_eff_chart}
+\end{figure}
 
 \subsection{SUS score}
 Figure \ref{fig:sus_result} shows the result scored by each tester in the SUS section:
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{img/SUS.png}
-	\caption{User Testing form - notice that in this form User refers to the Tester, while the tester is the Inspector.}
+	\includesvg[width=0.9\textwidth]{img/svg/SUS.svg}
+	\caption{SUS results per-user and average SUS score}
 	\label{fig:sus_result}
 \end{figure}
-The average SUS score is \textbf{45 points} which means the website has strong usability issues among all testers, which is consistent with the results and the comments by testers.
+The average SUS score is \textbf{45 points} which means the website has strong usability issues among all testers, which is consistent with the results and the comments by the testers.
 
 \subsection{Comments}
-While carrying out the User Testing we have noticed a couple of interesting things about the aspects that most influenced the users' experiences with the website. For each of the testee we collected some general information 
-about their gender, their age and their field of studies or work. Of these three aspects the one that affected the most the user's results was the background, whereas gender didn't impact significantly and ages were in a range compliant with the profile of the user persona we picked. 
-This distinction was particularily noticeable in the way the users would approach the website: while people who had a less technical backgound and weren not too familiar with common practice in web development were more prone to browsing the actual content and reading through it to 
-find what they were searching for, using an approach that could be defined as "explorative". Those with a technical background however, were overall less patient and felt frustrated when their expectations about elements the website weren not met.
-As a direct consequence of this specific difference in behaviour, the first would most likely complete the tasks percieving them as easy, while the latter would find convoluted ways to get to the same goal and feel frustrated.
+While carrying out the User Testing we have noticed a couple of interesting things about the aspects that most influenced the users' experiences with the website. For each of the tester we collected some general information
+about their gender, their age and their field of studies or work. Of these three aspects the one that affected the most the user's results was the background (Figure \ref{fig:background_pie}), whereas gender didn't impact significantly and ages were in a range compliant with the profile of the user persona we picked.
+This distinction was particularly noticeable in the way the users would approach the website: while people who had a less technical background and were not too familiar with common practice in web development were more prone to browsing the actual content and reading through it to find what they were searching for, using an approach that could be defined as "explorative". Those with a technical background, however, were overall less patient and felt frustrated when their expectations about elements the website were not met.
+As a direct consequence of this specific difference in behavior, the first would most likely complete the tasks perceiving them as easy, while the latter would find convoluted ways to get to the same goal and feel frustrated.
 
-Another consideration to be made about the testing was the learning curve of the users. It's particularly evident by the difference in the time it took them to reach their goals on the firt task with respect to the latter.
+Another consideration to be made about the testing was the learning curve of the users. It's particularly evident by the difference in the time it took them to reach their goals on the first task with respect to the latter.
 This means that the more the user familiarized with the website and with the type of task, the faster their navigation became.
 
 \section{Conclusions}
