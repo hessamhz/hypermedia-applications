@@ -1,5 +1,5 @@
 <script setup>
-import SectionHeader from "~/components/app/SectionHeader.vue";
+import SectionHeader from '~/components/app/SectionHeader.vue';
 
 const form = ref({
   name: '',
@@ -24,21 +24,23 @@ async function submit() {
     };
   }
 
-  const submitButton = document.getElementById('submit-button')
-  submitButton.textContent = 'Submitted!'
+  const submitButton = document.getElementById('submit-button');
+  submitButton.textContent = 'Submitted!';
 
-  setTimeout(function() {submitButton.textContent = 'Submit'}, 3000)
+  setTimeout(function () {
+    submitButton.textContent = 'Submit';
+  }, 3000);
 }
 
 // Define SEO metadata
 useSeoMeta({
-  title: "Contact Us | The Hive",
-  description: "Get in touch with The Hive, Anti-Violence Center for Women.",
-  ogTitle: "Contact Us | The Hive",
-  ogType: "website",
-  ogUrl: "https://the-hive.space/",
-  canonical: "https://the-hive.space/",
-  ogSiteName: "The Hive"
+  title: 'Contact Us | The Hive',
+  description: 'Get in touch with The Hive, Anti-Violence Center for Women.',
+  ogTitle: 'Contact Us | The Hive',
+  ogType: 'website',
+  ogUrl: 'https://the-hive.space/',
+  canonical: 'https://the-hive.space/',
+  ogSiteName: 'The Hive',
 });
 </script>
 
@@ -49,9 +51,9 @@ useSeoMeta({
       class="mx-auto max-w-[1240px] items-start gap-10 px-5 py-10 md:px-10 md:py-16 lg:flex xl:gap-11 xl:px-24 xl:py-28 2xl:gap-12"
     >
       <p class="mb-10 lg:basis-5/12 xl:text-lg 2xl:text-xl">
-        The Hive is here to support and assist you.
-        If you need help, have questions, or want to learn more about our services,
-        please reach out to us with an email by filling this form
+        The Hive is here to support and assist you. If you need help, have
+        questions, or want to learn more about our services, please reach out to
+        us with an email by filling this form
       </p>
       <!-- Contact form -->
       <form
@@ -79,7 +81,7 @@ useSeoMeta({
         <button
           id="submit-button"
           type="submit"
-          class="rounded-full bg-hive-purple px-10 py-2 text-sm text-white md:!mt-12 md:px-12 md:py-3 md:text-base hover:bg-hive-dark-purple"
+          class="rounded-full bg-hive-purple px-10 py-2 text-sm text-white hover:bg-hive-dark-purple md:!mt-12 md:px-12 md:py-3 md:text-base"
         >
           Submit
         </button>
@@ -93,10 +95,12 @@ useSeoMeta({
       >
         More Useful Contacts
       </h2>
-      <div class="flex flex-col gap-1 items-center md:grid md:grid-cols-2 md:justify-items-end md:gap-x-12 md:gap-y-4 xl:px-48 text-2xl">
-        <p class="font-semibold  text-hive-purple">+1522</p>
-        <p class="justify-self-start mb-3 md:mb-0">Telefono Rosa</p>
-        <p class="font-semibold text-2xl text-hive-purple">+1 254 154 1221</p>
+      <div
+        class="flex flex-col items-center gap-1 text-2xl md:grid md:grid-cols-2 md:justify-items-end md:gap-x-12 md:gap-y-4 xl:px-48"
+      >
+        <p class="font-semibold text-hive-purple">+1522</p>
+        <p class="mb-3 justify-self-start md:mb-0">Telefono Rosa</p>
+        <p class="text-2xl font-semibold text-hive-purple">+1 254 154 1221</p>
         <p class="justify-self-start">The Hive</p>
       </div>
     </div>

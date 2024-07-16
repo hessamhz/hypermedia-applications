@@ -1,5 +1,5 @@
 <script setup>
-import SectionHeader from "~/components/app/SectionHeader.vue";
+import SectionHeader from '~/components/app/SectionHeader.vue';
 
 const route = useRoute();
 
@@ -9,11 +9,11 @@ const { data } = await useApi(`services/${route.params.slug}/`);
 useSeoMeta({
   title: `${data.value.title} | Services | The Hive`,
   description: `"${data.value.description}" at The Hive`,
-  ogTitle: "Our Projects | The Hive",
-  ogType: "website",
-  ogUrl: "https://the-hive.space/",
-  canonical: "https://the-hive.space/",
-  ogSiteName: "The Hive"
+  ogTitle: 'Our Projects | The Hive',
+  ogType: 'website',
+  ogUrl: 'https://the-hive.space/',
+  canonical: 'https://the-hive.space/',
+  ogSiteName: 'The Hive',
 });
 </script>
 
@@ -36,7 +36,7 @@ useSeoMeta({
             v-if="data.picture"
             :src="data.picture.file"
             :alt="data.title"
-            class="h-full w-full p-16 rounded-xl object-cover lg:rounded-[20px]"
+            class="h-full w-full rounded-xl object-cover p-16 lg:rounded-[20px]"
           />
         </div>
         <div
@@ -53,9 +53,9 @@ useSeoMeta({
             <NuxtLink
               :to="{
                 name: 'who-we-are-our-team-slug',
-                params: { slug: data.manager.slug }
+                params: { slug: data.manager.slug },
               }"
-              class="underline hover:opacity-50 hover:ease-in-out hover:duration-150"
+              class="underline hover:opacity-50 hover:duration-150 hover:ease-in-out"
             >
               {{ data.manager.name }}
             </NuxtLink>
@@ -66,12 +66,15 @@ useSeoMeta({
         </div>
       </div>
       <div
-        class="sm:text-lg rounded-xl bg-purple-200 p-5 md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
+        class="rounded-xl bg-purple-200 p-5 sm:text-lg md:p-6 lg:rounded-[20px] lg:p-7 xl:p-8 2xl:p-9"
       >
         {{ data.description }}
       </div>
     </div>
-    <div v-if="data.comments.length > 0" class="px-5">
+    <div
+      v-if="data.comments.length > 0"
+      class="px-5"
+    >
       <h2
         class="mt-10 text-center text-3xl font-bold text-hive-purple md:text-4xl xl:text-5xl 2xl:text-6xl"
       >
@@ -99,15 +102,14 @@ useSeoMeta({
           :key="comment.id"
           class="!flex min-h-52 items-center justify-center rounded-xl bg-gray-100 p-4 shadow-sm lg:rounded-[20px] xl:text-lg 2xl:text-xl"
         >
-
           <div
-            class="flex-col items-start flex gap-2 text-sm px-3 text-gray-500"
+            class="flex flex-col items-start gap-2 px-3 text-sm text-gray-500"
           >
-            <div class="flex flox-row items-center mb-2">
+            <div class="flox-row mb-2 flex items-center">
               <img
                 v-if="comment.picture"
                 :src="comment.picture.file"
-                class="aspect-square object-cover w-10 rounded-full mr-4"
+                class="mr-4 aspect-square w-10 rounded-full object-cover"
               />
               <span>{{ comment.name }}</span>
             </div>

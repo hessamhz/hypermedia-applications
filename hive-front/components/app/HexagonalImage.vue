@@ -82,7 +82,7 @@ const imageStyle = computed(() => ({
           var(--radius)),
     linear-gradient(#000 0 0) center/calc(45% - 1.1 * var(--radius));
 
-    /* Ensure the mask does not repeat */
+  /* Ensure the mask does not repeat */
   -webkit-mask-repeat: no-repeat;
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import SectionHeader from "~/components/app/SectionHeader.vue";
+import SectionHeader from '~/components/app/SectionHeader.vue';
 
 const route = useRoute();
 
@@ -7,17 +7,21 @@ const { data } = await useApi(`members/${route.params.slug}/`);
 
 useSeoMeta({
   title: `${data.value.name} | Team | The Hive`,
-  ogTitle: "Our Projects | The Hive",
-  ogType: "profile",
-  ogUrl: "https://the-hive.space/",
-  canonical: "https://the-hive.space/",
-  ogSiteName: "The Hive"
+  ogTitle: 'Our Projects | The Hive',
+  ogType: 'profile',
+  ogUrl: 'https://the-hive.space/',
+  canonical: 'https://the-hive.space/',
+  ogSiteName: 'The Hive',
 });
 </script>
 
 <template>
   <div>
-    <SectionHeader :title="data?.name" background-color="bg-hive-purple" linkTo="/who-we-are/our-team"></SectionHeader>
+    <SectionHeader
+      :title="data?.name"
+      background-color="bg-hive-purple"
+      linkTo="/who-we-are/our-team"
+    ></SectionHeader>
     <div
       class="mx-auto flex max-w-[1240px] items-start gap-4 px-5 pb-10 pt-32 md:px-20 md:py-16 xl:px-24 xl:py-28"
     >
@@ -53,22 +57,26 @@ useSeoMeta({
         </p>
         <!-- Activities -->
         <div
-            v-show="data && (data?.activities.services.length || data?.activities.projects.length)"
+          v-show="
+            data &&
+            (data?.activities.services.length ||
+              data?.activities.projects.length)
+          "
         >
           <h2
-              id="activities"
-              class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
+            id="activities"
+            class="scroll-offset mb-3 text-2xl font-semibold lg:mb-5 lg:text-3xl xl:text-4xl"
           >
             Activities
           </h2>
           <ul class="space-y-2 lg:text-xl xl:text-2xl">
             <li
-                v-for="service in data?.activities.services"
-                :key="service.slug"
+              v-for="service in data?.activities.services"
+              :key="service.slug"
             >
               <NuxtLink
-                  :to="`/our-activities/our-services/${service.slug}`"
-                  class="border-b border-current text-purple-700"
+                :to="`/our-activities/our-services/${service.slug}`"
+                class="border-b border-current text-purple-700"
               >
                 {{ service.title }}
               </NuxtLink>
@@ -76,12 +84,15 @@ useSeoMeta({
               <p class="inline">&nbsp;{{ service.overview }}</p>
             </li>
             <li
-                v-for="project in data?.activities.projects"
-                :key="project.slug"
+              v-for="project in data?.activities.projects"
+              :key="project.slug"
             >
               <NuxtLink
-                  :to="{ name: 'our-activities-our-projects-slug', params: { slug: project.slug } }"
-                  class="border-b border-current text-purple-700"
+                :to="{
+                  name: 'our-activities-our-projects-slug',
+                  params: { slug: project.slug },
+                }"
+                class="border-b border-current text-purple-700"
               >
                 {{ project.title }}
               </NuxtLink>
@@ -102,22 +113,41 @@ useSeoMeta({
       </div>
       <ul class="sticky top-0 hidden basis-44 pt-28 text-gray-500 sm:block">
         <li>
-          <a class="hover:text-gray-700" href="#education">Education</a>
+          <a
+            class="hover:text-gray-700"
+            href="#education"
+          >
+            Education
+          </a>
         </li>
         <li>
-          <a class="hover:text-gray-700" href="#main-expertise">Main Expertise</a>
+          <a
+            class="hover:text-gray-700"
+            href="#main-expertise"
+          >
+            Main Expertise
+          </a>
         </li>
         <li>
-          <a class="hover:text-gray-700" href="#main-role">Main Role</a>
+          <a
+            class="hover:text-gray-700"
+            href="#main-role"
+          >
+            Main Role
+          </a>
         </li>
         <li>
-          <a class="hover:text-gray-700" href="#activities">Activities</a>
+          <a
+            class="hover:text-gray-700"
+            href="#activities"
+          >
+            Activities
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </template>
-
 
 <style scoped>
 .hexagon {
@@ -131,10 +161,10 @@ useSeoMeta({
 }
 
 .scroll-offset::before {
-  content: "";
+  content: '';
   display: block;
-  height: 13vh; 
-  margin-top: -13vh; 
+  height: 13vh;
+  margin-top: -13vh;
   visibility: hidden;
 }
 </style>

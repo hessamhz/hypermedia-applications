@@ -2,11 +2,17 @@
 import { useWebSocket } from '~/composables/useWebSocket';
 
 definePageMeta({
-  layout: "no-footer",
+  layout: 'no-footer',
 });
 
 // useWebSocket composable provides the following properties and methods:
-const { messages, sendMessage: send, clearHistory, isBotTyping, simulateBotTyping } = useWebSocket();
+const {
+  messages,
+  sendMessage: send,
+  clearHistory,
+  isBotTyping,
+  simulateBotTyping,
+} = useWebSocket();
 
 // Reactive reference for the new message input
 const newMessage = ref('');
@@ -49,13 +55,13 @@ function deleteMessages() {
 
 // Define SEO metadata
 useSeoMeta({
-  title: "Chat With Bee | The Hive",
-  description: "Chat with Bee about The Hive, Anti-Violence Center for Women.",
-  ogTitle: "Chat With Bee | The Hive",
-  ogType: "website",
-  ogUrl: "https://the-hive.space/",
-  canonical: "https://the-hive.space/",
-  ogSiteName: "The Hive"
+  title: 'Chat With Bee | The Hive',
+  description: 'Chat with Bee about The Hive, Anti-Violence Center for Women.',
+  ogTitle: 'Chat With Bee | The Hive',
+  ogType: 'website',
+  ogUrl: 'https://the-hive.space/',
+  canonical: 'https://the-hive.space/',
+  ogSiteName: 'The Hive',
 });
 </script>
 <template>
@@ -63,10 +69,15 @@ useSeoMeta({
     class="absolute bottom-0 left-0 right-0 top-[89px] flex flex-col overflow-y-hidden"
   >
     <!-- MESSAGES VIEW -->
-    <div class="flex h-full flex-grow flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 xl:pb-8" >
+    <div
+      class="flex h-full flex-grow flex-col-reverse gap-5 overflow-y-auto px-5 pb-5 pt-10 lg:px-10 xl:pb-8"
+    >
       <!-- TYPING INDICATOR -->
-      <div v-if="isBotTyping" class="flex justify-start">
-        <div class="bg-orange-100 max-w-72 rounded-lg px-4 py-2 animate-pulse">
+      <div
+        v-if="isBotTyping"
+        class="flex justify-start"
+      >
+        <div class="max-w-72 animate-pulse rounded-lg bg-orange-100 px-4 py-2">
           Typing...
         </div>
       </div>

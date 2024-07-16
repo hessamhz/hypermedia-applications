@@ -1,5 +1,5 @@
 <script setup>
-import SectionHeader from "~/components/app/SectionHeader.vue";
+import SectionHeader from '~/components/app/SectionHeader.vue';
 
 const route = useRoute();
 
@@ -9,25 +9,37 @@ const { data } = await useApi(`projects/${route.params.slug}/`);
 useSeoMeta({
   title: `${data.value.title} | Projects | The Hive`,
   description: `"${data.value.description}" at The Hive`,
-  ogTitle: "Our Projects | The Hive",
-  ogType: "website",
-  ogUrl: "https://the-hive.space/",
-  canonical: "https://the-hive.space/",
-  ogSiteName: "The Hive"
+  ogTitle: 'Our Projects | The Hive',
+  ogType: 'website',
+  ogUrl: 'https://the-hive.space/',
+  canonical: 'https://the-hive.space/',
+  ogSiteName: 'The Hive',
 });
 </script>
 
 <template>
   <div>
     <!-- Header section with dynamic title and link to projects overview that manages -->
-    <SectionHeader :title="data?.title" backgroundColor="bg-hive-yellow" color='black' linkTo="/our-activities/our-projects"></SectionHeader>
-    <div
-      class="mx-auto px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
-    >
+    <SectionHeader
+      :title="data?.title"
+      backgroundColor="bg-hive-yellow"
+      color="black"
+      linkTo="/our-activities/our-projects"
+    ></SectionHeader>
+    <div class="mx-auto px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28">
       <div class="text-sm italic md:text-base">
         <span class="text-gray-700">Responsible:</span>
-        <NuxtLink :to="{ name: 'who-we-are-our-team-slug', params: { slug: data.manager.slug } }">
-          <span class="font-semibold underline hover:bg-gray-200 hover:ease-in hover:duration-150">{{ data.responsible }}</span>
+        <NuxtLink
+          :to="{
+            name: 'who-we-are-our-team-slug',
+            params: { slug: data.manager.slug },
+          }"
+        >
+          <span
+            class="font-semibold underline hover:bg-gray-200 hover:duration-150 hover:ease-in"
+          >
+            {{ data.responsible }}
+          </span>
         </NuxtLink>
       </div>
       <div class="text-sm italic md:text-base">
@@ -37,7 +49,7 @@ useSeoMeta({
       <img
         :src="data.picture.file"
         alt=""
-        class="mb-10 mt-7 max-w-full m-auto object-contain rounded-xl shadow-lg xl:rounded-2xl"
+        class="m-auto mb-10 mt-7 max-w-full rounded-xl object-contain shadow-lg xl:rounded-2xl"
       />
       <div
         class="project-detail-content"

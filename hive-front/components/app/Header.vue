@@ -1,12 +1,12 @@
 <script setup>
-  // A reactive variable to track the state of the mobile menu
-  const isMobileMenuOpen = ref(false);
+// A reactive variable to track the state of the mobile menu
+const isMobileMenuOpen = ref(false);
 </script>
 
 <template>
   <!-- Header section of the webpage -->
   <header
-    class="app-header sticky top-0 z-[99] bg-white bg-opacity-70 backdrop-blur-lg w-full drop-shadow-md sm:py-4! flex items-center justify-between px-5 py-5 sm:px-8 md:px-12 lg:px-20"
+    class="app-header sm:py-4! sticky top-0 z-[99] flex w-full items-center justify-between bg-white bg-opacity-70 px-5 py-5 drop-shadow-md backdrop-blur-lg sm:px-8 md:px-12 lg:px-20"
   >
     <nav class="flex w-full items-center justify-between">
       <NuxtLink
@@ -15,14 +15,17 @@
       >
         <img
           alt="The Hive Logo"
-          class="w-28 lg:w-32 xl:w-40 hover:opacity-50 hover:ease-in-out hover:duration-150"
+          class="w-28 hover:opacity-50 hover:duration-150 hover:ease-in-out lg:w-32 xl:w-40"
           src="/logo.svg"
         />
       </NuxtLink>
       <ul
-        class="hidden gap-2 font-semibold md:flex md:gap-7 lg:gap-10 lg:text-md xl:gap-12 xl:text-lg 2xl:gap-16 2xl:text-xl"
+        class="lg:text-md hidden gap-2 font-semibold md:flex md:gap-7 lg:gap-10 xl:gap-12 xl:text-lg 2xl:gap-16 2xl:text-xl"
       >
-        <li class="relative cursor-pointer [&>nav]:hover:block" onclick="">
+        <li
+          class="relative cursor-pointer [&>nav]:hover:block"
+          onclick=""
+        >
           <NuxtLink
             to="/who-we-are"
             class="pointer-events-none p-2"
@@ -36,7 +39,7 @@
               <li>
                 <NuxtLink
                   to="/who-we-are/about"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:duration-150 hover:ease-in"
                 >
                   The Center
                 </NuxtLink>
@@ -44,16 +47,18 @@
               <li>
                 <NuxtLink
                   to="/who-we-are/our-team"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:duration-150 hover:ease-in"
                 >
                   Our Team
                 </NuxtLink>
               </li>
-
             </ul>
           </nav>
         </li>
-        <li class="relative cursor-pointer [&>nav]:hover:block" onclick="">
+        <li
+          class="relative cursor-pointer [&>nav]:hover:block"
+          onclick=""
+        >
           <NuxtLink
             to="/our-activities"
             class="pointer-events-none p-2"
@@ -67,7 +72,7 @@
               <li>
                 <NuxtLink
                   to="/our-activities/our-services"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:duration-150 hover:ease-in"
                 >
                   Our Services
                 </NuxtLink>
@@ -75,7 +80,7 @@
               <li>
                 <NuxtLink
                   to="/our-activities/our-projects"
-                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
+                  class="inline-block w-full rounded-lg px-3 py-2 hover:bg-hive-grey hover:duration-150 hover:ease-in"
                 >
                   Our Projects
                 </NuxtLink>
@@ -86,7 +91,7 @@
         <li>
           <NuxtLink
             to="/contacts"
-            class="rounded-xl p-2 hover:bg-hive-grey hover:ease-in hover:duration-150"
+            class="rounded-xl p-2 hover:bg-hive-grey hover:duration-150 hover:ease-in"
           >
             Contact Us
           </NuxtLink>
@@ -94,7 +99,7 @@
         <li>
           <NuxtLink
             to="/chat"
-            class="rounded-lg px-6 bg-hive-yellow py-2 hover:bg-hive-dark-yellow hover:ease-in hover:duration-150"
+            class="rounded-lg bg-hive-yellow px-6 py-2 hover:bg-hive-dark-yellow hover:duration-150 hover:ease-in"
           >
             Chat with Bee
           </NuxtLink>

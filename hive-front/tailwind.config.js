@@ -12,8 +12,8 @@ module.exports = {
         'hive-dark-yellow': '#E4B200',
         'hive-black': '#131313',
         'hive-grey': '#D6D6D6',
-        'hive-beige': '#F4F1EC'
+        'hive-beige': '#F4F1EC',
       },
-    }
+    },
   },
 };
