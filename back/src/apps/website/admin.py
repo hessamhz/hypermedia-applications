@@ -1,5 +1,4 @@
 from django.contrib import admin
-from src.apps.website.models import ContactUs, WebsiteConfig
+from src.apps.website.models import ContactUs
 
-admin.site.register(WebsiteConfig)
 admin.site.register(ContactUs)

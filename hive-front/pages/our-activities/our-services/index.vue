@@ -3,6 +3,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 
 const { data } = await useApi('services/');
 
+// Define SEO metadata for the page
 useSeoMeta({
   title: "Our Services | The Hive",
   description: "Learn more about the services offered at The Hive, Anti-Violence Center for Women.",
@@ -20,6 +21,7 @@ useSeoMeta({
     <div
       class="mx-auto max-w-[1240px] px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
     >
+      <!-- Services list -->
       <ul class="space-y-3 lg:space-y-4 2xl:space-y-5">
         <li
           v-for="service in data"

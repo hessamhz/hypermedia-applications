@@ -43,6 +43,7 @@ function hexagonColumnClass(i) {
   return classes;
 }
 
+// Define SEO metadata for the page
 useSeoMeta({
   title: "Main Page | The Hive",
   description: "The home page of The Hive Anti-Violence Center for Women.",
@@ -80,11 +81,11 @@ useSeoMeta({
         />
         </div>
     </div>
-    
+
     <!-- OUR CENTER -->
      <div class="flex flex-col items-center justify-center text-center py-20">
       <h2 class="mb-6 text-4xl font-bold text-hive-purple md:mb-11 md:text-5xl">Our Center</h2>
-      <p class="mb-8 max-w-3xl xl:mb-12 xl:text-lg">The Hive was founded by four dedicated individuals who shared a common vision of creating a safe haven 
+      <p class="mb-8 max-w-3xl xl:mb-12 xl:text-lg">The Hive was founded by four dedicated individuals who shared a common vision of creating a safe haven
         for women affected by violence, abuse or discrimination. We strive to provide a safe, supportive, and empowering environment for them to share their experience.
         </p>
       <NuxtLink
@@ -141,9 +142,9 @@ useSeoMeta({
     >
       <h2 class="mb-6 text-4xl font-bold md:mb-11 md:text-5xl">Risk Assessment</h2>
       <p class="mb-8 max-w-3xl xl:mb-12 xl:text-lg">
-        We have developed Bee, our virtual assistant capable of providing a live risk assessment of a dangerous situation 
-        you or someone you know might be going through. Bee will ask some questions to better understand the severity of the case and tailor 
-        a response with suggestions about the most important emergency contacts or services that can be of help. 
+        We have developed Bee, our virtual assistant capable of providing a live risk assessment of a dangerous situation
+        you or someone you know might be going through. Bee will ask some questions to better understand the severity of the case and tailor
+        a response with suggestions about the most important emergency contacts or services that can be of help.
       </p>
       <NuxtLink
         to="/chat"

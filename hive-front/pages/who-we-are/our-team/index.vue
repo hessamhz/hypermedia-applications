@@ -3,6 +3,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 
 const { data } = await useApi('members/');
 
+// Define SEO metadata for the page
 useSeoMeta({
   title: `The Team | The Hive`,
   description: "Meet the team of The Hive, Anti-Violence Center for Women.",

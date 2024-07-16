@@ -5,8 +5,10 @@ definePageMeta({
   layout: "no-footer",
 });
 
+// useWebSocket composable provides the following properties and methods:
 const { messages, sendMessage: send, clearHistory, isBotTyping, simulateBotTyping } = useWebSocket();
 
+// Reactive reference for the new message input
 const newMessage = ref('');
 
 const sendMessage = () => {
@@ -18,6 +20,7 @@ const sendMessage = () => {
   newMessage.value = '';
 };
 
+// Function to format the timestamp
 function formatTimestamp(timestamp) {
   const date = new Date(timestamp);
   const year = date.getFullYear().toString().slice(-2); // Get last 2 digits of year
@@ -28,6 +31,7 @@ function formatTimestamp(timestamp) {
   return `${year}/${month}/${day} ${hours}:${minutes}`;
 }
 
+// Dialouge for clearing messages
 const isDialogOpen = ref(false);
 
 function openDialog() {
@@ -43,6 +47,7 @@ function deleteMessages() {
   closeDialog();
 }
 
+// Define SEO metadata
 useSeoMeta({
   title: "Chat With Bee | The Hive",
   description: "Chat with Bee about The Hive, Anti-Violence Center for Women.",

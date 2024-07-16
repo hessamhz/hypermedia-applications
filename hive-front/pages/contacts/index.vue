@@ -9,6 +9,7 @@ const form = ref({
 
 const config = useRuntimeConfig();
 
+// submit the form data to the backend
 async function submit() {
   const response = await $fetch(`${config.public.baseURL}/contact-us/`, {
     method: 'POST',
@@ -21,7 +22,7 @@ async function submit() {
       email: '',
       message: '',
     };
-  } 
+  }
 
   const submitButton = document.getElementById('submit-button')
   submitButton.textContent = 'Submitted!'
@@ -29,6 +30,7 @@ async function submit() {
   setTimeout(function() {submitButton.textContent = 'Submit'}, 3000)
 }
 
+// Define SEO metadata
 useSeoMeta({
   title: "Contact Us | The Hive",
   description: "Get in touch with The Hive, Anti-Violence Center for Women.",
@@ -51,6 +53,7 @@ useSeoMeta({
         If you need help, have questions, or want to learn more about our services,
         please reach out to us with an email by filling this form
       </p>
+      <!-- Contact form -->
       <form
         class="space-y-5 rounded-xl bg-purple-100 p-4 sm:p-5 md:p-7 lg:basis-7/12"
         @submit.prevent="submit"

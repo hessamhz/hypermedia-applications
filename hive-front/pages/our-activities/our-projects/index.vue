@@ -3,6 +3,7 @@ import SectionHeader from "~/components/app/SectionHeader.vue";
 
 const { data } = await useApi('projects/');
 
+// Define SEO metadata for the page
 useSeoMeta({
   title: "Our Projects | The Hive",
   description: "Learn more about the projects we are working on at The Hive, Anti-Violence Center for Women.",
@@ -20,7 +21,11 @@ useSeoMeta({
     <div
       class="mx-auto max-w-[1240px] px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"
     >
+      <!-- Projects list -->
       <ul class="grid gap-3 sm:grid-cols-2 lg:gap-4 2xl:gap-5">
+        <!-- Iterate over each project and create a list item -->
+        <!-- Basically the view here is based on a periodic reccurence of items in the list that we -->
+        <!-- have based on 7 item periodicity (if you look at the ui you will understand it better) -->
         <li
           v-for="project in data"
           :key="project.slug"
@@ -51,17 +56,3 @@ useSeoMeta({
     </div>
   </div>
 </template>
-
-<style scoped>
-/* li:nth-child(7n+1),
-li:nth-child(7n+4),
-li:nth-child(7n+5) {
-  grid-column: span 2;
-}
-
-li:nth-child(7n+1),
-li:nth-child(7n+4),
-li:nth-child(7n+5) {
-  grid-column: span 2;
-} */
-</style>

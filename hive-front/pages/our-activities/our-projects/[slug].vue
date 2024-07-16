@@ -5,6 +5,7 @@ const route = useRoute();
 
 const { data } = await useApi(`projects/${route.params.slug}/`);
 
+// Set up SEO metadata for the page dynamically based on the project data
 useSeoMeta({
   title: `${data.value.title} | Projects | The Hive`,
   description: `"${data.value.description}" at The Hive`,
@@ -18,6 +19,7 @@ useSeoMeta({
 
 <template>
   <div>
+    <!-- Header section with dynamic title and link to projects overview that manages -->
     <SectionHeader :title="data?.title" backgroundColor="bg-hive-yellow" color='black' linkTo="/our-activities/our-projects"></SectionHeader>
     <div
       class="mx-auto px-5 py-10 md:px-10 md:py-16 xl:px-24 xl:py-28"

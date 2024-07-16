@@ -1,12 +1,12 @@
 <template>
-
+  <!-- The footer section of the webpage -->
   <footer
       class="flex flex-col gap-10  bg-hive-dark-purple px-5 py-7 md:flex-row md:justify-between lg:px-10 lg:py-14 xl:px-14 2xl:px-20 2xl:py-20"
   >
     <ul class="space-y-2 xl:text-lg 2xl:text-xl text-white">
       <li>
         Email:
-        <strong>test@test.com</strong>
+        <strong>info@the-hive.space</strong>
       </li>
       <li>
         Phone number:

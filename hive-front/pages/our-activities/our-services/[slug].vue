@@ -5,6 +5,7 @@ const route = useRoute();
 
 const { data } = await useApi(`services/${route.params.slug}/`);
 
+// Set up SEO metadata for the page dynamically based on the project data
 useSeoMeta({
   title: `${data.value.title} | Services | The Hive`,
   description: `"${data.value.description}" at The Hive`,

@@ -1,8 +1,10 @@
 <script setup>
-const isMobileMenuOpen = ref(false);
+  // A reactive variable to track the state of the mobile menu
+  const isMobileMenuOpen = ref(false);
 </script>
 
 <template>
+  <!-- Header section of the webpage -->
   <header
     class="app-header sticky top-0 z-[99] bg-white bg-opacity-70 backdrop-blur-lg w-full drop-shadow-md sm:py-4! flex items-center justify-between px-5 py-5 sm:px-8 md:px-12 lg:px-20"
   >
@@ -99,6 +101,7 @@ const isMobileMenuOpen = ref(false);
         </li>
       </ul>
     </nav>
+    <!-- Button to open the mobile menu -->
     <button
       aria-label="Open menu button"
       class="md:hidden"

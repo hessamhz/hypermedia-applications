@@ -15,6 +15,9 @@ def serialize_batch_of_media(
         context = {}
     serializer = MediaModelSerializer(media, context=context, many=True)
     data = serializer.data
+
+    # If the application is not running on a local URL,
+    # replace 'http' with 'https' in the file URLs
     if not settings.IS_LOCAL_URL:
         for item in data:
             item["file"] = item["file"].replace("http", "https")

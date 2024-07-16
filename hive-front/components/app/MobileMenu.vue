@@ -1,8 +1,10 @@
 <script setup>
+// Define props for the component
 defineProps({
   isOpen: Boolean,
 });
 
+// Event for closing the menu
 defineEmits(['close']);
 </script>
 
@@ -11,6 +13,7 @@ defineEmits(['close']);
     class="app-mobile-menu fixed bottom-0 right-0 top-0 z-[999] flex h-full w-48 flex-col border-l border-gray-400 bg-white px-5 py-8 transition-transform"
     :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
   >
+    <!-- Emits the 'close' event when clicked -->
     <button
       aria-label="Close Menu Button"
       class="mb-10 self-end"
@@ -78,6 +81,7 @@ defineEmits(['close']);
 </template>
 
 <style scoped>
+/* Styles for active router links */
 .app-mobile-menu .router-link-active {
   text-decoration: underline 2px theme('colors.hive-purple');
   text-underline-offset: 6px;

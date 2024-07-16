@@ -1,5 +1,6 @@
 <template>
   <header :class="`${backgroundColor} text-${color} px-5 py-4 font-bold md:px-14 md:py-10 xl:px-20 xl:py-14`">
+    <!-- Conditional NuxtLink for navigation if 'linkTo' is provided -->
     <NuxtLink
         :to=linkTo
         class="mb-2 flex items-center gap-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"

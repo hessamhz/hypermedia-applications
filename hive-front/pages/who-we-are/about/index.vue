@@ -1,6 +1,7 @@
 <script setup>
 import SectionHeader from "~/components/app/SectionHeader.vue";
 
+// Define SEO metadata for the page
 useSeoMeta({
   title: "The Center | The Hive",
   description: "Learn more about the history of The Hive, Anti-Violence Center for Women.",

@@ -1,4 +1,5 @@
 <script setup>
+// Define props for the component
 defineProps({
   label: {
     type: String,
@@ -22,6 +23,7 @@ defineProps({
   },
 });
 
+// Create a model for two-way data binding
 const model = defineModel();
 </script>
 <template>
@@ -32,6 +34,7 @@ const model = defineModel();
     >
       {{ label }}
     </label>
+    <!-- bound attributes to respective props -->
     <input
       v-model="model"
       :type="type"

@@ -1,4 +1,5 @@
 <template>
+  <!-- Layout for pages (That will have a footer)-->
   <div>
     <AppHeader />
     <main>

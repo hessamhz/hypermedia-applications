@@ -14,27 +14,35 @@ const hexagonStyle = computed(() => ({
 </script>
 
 <template>
+  <!-- The ':style' binding applies the computed 'hexagonStyle' to the div -->
   <div
     class="hexagon overflow-hidden"
     :style="hexagonStyle"
   >
+    <!-- <slot /> allows for content insertion inside the hexagon div -->
     <slot />
   </div>
 </template>
 
 <style scoped>
+/* The 'hexagon' class applies the following styles */
 .hexagon {
-  /* --size: 200px; */
+  /* CSS variable for size */
   --f: 10;
   --radius: calc(var(--size) / var(--f));
 
+  /* Width and height settings */
   width: var(--size);
   height: auto;
   aspect-ratio: 1.155;
   object-fit: cover;
+
+  /* CSS variables for gradient and mask settings */
   --cg: #0000, #000 1deg 119deg, #0000 120deg;
   --rad: radial-gradient(farthest-side, #000 99%, #0000 101%);
   --s: calc(2 * var(--radius)) calc(2 * var(--radius));
+
+  /* -webkit-mask settings for creating hexagon shapes */
   -webkit-mask:
     var(--rad) left calc(0.25 * var(--size) - 0.4 * var(--radius)) top 0 /
       var(--s),
@@ -59,6 +67,8 @@ const hexagonStyle = computed(() => ({
       right calc(0.3 * var(--radius)) top 50% /50% calc(100% - 0.8 *
           var(--radius)),
     linear-gradient(#000 0 0) center/calc(45% - 1.1 * var(--radius));
+
+  /* Ensure the mask does not repeat */
   -webkit-mask-repeat: no-repeat;
 }
 </style>
