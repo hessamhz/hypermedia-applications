@@ -9,11 +9,17 @@
 \restoregeometry
 
 \setcounter{tocdepth}{5}
+
+\let\LaTeXStandardClearpage\clearpage
+\let\clearpage\relax % relax clearpage rule to allow listings to print on the same page
+
 \tableofcontents
 \listoffigures
 \listoftables
 
-\justify
+\let\clearpage\LaTeXStandardClearpage % restore clearpage functionality
+
+\pagebreak
 
 \chapter{Introduction}
 \input{1_header/introduction}

@@ -14,7 +14,7 @@ The files are located in the `deploy` directory.
 Since we already had the dockerized version of our project working on our local machines, we decided to deploy our project on a simple virtual private server (VPS) using DigitalOcean.
 We have securely configured the VPS to build and run the docker containers.
 We are using Nginx as a reverse proxy to route the incoming requests to the appropriate internal container, and also handle the SSL certificates.
-The domain we have used is `the-hive.space` which we have purchased for only using it for this project.
+The domain we have used is `\url{the-hive.space}`, which we have purchased for use exclusively for this project.
 
 \section{Continuous Deployment}
 Using Github Actions, we have setup a continuous deployment pipeline that builds and deploys the project to the VPS whenever a new commit is pushed to the main branch.
