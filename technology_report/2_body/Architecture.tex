@@ -7,18 +7,15 @@ Additionally, SSR provides a more seamless experience as users navigate through 
 \section{Structure}
 As for the structure of the project main folders, we referenced the Nuxt3 standard: the most external index file
 contains the code of the homepage, while each page code is inside its own folder, with the same organization used for navigation.
-For the pages of the single Service, Project and Person we used 'slug' .....
-In order to maintain the same layout throughout the website we have also utilized layouts: a default one with header (navigation bar), body (page content) and footer;
-and a 'no-footer' layout, that we used for the chatbot page specifically.
+For the pages of the single Service, Project and Person we used \texttt{slug} pages.
+In order to maintain the same appearance throughout the website we have also utilized layouts: a default one with header (navigation bar), body (page content) and footer;
+and a 'no-footer' layout, that we used for the chatbot page specifically, which removes the footer making the chat application take advantage of the entire window.
 
 
 \begin{center}
     \includegraphics[width=0.4\linewidth]{img/folders-structure.png}
     \captionof{figure}{Pages and layouts folders structure}
 \end{center}
-
-\vspace{1em}
-Available server endpoint with short description
 
 \section{Components}
 List of components implemented with description, props and emit (if used)
