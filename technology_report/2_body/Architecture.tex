@@ -72,13 +72,17 @@ Table \ref{table:modules} introduces the modules we used throughout the project:
             \label{table:modules}
 \end{table}
 
-% TODO Non-mandatory staff
-\section{Extra functionalities implemented}
-Store, Filters, etc
+\section{SEO}
+Each webpage implements the \texttt{useSeoMeta()} method to define SEO metadata. The metadata injected into each page is:
+\begin{itemize}
+	\item \textbf{\texttt{Title} (and \texttt{ogTitle})} of the current page and the name of the website;
+	\item \texttt{Description} of the current page;
+	\item \texttt{ogType} defines the type of content being displayed.
+	\item \textbf{\texttt{ogUrl} (and \texttt{canonical})} define the main url of the website.
+	\item \texttt{ogSiteName} defines the name of the website.
+\end{itemize}
 
-\section{SEO and Accessibility}
-approaches used to comply with accessibility and SEO guidelines
-
+\section{Accessibility}
 Accessibility is a fundamental aspect of Web Development and Design and we cared about making our
 website as inclusive as possible. For this reason we referenced the WCAG (Web Content Accessibility Guidelines) basic principles and rules
 as early as the User Interface Design stage.
