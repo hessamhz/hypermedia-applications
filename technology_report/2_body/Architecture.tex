@@ -5,8 +5,6 @@ This initial rendering on the server ensures that search engines can easily inde
 Additionally, SSR provides a more seamless experience as users navigate through the application, reducing the perceived load time and enhancing the overall responsiveness.
 
 \section{Structure}
-Structure of links/pages folder with short description
-
 As for the structure of the project main folders, we referenced the Nuxt3 standard: the most external index file
 contains the code of the homepage, while each page code is inside its own folder, with the same organization used for navigation.
 For the pages of the single Service, Project and Person we used 'slug' .....
@@ -32,11 +30,39 @@ Here we describe each of the components we implemented in our project:
         \item \textbf{AppFooter}: the footer present in every page with the contacts, address and map location of The Hive
         \item \textbf{Header}: the navigation bar for medium to large screen
         \item \textbf{Hexagon}: the shape used for various sections regarding the team of The Hive
+        \begin{itemize}
+            \item \texttt{size} of the hexagon.
+        \end{itemize}
         \item \textbf{HexagonalImage}: the component used to shape images into hexagons
+        \begin{itemize}
+            \item \texttt{size} of the hexagon;
+            \item \texttt{src} \textbf{(Required)} URL of the image;
+            \item \texttt{alt} Alternative description for the image, if present.
+        \end{itemize}
         \item \textbf{Input}: the contact form input field
+        \begin{itemize}
+            \item \texttt{label} \textbf{(Required)} What information should expect the user to input;
+            \item \texttt{name} \textbf{(Required)} The form field name to add to the POST request to the server for the given input;
+            \item \texttt{type} The type of input the browser should expect from the user. Defaults to \texttt{text} but it could also be \texttt{'email'};
+            \item \texttt{inputClass} Allows the passing of custom CSS class names to the input element, enabling styling customization for the input field;
+            \item \texttt{labelClass} Allows for custom CSS class names to be passed to the label element, enabling styling customization for the label.
+        \end{itemize}
         \item \textbf{MobileMenu}: the mobile navigation bar for smaller screens
         \item \textbf{SectionHeader}: the gradient or solid header containing the title for all of the pages of the website (excluding homepage and chatbot)
+        \begin{itemize}
+            \item \texttt{title} \textbf{(Required)} The title of the current webpage to display in the header
+            \item \texttt{linkTo} Specifies a navigation target URL. If provided, a clickable link (and breadcrumb) is rendered.
+            \item \texttt{backgroundColor} Specifies Tailwind CSS properties for the appearance of the header.
+            \item \texttt{color} specifies the color text and other elements of the header. It should just contain the name of the color, which is going to be attached to the Tailwind CSS \texttt{text-} and \texttt{border-} prefixes in the class field.
+        \end{itemize}
         \item \textbf{TextArea}: the message input field of the contact form
+        \begin{itemize}
+            \item \texttt{label} \textbf{(Required)} What information should expect the user to input;
+            \item \texttt{name} \textbf{(Required)} The form field name to add to the POST request to the server for the given input;
+            \item \texttt{rows} The number of rows the textfield should present. Basically affects the height.
+            \item \texttt{teaxtareaClass} Allows the passing of custom CSS class names to the input element, enabling styling customization for the input field;
+            \item \texttt{labelClass} Allows for custom CSS class names to be passed to the label element, enabling styling customization for the label.
+        \end{itemize}
     \end{itemize}
 
     \item Icon:

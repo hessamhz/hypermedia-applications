@@ -34,7 +34,7 @@
 export default {
   name: 'SectionHeader',
   props: {
-    // 'linkTo' specifies the navigation target URL. If provided, a clickable link is rendered.
+    // 'linkTo' specifies the navigation target URL. If provided, a clickable link (and breadcrumb) is rendered.
     linkTo: {
       type: String,
       required: false,
