@@ -1,4 +1,5 @@
 <template>
+  <!-- SectionHeader displays the title of the current page and optional breadcrumbs if within a 'slug' page -->
   <header
     :class="`${backgroundColor} text-${color} px-5 py-4 font-bold md:px-14 md:py-10 xl:px-20 xl:py-14`"
   >
@@ -33,21 +34,26 @@
 export default {
   name: 'SectionHeader',
   props: {
+    // 'linkTo' specifies the navigation target URL. If provided, a clickable link is rendered.
     linkTo: {
       type: String,
       required: false,
       default: '',
     },
+    // 'backgroundColor' specifies Tailwind CSS properties for the appearance of the header.
     backgroundColor: {
       type: String,
       required: false,
       default: 'bg-gradient-to-r from-hive-purple to-hive-yellow',
     },
+    // 'color' specifies the color text and other elements of the header.
+    // It should just contain the name of the color, which is going to be attached to the Tailwind CSS text- and border- prefixes.
     color: {
       type: String,
       required: false,
       default: 'white',
     },
+    // 'title' specifies the title of the header.
     title: {
       type: String,
       required: true,
@@ -58,15 +64,16 @@ export default {
     isLinkEmpty() {
       return this.linkTo.trim() === '';
     },
+    // Computed property to extract the title of the previous page from the linkTo property
     formattedLinkTitle() {
       if (this.isLinkEmpty) return '';
 
       const lastSlashIndex = this.linkTo.lastIndexOf('/');
-      const rawTitle = this.linkTo.substring(lastSlashIndex + 1);
+      const rawTitle = this.linkTo.substring(lastSlashIndex + 1); // Extract the title from the linkTo property starting from the position next to the last slash
       return rawTitle
-        .split('-')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+        .split('-') // Links contain the '-' character, which we need to remove
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+        .join(' '); // Join the words back together
     },
   },
 };
