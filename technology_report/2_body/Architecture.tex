@@ -1,5 +1,8 @@
 \section{Services used}
-SSR was used. % TODO add description
+We chose to use Nuxt.js in SSR (Server-Side Rendering) mode for our project to enhance performance, improve SEO, and deliver a better user experience.
+SSR allows the server to render the initial HTML of the application, which significantly reduces the time to first meaningful paint and improves load times for users, particularly those on slower connections.
+This initial rendering on the server ensures that search engines can easily index the content of our pages, improving our site's SEO and making it more discoverable to potential users.
+Additionally, SSR provides a more seamless experience as users navigate through the application, reducing the perceived load time and enhancing the overall responsiveness.
 
 \section{Structure}
 Structure of links/pages folder with short description
@@ -111,3 +114,10 @@ Of course these tools are extremely useful but not perfect, and we took care of 
     \includegraphics[width=0.75\linewidth]{img/wave-result.png}
 \end{center}
 \captionof{figure}{WAVE analysis result of the homepage}
+
+
+\section{Additional features}
+One of the nice features we have implemented is related to the chatbot.
+By using the localStorage we could store the thread\_id of the conversation with the OpenAI assistant, and use it to have meaningful context-aware conversations.
+No matter if you go to another page, close the tab or even the browser, the conversation will be saved and you can continue it from where you left off.
+You are also able to delete the conversation history at any time.
