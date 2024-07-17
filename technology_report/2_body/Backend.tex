@@ -18,7 +18,9 @@ Django apps and database models we have used is depicted in Table \ref{figure:dj
 We used \texttt{Postgresql} which is an open-source relational database management system emphasizing extensibility and SQL compliance.
 \texttt{Postgresql} also has a great integration with Django and it is easy to use and maintain.
 We did not directly interact with the database, but we used Django ORM which made interaction easy also to make queries and to modify or create tables.
-
+For viewing the database we used \texttt{Django admin} which is a built-in app that allows us to view and manage the models and data in the database.
+This was also another motive for using Django as the backend framework.
+You can access the admin at \url{https://the-hive.space/admin/} with credientials provided in the submission folder.
 \section{Websockets}
 In order to implement the chat functionality we used \textbf{Django Channels}, a project that takes Django and extends its abilities beyond HTTP and API calls.
 This allowed us to maintain a persistent connection between the client and the server and send and receive messages in real-time.
