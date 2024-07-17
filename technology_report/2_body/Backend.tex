@@ -7,8 +7,8 @@ Django enabled us to have a clean and maintainable codebase while providing a lo
 By leveraging Python, we were able to easily connect the backend with OpenAI API, and connect them with the frontend using \textit{channels} which is a socket programming library for Django.
 
 \section{Database}
-We used \textbf{Postgresql} which is an open-source relational database management system emphasizing extensibility and SQL compliance.
-Postgresql also has a great integration with Django and it is easy to use and maintain.
+We used \texttt{Postgresql} which is an open-source relational database management system emphasizing extensibility and SQL compliance.
+\texttt{Postgresql} also has a great integration with Django and it is easy to use and maintain.
 We did not directly interact with the database, but we used Django ORM which made interaction easy also to make queries and to modify or create tables.
 
 \section{Websockets}
@@ -22,5 +22,5 @@ As for the datastore of these conversation (active web-sockets) we have setup a 
 We have used the new OpenAI API for OpenAI assistant. We have already setup our OpenAI assistant with the right context through OpenAI's Playground feature. For each conversation with the user, we store a \textbf{thread\_id} value, which is the conversation ID that allow us to keep track of the conversation, and an OpenAI's thread\_id, which keeps track of the conversation with the OpenAI assistant. Having two different IDs allow us to mask the internal OpenAI's thread\_id.
 When a user with a valid thread\_id, that is stored in our database, sends a message, we add it into the user's thread.
 This way we can use the context and history of our user's conversation to generate a better response from the LLM.
-Since we utilized local storage to store the thread\_id in the front-end, even if the user comes back in a different time, we can still use the previous conversation context. And the user always have the option to delete the history.
+Since we utilized local storage to store the thread\_id in the front-end, even if the user comes back in a different time, we can still use the previous conversation context. And the user always has the option to delete the history.
 A final important note is that the connection to OpenAI is done asynchronously, enabling a much higher scalability.
