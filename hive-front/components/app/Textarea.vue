@@ -8,14 +8,19 @@ defineProps({
     type: String,
     required: true,
   },
+  // Define a prop for the number of rows (or height) in the textarea
   rows: {
     type: Number,
     default: 5,
   },
+  // Define a prop for the textarea class,
+  // it allows for the passing of custom CSS class names to the textarea element, enabling styling customization.
   teaxtareaClass: {
     type: String,
     default: '',
   },
+  // Define a prop for the label class
+  // It allows for the passing of custom CSS class names to the label element, enabling styling customization.
   labelClass: {
     type: String,
     default: '',
